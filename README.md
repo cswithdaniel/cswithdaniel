@@ -3,6 +3,8 @@ Four levels of Java classes are designed and offered by High School Student Dani
 
 Since 9th grade, Daniel Li has taught 16 courses of Java at the Horizons for Youth Program in Northampton Community College (each course covers a level) with over 300 teaching hours and over 100 students in middle and high school.
 
+Free video lessons on https://www.youtube.com/channel/UCSL-Yqh3riycNomgQNCjQlw (new videos weekly).
+
 ## Why Java?
 * Java is the most popular programming language.
   * Java can run on nearly any system.
