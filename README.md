@@ -18,3 +18,9 @@ Free video lessons on https://www.youtube.com/channel/UCSL-Yqh3riycNomgQNCjQlw (
 * Although some languages such as C++ are faster, they are much harder to learn and debug.
 * Although Python is easy to learn, it is much slower than Java, and it is harder to debug in Python than in Java.
   * Python is also often too slow for many programming competitions.
+
+## Why cswithdaniel?
+* Taught by a high school student, making programming seem accessible to middle and high school students.
+* Contains problem sets for each video.
+* Contains curriculum that is organized. Curriculum can be used to self-study or teach.
+* It is free.
