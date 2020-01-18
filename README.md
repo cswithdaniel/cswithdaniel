@@ -15,3 +15,4 @@ Since 9th grade, Daniel Li has taught 16 courses of Java at the Horizons for You
 ##### Compared to other popular programming languages
 * Although some languages such as C++ are faster, they are much harder to learn and debug.
 * Although Python is easy to learn, it is much slower than Java, and it is harder to debug in Python than in Java.
+  * Python is also often too slow for many programming competitions.
