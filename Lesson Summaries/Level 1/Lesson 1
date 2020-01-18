@@ -1,6 +1,6 @@
 # Lesson 1
 
-## Creating a basic Java program
+Creating a basic Java program
 
 Every java program must have a class declaration and a main method that looks like the following:
 public class ClassName
