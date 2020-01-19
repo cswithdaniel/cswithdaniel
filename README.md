@@ -24,3 +24,24 @@ Free video lessons on https://www.youtube.com/channel/UCSL-Yqh3riycNomgQNCjQlw (
 * Contains problem sets for each video.
 * Contains curriculum that is organized. Curriculum can be used to self-study or teach.
 * It is free.
+
+## Amount of time needed
+
+* There are 4 levels in total.
+* Each level has 4 lessons, total of 16 lessons.
+* Each lesson has 3 lesson parts; each level contains around 12 lesson parts, total of 48 lesson parts in 4 levels.
+* Each lesson part has 10-20 minutes in video lessons.
+* Each lesson part has a problem set to go along with it, and each problem set takes around 45-90 minutes for students with no prior programming experience.
+* This curriculum is designed to help students self-study and help high school students teach Java.
+
+##### For self-studying students
+* Students are encouraged to do the problem sets of a lesson part before moving on to the next lesson part.
+
+##### For high school students planning to use my curriculum to teach Java
+* There are two teaching schedules I have used:
+  * 12 lessons for each level, 1 lesson each week, each lesson is 60-75 minutes long (including going over practice problems) and covers the equivalent of a lesson part in the videos
+  * 4 lessons for each level, 1 lesson per day, each lesson is 3 hours long and covers the equivalent of a lesson in the videos
+  * Additional lessons can be dedicated to review material or test students.
+  * Lesson summaries, problem sets, and exams are posted here and can be freely used in teaching.
+* Teachers are encouraged to assign homework after each lesson.
+* Teachers are free to use the curriculum or videos here.
