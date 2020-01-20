@@ -1,0 +1,58 @@
+1. Determine the output (note that ^ is higher than &&, and && is higher than || in the order of operations):
+System.out.println(6 < 7 && 8 > 6);
+System.out.println(6 < 7 || 8 > 6);
+System.out.println(6 < 7 ^ 8 > 6);
+System.out.println(6 % 2 == 0 && !(6 > 0));
+System.out.println(6 % 2 == 0 || !(6 > 0));
+System.out.println(6 % 2 == 0 ^ !(6 > 0));
+System.out.println(true || false && false);
+System.out.println(6 % 2 == 0 || 6 > 0 && 6 < 5);
+System.out.println(6 % 2 == 0 && 6 > 0 || 6 < 5);
+System.out.println(6 % 2 == 0 ^ 6 > 0 || 6 < 5);
+System.out.println(6 % 2 == 0 || 6 > 0 ^ 6 < 5);
+
+2.
+  a. Can an if block exist without an else block?
+  b. Can an else block exist without an if statement?
+  c. Can an if block be followed by more than one else block?
+  d. What happens when an if block or else block has no brackets?
+  
+3. Find all differences between the following blocks of code:
+  a. if(1<2&&3<4) {
+         System.out.println(   "a");
+     }
+  b. if (1 < 2 && 3 < 4)
+     {
+         System.out.println("a");
+     }
+
+4. Determine the output:
+if (6 < 7 && 8 > 6)
+{
+    if(6 < 7 || 8 > 6) System.out.println("a");
+    else System.out.println("b");
+    System.out.println("c");
+}
+else
+{
+    if(6 < 7 ^ 8 > 6) System.out.println("d");
+    else System.out.println("e");
+    System.out.println("f");
+}
+
+5. Determine the output:
+int i = 6;
+if (i % 2 == 0) {i /= 2;}
+if (i % 2 != 0) {i = 3 * i + 1;}
+else
+{
+    i /= 2;
+}
+if (i % 2 == 0) {i /= 2;}
+else
+{
+    i = 3 * i + 1;
+}
+if (i == 1) {System.out.println(i);}
+else {System.out.print("not done");}
+System.out.println("qwerty");
