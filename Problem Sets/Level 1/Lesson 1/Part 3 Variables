@@ -1,0 +1,54 @@
+1.
+  a. What is the difference between declaring and initializing a variable?
+  b. Can you declare a variable without initializing it?
+  c. Can you initialize a variable without declaring it?
+  d. Can you print a variable without initializing it?
+
+2.
+  a. List all 8 primitive data types.
+  b. Identify the primitive data types that store integers only. List them in increasing order of memory size.
+  c. Identify the primitive data types that store numbers including non-integers.
+     Which one has more precision and takes up more memory space?
+  d. What do the remaining primitive data types store?
+  
+3. Explain everything that is wrong with the following code:
+int i;
+System.out.println(i);
+int i = 5;
+j = 7;
+System.out.println(k);
+
+4. Use the following variables to print "5false8"
+int i = 5;
+boolean j = false;
+int k = 2;
+long l = 6;
+
+5. Determine the output:
+int i = 1;
+int j = 2;
+int k = 3;
+System.out.println(i + "abc" + j + k);
+System.out.println(i + "abc" + (j + k));
+
+6. Determine the output:
+int i = 9;
+int j = 2;
+i %= j;
+System.out.println("" + i + j);
+
+7. Determine the output:
+  a. int q = 3;
+     System.out.println(q++);
+  b. int q = 3;
+     System.out.println(++q);
+
+8.
+  a. Determine the output:
+  double d1 = 5.7;
+  double d2 = 9.5;
+  d1 = d2;
+  d2 = d1;
+  System.out.println(d1 + " " + d2);
+  
+  b. Did the code successfully swap the variables? If not, fix the code to make it swap the variables.
