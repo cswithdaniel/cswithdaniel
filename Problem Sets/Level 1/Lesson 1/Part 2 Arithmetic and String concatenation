@@ -1,0 +1,44 @@
+1. Determine the output:
+/*
+System.out.println("a");
+System.out.println("b");
+//*/
+///*
+System.out.println("//");
+//System.out.println("//");
+//*/
+
+2. Determine the output (ignoring all imprecisions):
+System.out.println(5 / 2);
+System.out.println(5 / 2.0);
+System.out.println(5.0 / 2);
+System.out.println(5.0 / 2.0);
+System.out.println(5 * 2);
+System.out.println(5 * 2.0);
+System.out.println(5.0 * 2);
+System.out.println(5.0 * 2.0);
+System.out.println(5 % 2);
+System.out.println(6 % 2);
+System.out.println(-9 % 2);
+System.out.println(5 % 1.4);
+System.out.println(5.6 % 1.9);
+
+3. Determine the output:
+System.out.println("1 + 1 = " + 1 + 1);
+System.out.println("1 + 1 = " + (1 + 1));
+System.out.println(1 + 1);
+System.out.println("2 * 3 = " + 2 * 3);
+System.out.println("7 / 2 = " + 7 / 2);
+System.out.println(1 + 1 + " = 1 + 1 = " + 1 + 1);
+System.out.println(1 + 2 * 5 % 3 - 6);
+
+4. Fix all errors to make the following program run properly:
+Public class 2FullOfErrors
+{
+  system.out.Println("qwerty");
+  public void main(String args)
+  {
+    System.println("asdfgh");
+}
+System.out.println(zxcvbn);
+System.out.println("1 + 1 = " (1 + 1));
