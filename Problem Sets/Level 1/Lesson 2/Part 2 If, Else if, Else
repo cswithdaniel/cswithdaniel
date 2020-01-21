@@ -1,0 +1,66 @@
+1. Consider the following code:
+if (grade >= 90) {System.out.println("A");}
+else if (grade >= 80) {System.out.println("B");}
+else if (grade >= 70) {System.out.println("C");}
+else {System.out.println("F");}
+
+Determine the output when:
+  a. grade is 90
+  b. grade is 83
+  c. grade is 79
+  d. grade is 57
+
+2. Consider the following code:
+if (grade >= 90) {System.out.println("A");}
+if (grade >= 80) {System.out.println("B");}
+if (grade >= 70) {System.out.println("C");}
+else {System.out.println("F");}
+
+Determine the output when:
+  a. grade is 90
+  b. grade is 83
+  c. grade is 79
+  d. grade is 57
+
+3. Consider the following code:
+if (grade >= 90) {System.out.println("A");}
+else if (grade >= 80) {System.out.println("B");}
+if (grade >= 70) {System.out.println("C");}
+else {System.out.println("F");}
+
+Determine the output when:
+  a. grade is 90
+  b. grade is 83
+  c. grade is 79
+  d. grade is 57
+
+4. Consider the following code:
+if (grade >= 90) System.out.println("A");
+else; if (grade >= 80) System.out.println("B");
+else if (grade >= 70) System.out.println("C");
+else; System.out.println("F");
+
+Determine the output when:
+  a. grade is 90
+  b. grade is 83
+  c. grade is 79
+  d. grade is 57
+
+What bad practice causes this program to be different from problem 1?
+
+5. Determine the output:
+int i1 = 7;
+if (i1 == 7)
+{
+    System.out.println(i1++);
+}
+else if (i1 == 8) {System.out.println(++i1);}
+if (i1 == 8) System.out.println(++i1);
+else {} if (i1 == 9) {System.out.println(i1++);}
+System.out.println(i1);
+
+6. Fix all errors:
+if (6 > 3) System.out.println(5); System.out.println(9);
+else if (5 < 6) System.out.println(7); System.out.println(3);
+else System.out.println(3);
+
