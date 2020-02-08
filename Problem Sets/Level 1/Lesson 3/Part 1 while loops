@@ -1,0 +1,38 @@
+1. Determine the output.
+int i = 0;
+while (i < 5)
+{
+    System.out.println(i);
+    i++;
+}
+System.out.println(i);
+
+
+
+2. Consider the code shown below.
+  a. Determine the output.
+  b. What is the value of u after the code is executed?
+  c. What is the value of i after the code is executed?
+
+int u = 0;
+while (u < 4)
+{
+  int i = u * u;
+  u++;
+  System.out.println(i);
+}
+
+
+
+
+3. Fix the code to make it print the integers from 0 to 4 inclusive:
+int i = 0
+while (i < 5)
+{
+  System.out.println(i);
+}
+
+
+4. Use a while loop to print the integers from 0 to 20 inclusive.
+5. Use a while loop to print the even integers from 0 to 20 inclusive.
+6. Use a while loop to print the powers of 2 from 1 to 10000 inclusive (including 1).
