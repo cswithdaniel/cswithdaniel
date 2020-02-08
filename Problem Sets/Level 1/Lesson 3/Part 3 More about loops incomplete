@@ -1,0 +1,11 @@
+1. Determine whether the following are true or false:
+  a. A break statement must be in a while loop.
+  b. When a break statement is executed, it breaks out of the innermost loop it is in.
+  c. A break statement can be used to break out of an if block or an else block.
+  d. When a continue statement is used in a while loop, the execution goes to checking the condition.
+  e. When a continue statement is used in a for loop, the execution goes to checking the condition.
+  f. During a nested loop, every time the outer loop runs one iteration, the inner loops must completely finish.
+  g. Variables defined in an if block or else block will disappear after the block is executed.
+  h. Variables defined in a loop will disappear after the block is executed.
+  i. If a variable is defined in an outer loop, an inner loop nested inside the outer loop can access the variable.
+ 
