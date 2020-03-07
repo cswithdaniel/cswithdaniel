@@ -1,0 +1,186 @@
+1. You should think of the code as the same as the following:
+
+if (grade >= 90) {System.out.println("A");}
+else
+{
+  if (grade >= 80) {System.out.println("B");}
+  else
+  {
+    if (grade >= 70) {System.out.println("C");}
+    else {System.out.println("F");}
+  }
+}
+  
+  a. When grade is 90, grade >= 90 is true. Then the program prints "A".
+  The else block (lines 4-12) is skipped since the if block is executed.
+  
+  b. When grade is 83, grade >= 90 is false. Then the execution goes to the else block (line 4).
+  grade >= 80 is true, which means that the program prints "B" (line 6).
+  The else block afterward (lines 7-11) is skipped because the if block is executed.
+  
+  c. When grade is 79, grade >= 90 is false. Then the execution goes to the else block (line 4).
+  grade >= 80 is false, which means that the execution goes to the corresponding else block (line 7).
+  grade >= 70 is true, which means that the program prints "C" (line 9).
+  The else block afterward (line 10) is skipped because the if block is executed.
+  
+  d. When grade is 57, grade >= 90 is false. Then the execution goes to the else block (line 4).
+  grade >= 80 is false, which means that the execution goes to the corresponding else block (line 7).
+  grade >= 70 is false, which means that the execution goes to the corresponding else block (line 10).
+  Then "F" is printed.
+  
+  
+2.
+
+if (grade >= 90) {System.out.println("A");}
+if (grade >= 80) {System.out.println("B");}
+if (grade >= 70) {System.out.println("C");}
+else {System.out.println("F");}
+
+  a. grade = 90
+  grade >= 90 is true. "A" is printed.
+  grade >= 80 is true. "B" is printed.
+  grade >= 70 is true. "C" is printed.
+  The else block is skipped since line 37 is executed.
+  
+  b. grade = 83
+  grade >= 90 is false.
+  grade >= 80 is true. "B" is printed.
+  grade >= 70 is true. "C" is printed.
+  The else block is skipped.
+  
+  c. grade = 79
+  grade >= 90 is false.
+  grade >= 80 is false.
+  grade >= 70 is true. "C" is printed.
+  The else block is skipped.
+  
+  d. grade = 57
+  grade >= 90 is false.
+  grade >= 80 is false.
+  grade >= 70 is false.
+  The else block is executed since line 37 is skipped. "F" is printed.
+  
+  
+3. 
+  
+if (grade >= 90) {System.out.println("A");}
+else if (grade >= 80) {System.out.println("B");}
+if (grade >= 70) {System.out.println("C");}
+else {System.out.println("F");}
+
+  a. grade is 90
+  grade >= 90 is true. "A" is printed.
+  Line 67 is skipped since line 66 is executed.
+  grade >= 70 is true. "C" is printed.
+  Line 69 is skipped since line 68 is executed.
+  
+  b. grade is 83
+  grade >= 90 is false.
+  grade >= 80 is true (and line 66 was skipped). "B" is printed.
+  grade >= 70 is true. "C" is printed.
+  Line 69 is skipped since line 68 is executed.
+  
+  c. grade is 79
+  grade >= 90 is false.
+  grade >= 80 is false.
+  grade >= 70 is true. "C" is printed.
+  Line 69 is skipped since line 68 is executed.
+  
+  d. grade is 57
+  grade >= 90 is false.
+  grade >= 80 is false.
+  grade >= 70 is false.
+  Line 69 is executed since line 68 is skipped. "F" is printed.
+  
+  
+4. Remember that without brackets only the first statement is attached to the if or else.
+So on line 100, the if is not part of the else. The ; is part of the else.
+The ; after the else is a very bad practice.
+We can respace the code as follows:
+
+if (grade >= 90) System.out.println("A");
+else;
+if (grade >= 80) System.out.println("B");
+else if (grade >= 70) System.out.println("C");
+else;
+System.out.println("F");
+
+  a. grade is 90
+  grade >= 90 is true. "A" is printed. else; is skipped.
+  grade >= 80 is true. "B" is printed.
+  Lines 103 and 104 are skipped since line 102 is executed.
+  "F" is printed.
+  
+  b. grade is 83
+  grade >= 90 is false. Line 101 is executed, but it does nothing.
+  grade >= 80 is true. "B" is printed.
+  Lines 103 and 104 are skipped since line 102 is executed.
+  "F" is printed.
+  
+  c. grade is 79
+  grade >= 90 is false. Line 101 is executed, but it does nothing.
+  grade >= 80 is false.
+  grade >= 70 is true (and line 102 is skipped). "C" is printed.
+  Line 104 is skipped since line 103 is executed.
+  "F" is printed.
+  
+  d. grade is 57
+  grade >= 90 is false. Line 101 is executed, but it does nothing.
+  grade >= 80 is false.
+  grade >= 70 is false. Line 104 is executed, but it does nothing.
+  "F" is printed.
+  
+  
+5.
+
+int i1 = 7;
+if (i1 == 7)
+{
+    System.out.println(i1++);
+}
+else if (i1 == 8) {System.out.println(++i1);}
+if (i1 == 8) System.out.println(++i1);
+else {} if (i1 == 9) {System.out.println(i1++);}
+System.out.println(i1);
+
+Output:
+7
+9
+9
+10
+
+Explanation:
+i1 is 7 on line 136.
+i1 == 7 is true, so line 139 is executed.
+Remember that i1++ is done after the printing.
+So 7 is printed, and i1 becomes 8.
+Line 141 is skipped since lines 137 to 140 were executed.
+i1 == 8 is true, so System.out.println(++i1); is executed.
+Remember that ++i1 is done before the printed.
+So i1 becomes 9, and 9 is printed.
+Then the else {} is skipped.
+i1 == 9 is true. Then 9 is printed, and i1 becomes 10.
+Finally, 10 is printed.
+  
+  
+6. Original code:
+
+if (6 > 3) System.out.println(5); System.out.println(9);
+else if (5 < 6) System.out.println(7); System.out.println(3);
+else System.out.println(3);
+
+Fixed code:
+
+if (6 > 3) {System.out.println(5); System.out.println(9);}
+else if (5 < 6) {System.out.println(7); System.out.println(3);}
+else System.out.println(3);
+
+Explanation: Originally, if (6 > 3) didn't enclose System.out.println(9);
+Then, the else on line 169 had no matching if block.
+(Note that there cannot be statements between matching if and else blocks.)
+Similarly, the if (5 < 6) originally didn't enclose System.out.println(3);
+
+After adding the brackets, both problems are solved.
+  
+  
+  
