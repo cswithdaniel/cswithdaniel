@@ -76,7 +76,7 @@ Challenge Problems:
 
 10. Print all prime numbers less than 100.
 
-11. Print all ordered pairs of primes (p, q) satisfying p, q <= 100.
+11. Print all ordered pairs of primes (p, q) satisfying p, q <= 50.
 
 12. Print the first 100 prime numbers.
 
