@@ -1,0 +1,24 @@
+1. Use a computer program to determine whether the following are prime:
+  a. 257
+  b. 997
+  c. 1001
+  d. 1003
+  e. 1573
+  f. 65537
+  g. 99587
+  h. 14589127
+  i. 32426899
+  j. 99999997
+
+2. Print all prime numbers less than 100.
+
+3. Print all ordered pairs of primes (p, q) satisfying p, q <= 50.
+
+4. Print all ordered triples of primes (p, q, r) satisfying p, q, r <= 15.
+
+5. Print the first 100 prime numbers.
+
+6. Print the first 100 prime numbers in the following format:
+The 1st prime number is 2.
+The 2nd prime number is 3.
+And so on
