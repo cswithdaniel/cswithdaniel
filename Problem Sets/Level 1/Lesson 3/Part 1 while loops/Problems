@@ -17,9 +17,9 @@ System.out.println(i);
 int u = 0;
 while (u < 4)
 {
-  int i = u * u;
-  u++;
-  System.out.println(i);
+    int i = u * u;
+    u++;
+    System.out.println(i);
 }
 
 
@@ -29,7 +29,7 @@ while (u < 4)
 int i = 0
 while (i < 5)
 {
-  System.out.println(i);
+    System.out.println(i);
 }
 
 
