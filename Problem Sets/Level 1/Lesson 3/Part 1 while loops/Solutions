@@ -1,0 +1,119 @@
+1.
+int i = 0;
+while (i < 5)
+{
+    System.out.println(i);
+    i++;
+}
+System.out.println(i);
+
+Output:
+0
+1
+2
+3
+4
+5
+
+Explanation:
+i = 0 (line 2)
+0 < 5 is true (line 3)
+0 is printed (line 5)
+i = 1 (line 6)
+1 < 5 is true (line 3)
+1 is printed (line 5)
+i = 2 (line 6)
+2 < 5 is true (line 3)
+2 is printed (line 5)
+i = 3 (line 6)
+3 < 5 is true (line 3)
+3 is printed (line 5)
+i = 4 (line 6)
+4 < 5 is true (line 3)
+4 is printed (line 5)
+i = 5 (line 6)
+5 < 5 is false (line 3)
+5 is printed (line 8)
+
+
+2.
+int u = 0;
+while (u < 4)
+{
+    int i = u * u;
+    u++;
+    System.out.println(i);
+}
+
+Output:
+0
+1
+4
+9
+
+Value of u after execution: 4
+Value of i after execution: does not exist
+
+Explanation:
+u = 0 (line 39)
+0 < 4 is true (line 40)
+i = 0 (line 42)
+u = 1 (line 43)
+0 is printed (line 44)
+1 < 4 is true (line 40)
+i = 1 (line 42)
+u = 2 (line 43)
+1 is printed (line 44)
+2 < 4 is true (line 40)
+i = 4 (line 42)
+u = 3 (line 43)
+4 is printed (line 44)
+3 < 4 is true (line 40)
+i = 9 (line 42)
+u = 4 (line 43)
+9 is printed (line 44)
+4 < 4 is false (line 40)
+i goes out of scope (line 45)
+
+Note that i has no value outside the while loop.
+The scope of i is only during lines 42-44.
+
+
+3.
+int i = 0;
+while (i < 5)
+{
+    System.out.println(i);
+    i++;
+}
+
+Explanation:
+Variable definitions need a semicolon at the end (line 81).
+i++ is needed since otherwise i remains at 0 (line 85).
+If i++ is not included then 0 is printed forever.
+
+
+4.
+int i = 0; //first integer from 0 to 20
+while (i <= 20)
+{
+    System.out.println(i);
+    i++; //goes to next integer
+}
+
+
+5.
+int i = 0; //first even integer from 0 to 20
+while (i <= 20)
+{
+    System.out.println(i);
+    i += 2; //goes to next even number
+}
+
+6.
+int i = 1; //first power of 2 from 1 to 10000
+while (i <= 10000)
+{
+    System.out.println(i);
+    i *= 2; //goes to next power of 2
+}
