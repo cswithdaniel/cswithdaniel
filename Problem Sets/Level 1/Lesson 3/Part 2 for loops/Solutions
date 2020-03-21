@@ -1,0 +1,118 @@
+1.
+for (int i = 0; i < 5; i++)
+{
+  System.out.println(i);
+}
+
+Output:
+0
+1
+2
+3
+4
+
+The variable i doesn't have a value after the loop is executed since it went out of scope once the for loop ended.
+
+Note: if you did
+int i;
+for (i = 0; i < 5; i++)
+{
+  System.out.println(i);
+}
+then the output would be the same, but i wouldn't go out of scope. The value of i would be 5 after the loop.
+
+
+2.
+for (int i = 0; i < 5; i++)
+{
+  System.out.println(i);
+  i++;
+}
+
+Output:
+0
+2
+4
+
+The variable i doesn't have a value after the loop is executed since it went out of scope once the for loop ended.
+
+
+3. Start from 0, go up to 20 (note the <= since 20 is included) and increase i by 1 each time.
+for (int i = 0; i <= 20; i++)
+{
+  System.out.println(i);
+}
+
+
+4. Start from 0, go up to 20, and increase i by 2 each time (i += 2 instead of i++ since even numbers only).
+for (int i = 0; i <= 20; i += 2)
+{
+  System.out.println(i);
+}
+
+
+5. Start from 1, go up to 10000, and multiply i by 2 each time (since you multiply a power of 2 by 2 to get to the next one).
+for (int i = 1; i <= 10000; i *= 2)
+{
+  System.out.println(i);
+}
+
+
+6. Use an if statement to check whether the number has a units digit of 4.
+for (int i = 0; i <= 100; i++)
+{
+  if (i % 10 != 4) {System.out.println(i);}
+}
+
+
+7. Keep track of a sum variable, then loop through the even integers from 0 to 100, adding them to the sum.
+int sum = 0;
+for (int i = 0; i <= 100; i += 2)
+{
+  sum += i;
+}
+System.out.println(sum);
+
+
+8. Keep track of a product variable, then loop through the even integers from 2 to 16, multiplying them to the product.
+int product = 1;
+for (int i = 2; i <= 16; i += 2)
+{
+  product *= i;
+}
+System.out.println(product);
+
+
+9. Keep track of a sum variable, then add the terms to the sum:
+int sum = 0;
+for (int i = 1; i <= 99; i++)
+{
+  sum += i * (i + 1);
+}
+System.out.println(sum);
+
+
+10. For part a:
+int f1 = 1;
+int f2 = 1;
+for (int i = 3; i <= 40; i++)
+{
+  //f3 is term i, f2 is term i - 1, f1 is term i - 2
+  int f3 = f1 + f2;
+  
+  //f2 is term i, f1 is term i - 1
+  f1 = f2;
+  f2 = f3;
+}
+System.out.println(f2); //term 40
+
+For part b, the only difference is that the numbers become too large to fit inside int:
+long f1 = 1;
+long f2 = 1;
+for (int i = 3; i <= 75; i++)
+{
+  long f3 = f1 + f2;
+  f1 = f2;
+  f2 = f3;
+}
+System.out.println(f2);
