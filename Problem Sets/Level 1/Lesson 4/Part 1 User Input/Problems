@@ -1,0 +1,72 @@
+1. Fix the errors:
+
+public class Main
+{
+  public static void main(String args)
+  {
+    System.out.print("Enter an integer: ");
+    int i = input.nextInt();
+    System.out.println("You entered " i);
+  }
+}
+
+
+2. Prompt the user for two integers and print their sum.
+
+Sample Output:
+Enter two integers: 5 7
+5 + 7 = 12
+
+
+3. Assume that the user enters
+4 5 7
+1 qwe 3
+abc def 56
+
+Determine the output of the following:
+Scanner input = new Scanner(System.in);
+int a = input.nextInt();
+int b = input.nextInt();
+System.out.println(a + b + input.nextInt());
+String s = input.next() + input.next();
+System.out.println(s + input.nextInt() + input.next());
+System.out.println(input.next());
+
+
+4. Prompt the user for three words and print them in reverse order.
+
+Sample Output:
+Enter three words: abc 567 q12
+q12 567 abc
+
+
+5. Prompt the user for an integer n.
+Then prompt the user for n integers.
+Finally, print their sum.
+
+Sample output:
+Enter an integer: 4
+Enter 4 integers: 1 9 -3 57
+The sum of the 4 integers is 64.
+
+
+6. Prompt the user for an integer. Return the letter grade that corresponds to this integer:
+90 or above: A
+80 to 89: B
+70 to 79: C
+69 or below: F
+
+Repeat this until the user enters a negative number.
+
+Sample Output:
+Enter an integer: 97
+A
+Enter an integer: 82
+B
+Enter an integer: 36
+F
+Enter an integer: 103
+A
+Enter an integer: 74
+C
+Enter an integer: -1
