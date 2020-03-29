@@ -1,0 +1,48 @@
+1.
+  a. What does a method have to do for it to be considered recursive?
+  b. What is a base case, and why should every recursive method have one?
+  c. Can every recursive method be written iteratively (without recursion)?
+  d. What are the benefits of writing iterative code compared to recursive code?
+  e. What are the benefits of writing recursive code compared to iterative code?
+ 
+2.
+  a. Create a recursive method that takes an integer n and returns the sum of the integers from 1 to n.
+  b. Determine the return value when 7 is passed into the method, and show all work (don't just do 1 + 2 + 3 + 4 + 5 + 6 + 7).
+  c. Determine what happens when -1 is passed into the method, and show all work.
+
+3. Determine the output:
+public class Main
+{
+    public static void main(String[] args)
+    {
+        p3(5);
+    }
+    public static void p3(int n)
+    {
+        if (n <= 0) {System.out.println(0);}
+        else
+        {
+            System.out.println(n);
+            p3(n - 1);
+        }
+    }
+}
+
+4. Determine why the following code causes an error:
+public class Main
+{
+    public static void main(String[] args)
+    {
+        p3(5);
+    }
+    public static void p3(int n)
+    {
+        if (n <= 0) {System.out.println(0);}
+        else
+        {
+            p3(n - 1);
+            System.out.println(n);
+            p3(n);
+        }
+    }
+}
