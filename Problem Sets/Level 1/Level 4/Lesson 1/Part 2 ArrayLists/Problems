@@ -1,0 +1,105 @@
+1.
+  a. In order to use ArrayList, you must import it. Name two statements that would import ArrayList.
+  b. Construct an empty ArrayList of String.
+  
+2. Fix all errors:
+public class Main
+{
+    public static void main(String[] args)
+    {
+        ArrayList<double> list;
+        list.add(2.7);
+        list.add(4);
+        list.add(5.3);
+        System.out.println(list);
+    }
+}
+
+3. Determine the output:
+ArrayList<String> listOfStrings = new ArrayList<String>();
+listOfStrings.add("Asdfghjkl");
+listOfStrings.add("qwerty");
+listOfStrings.add(1, "abcdefg");
+listOfStrings.add("okm");
+listOfStrings.add(1, "okm");
+listOfStrings.remove("okm");
+listOfStrings.set(1, "qwerty");
+listOfStrings.remove("qwerty");
+listOfStrings.remove(0);
+System.out.println(listOfStrings);
+for (String s : listOfStrings)
+{
+    System.out.println(s);
+}
+
+4. Determine the output:
+ArrayList<Integer> list = new ArrayList<Integer>();
+list.add(5);
+list.add(2);
+list.add(3);
+list.add(7);
+list.add(9);
+list.remove(2);
+System.out.println(list);
+
+5. Determine the output:
+ArrayList<Integer> list = new ArrayList<Integer>();
+list.add(3);
+list.add(5);
+list.add(7);
+list.add(9);
+list.remove(3);
+list.size();
+System.out.println(list);
+System.out.println(list.contains(3));
+System.out.println(list.size());
+System.out.println(list.get(2));
+list.set(1, 8);
+list.add(2, 4);
+list.add(1, 6);
+System.out.println(list);
+Integer i = list.get(2);
+Integer j = 4;
+list.remove(j);
+System.out.println(list);
+list.remove(i);
+System.out.println(list);
+
+6. Create a method that takes an ArrayList of Integer and removes all occurrences of 0 from the list.
+
+7. Create an ArrayList of Integer.
+  a. Add the integers from 1 to 100 to the ArrayList.
+  b. Set all multiples of 3 in the list to 0.
+  c. Remove all square numbers (including the newly created zeros) from the list.
+  d. Print all the elements of the list.
+
+8. Create a method that takes an integer n and returns an ArrayList of Integer containing the first n primes.
+
+9. This problem will show you the dangers of removing from an ArrayList.
+Consider the following code:
+
+int[] arr = {2, 5, 7, 2, 8, 3, 4, 0, 9, 6};
+ArrayList<Integer> list = new ArrayList<Integer>();
+for (int i : arr) {list.add(i);}
+for (int i = 0; i < list.size(); i++)
+{
+    if (list.get(i) % 2 == 0) {list.remove(i);}
+}
+System.out.println(list);
+
+a. Determine the output.
+b. Fix the code to make it successfully remove all even integers from arr.
+c. Create a method that takes an ArrayList of Integer and removes all even elements from the list.
+d. Consider the following code:
+
+   int[] arr = {2, 5, 7, 2, 8, 3, 4, 0, 9, 6};
+   ArrayList<Integer> list = new ArrayList<Integer>();
+   for (int i : arr) {list.add(i);}
+   for (Integer i : list)
+   {
+       if (i % 2 == 0) {list.remove(i);}
+   }
+   System.out.println(list);
+
+   The code will not work (and there is no immediate way to fix it).
+   You need to be extremely careful when removing from an ArrayList you are looping through.
