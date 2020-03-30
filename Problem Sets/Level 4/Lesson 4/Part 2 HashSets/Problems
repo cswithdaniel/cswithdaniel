@@ -1,0 +1,74 @@
+1. Create a method that takes an ArrayList of String and returns a copy of that ArrayList with no duplicates.
+The relative ordering of elements in the new ArrayList should be the same.
+Sample Input: {"qwerty", "asdfgh", "qwer", "123", "qwerty", "123", "zxcvbn", "asdfgh"}
+Sample Output: {"qwerty", "asdfgh", "qwer", "123", "zxcvbn"}
+
+
+2. Use a HashSet to do the following:
+Create a program that takes as user input an integer n.
+Then prompts n strings from the user.
+Afterward, print all the Strings without duplicates in any order (print at most 1 of each String).
+
+3. Determine the output:
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        HashSet<Integer> h = new HashSet<Integer>();
+        h.add(5);
+        h.add(7);
+        h.add(5);
+        h.add(8);
+        h.add(-1);
+        h.add(8);
+        h.remove(5);
+        int sum = 0;
+        for (int i : h)
+        {
+            sum += i;
+        }
+        System.out.println(sum);
+    }
+}
+
+4.
+  a. Create a class named RectangularPrism that has instance variables length, width, and height.
+  b. Create a constructor that sets those variables. Also, create get and set methods for each variable.
+  c. Create a toString() method.
+  d. Create an equals() method.
+  e. Create a hashCode() method.
+
+
+5. Consider the Pair class covered in class:
+class Pair<A, B>
+{
+    public A first;
+    public B second;
+    public Pair(A a, B b)
+    {
+        first = a;
+        second = b;
+    }
+    public void setFirst(A a)
+    {
+        first = a;
+    }
+    public A getFirst()
+    {
+        return first;
+    }
+    public void setSecond(B b)
+    {
+        second = b;
+    }
+    public B getSecond()
+    {
+        return second;
+    }
+}
+
+a. Create a toString() method inside the Pair class.
+b. Create an equals() method inside the Pair class.
+c. Create a hashCode() method inside the Pair class.
+d. Create a HashSet of Pair<Integer, String>. Verify that the HashSet properly removes all duplicates.
