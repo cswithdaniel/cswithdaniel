@@ -1,0 +1,71 @@
+Directions: For each of the following problems, determine the output.
+If there is an error or infinite recursion, then your answer should be "error" (without the quotes).
+
+1. Determine the output:
+public class Main
+{
+    public static void main(String[] args)
+    {
+        p1(3);
+    }
+    public static void p1(int n)
+    {
+        if (n < 0) {return;}
+        System.out.println(n);
+        p1(n - 1);
+        System.out.println(n);
+        p1(n - 2);
+    }
+}
+
+2. Determine the output:
+public class Main
+{
+    public static void main(String[] args)
+    {
+        p2(3);
+    }
+    public static void p2(int n)
+    {
+        p2(n - 1);
+        if (n < 0) {return;}
+        System.out.println(n);
+    }
+}
+
+3. Determine the output:
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println(recursiveMethod(2, 3));
+    }
+    public static int recursiveMethod(int m, int n)
+    {
+        if (m == 0 || n == 0) {return 1;}
+        return Math.max(recursiveMethod(m, n - 1), recursiveMethod(n, m - 1)) + 1;
+    }
+}
+
+4. Determine the output:
+public class MyClass
+{
+    public static void main(String[] args)
+    {
+        x(3);
+    }
+    public static void x(int n)
+    {
+        for (int i = 0; i < n; i++)
+        {
+            y(i);
+        }
+        System.out.println(n);
+    }
+    public static void y(int n)
+    {
+        System.out.println(n);
+        x(n - 1);
+    }
+}
+
