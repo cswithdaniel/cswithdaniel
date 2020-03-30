@@ -1,0 +1,24 @@
+1.
+  a. Explain how Bubble Sort works in general.
+  b. Explain how Selection Sort works in general.
+  c. Explain how Insertion Sort works in general.
+
+2. Perform Bubble Sort, Selection Sort, and Insertion Sort manually on the array {6, 9, 8, 4, 1}.
+
+3.
+  a. Create a method that takes in and sorts an ArrayList of Double using Bubble Sort.
+  b. Create a method that takes in and sorts an ArrayList of Double using Selection Sort.
+  c. Create a method that takes in and sorts an ArrayList of Double using Insertion Sort.
+  
+4. Create a method that uses selection sort to sort an array of int, except put the largest element at the end instead of putting the smallest element at the beginning.
+Example: on the array {6, 9, 8, 4, 1}, after each pass of the selection sort the array should be
+{6, 1, 8, 4, 9}
+{6, 1, 4, 8, 9}
+{4, 1, 6, 8, 9}
+{1, 4, 6, 8, 9}
+
+5.
+  a. What are the approximate runtimes of Bubble Sort, Selection Sort, and Insertion Sort?
+  b. Can Bubble Sort or Selection Sort handle sorting arrays of length 5000000 within a reasonable amount of time?
+  c. Can Insertion Sort handle sorting nearly sorted arrays of length 5000000 within a reasonable amount of time?
+  d. On average, can Insertion Sort handle sorting randomized arrays of length 5000000 within a reasonable amound of time?
