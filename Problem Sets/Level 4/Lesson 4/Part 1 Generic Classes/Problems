@@ -1,0 +1,65 @@
+1. What are the advantages of using generic classes?
+
+2. Create a generic class named Triple that has 3 type parameters and a variable for each type parameter.
+Create a constructor that sets those variables.
+Create get and set methods for each variable.
+
+3. Create a method named size in the MyArray class (see the video lesson) that returns the length of the array.
+
+4. Create a method named add in the MyArray class that takes an index and a value and inserts the value into the array at the index.
+
+5. Create a method named remove in the MyArray class that takes an index and removes the element at the given index.
+
+6. Create a method named contains in the MyArray class that takes a value and returns
+whether the value is equal to an element of the array. Use the equals() method.
+
+7. Create a method named remove in the MyArray class that takes a value and removes the first occurrence of the value from the array.
+If the value doesn't exist, do nothing. Use the equals() method.
+
+8. Fix all errors:
+public Pair
+{ 
+    A first;
+    B second;
+    public Pair<A, B>(A a, B b)
+    {
+        a = first;
+        b = second;
+    }
+    public void set(a, b)
+    {
+        first = a;
+        second = b;
+    }
+    public A getFirst()
+    {
+        return first;
+    }
+    public B getSecond()
+    {
+        return second;
+    }
+}
+
+9.
+  a. Why should a class such as Rectangle not be generic?
+  b. Consider the following code:
+  
+  class Rectangle<A, B>
+  {
+      A length;
+      B width;
+      public Rectangle(A l, B w)
+      {
+          length = l;
+          width = w;
+      }
+      public double area()
+      {
+          return length * width;
+      }
+  }
+  
+  Are you allowed to do the following without errors:
+  Rectangle<Integer, Integer> r = new Rectangle<Integer, Integer>(5, 7);
+  System.out.println(r.area());
