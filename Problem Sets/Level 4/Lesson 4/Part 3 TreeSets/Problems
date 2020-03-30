@@ -1,0 +1,76 @@
+1. Create a method that takes an ArrayList of Integer and returns a sorted copy of that ArrayList with no duplicates.
+Sample Input: {5, 7, 4, 6, 5, 6, 9, 7}
+Sample Output: {4, 5, 6, 7, 9}
+
+2. Determine the output:
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        TreeSet<Integer> t = new TreeSet<Integer>();
+        t.add(5);
+        t.add(7);
+        t.add(5);
+        t.add(8);
+        t.add(-1);
+        t.add(8);
+        t.remove(5);
+        int sum = 0;
+        for (int i : t)
+        {
+            sum += i;
+        }
+        System.out.println(sum);
+        System.out.println(t);
+    }
+}
+
+3.
+  a. Create a class named Point3D that contains 3 instance variables x, y, and z.
+  b. Create a constructor that sets the variables. Also, create get and set methods for each variable.
+  c. Create a toString() method.
+  d. Make Point3D implement Comparable<Point3D>.
+  Also, create a compareTo(Point3D other) method that compares based on
+  the x-coordinate, then y-coordinate for tiebreakers, then z-coordinate for tiebreakers.
+  For example, (1, 2, 5) comes before (2, 1, 4), which comes before (2, 2, 3), which comes before (2, 2, 4).
+  e. Create a TreeSet of Point3D and insert a few elements including duplicates.
+  Verify that the TreeSet removes all the duplicates.
+  Also verify that the TreeSet orders the elements properly.
+  
+4. Determine the output:
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        TreeSet<Integer> t1 = new TreeSet<Integer>();
+        t1.add(5);
+        t1.add(7);
+        t1.add(9);
+        t1.add(6);
+        t1.add(0);
+        for (int i : t1) {System.out.print(i);}
+        System.out.println();
+        
+        TreeSet<Integer> t2 = new TreeSet<Integer>(
+            new Comparator<Integer>()
+            {
+                public int compare(Integer a, Integer b)
+                {
+                    if (a % 2 == 0 && b % 2 != 0) {return 1;}
+                    if (a % 2 != 0 && b % 2 == 0) {return -1;}
+                    return new Integer(a).compareTo(b);
+                }
+            }
+            );
+        t2.add(5);
+        t2.add(7);
+        t2.add(9);
+        t2.add(6);
+        t2.add(0);
+        for (int i : t2) {System.out.print(i);}
+        System.out.println();
+    }
+}
+
