@@ -1,0 +1,17 @@
+1. Explain how Merge Sort works in general.
+
+2. Perform the merging process manually on {3, 4, 7, 9, 5, 7, 8, 11}.
+
+3. Perform merge sort manually on {7, 3, 9, 4, 8, 7, 5, 11}.
+
+4.
+  a. Create a method that takes as input an array of int and performs merge sort on the array.
+  b. Create a method that takes as input an ArrayList of Integer and performs merge sort on the array.
+
+
+Challenge Problem:
+
+5. An inversion in an array is a pair of elements such that the element to the left is greater than the element to the right.
+For example, {1, 3, 2, 5, 4} has 2 inversions (2, 3) and (4, 5), while {5, 4, 3, 2, 1} has 10 inversions (every pair of elements).
+Create a method that takes as input an array of int and returns the number of inversions in the array.
+Hint: Use merge sort.
