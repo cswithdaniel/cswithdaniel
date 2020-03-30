@@ -1,0 +1,9 @@
+1. Create a method that takes as input an integer n and prints "1" F(n) times, where F(n) is the nth fibonacci number.
+For example, if n = 6, then "1" should be printed 8 times.
+
+2. If we denote n choose k by c(n, k), then c(n, k) = c(n - 1, k - 1) + c(n - 1, k) always holds.
+Also, c(n, 0) = 1 always holds. Finally, c(n, k) = 0 whenever n < k.
+Create a recursive method that takes two integers n and k (assume they are positive) and returns n choose k.
+
+3. A ternary String is a String that only contains the characters '0', '1', and '2'.
+Create a method that takes as input an integer n and returns an ArrayList containing all ternary Strings of length n.
