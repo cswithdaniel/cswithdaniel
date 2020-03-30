@@ -1,14 +1,14 @@
 1.
-  a. Explain how Bubble Sort works in general.
-  b. Explain how Selection Sort works in general.
-  c. Explain how Insertion Sort works in general.
+  a. Explain how bubble sort works in general.
+  b. Explain how selection sort works in general.
+  c. Explain how insertion sort works in general.
 
-2. Perform Bubble Sort, Selection Sort, and Insertion Sort manually on the array {6, 9, 8, 4, 1}.
+2. Perform bubble sort, selection sort, and insertion sort manually on the array {6, 9, 8, 4, 1}.
 
 3.
-  a. Create a method that takes in and sorts an ArrayList of Double using Bubble Sort.
-  b. Create a method that takes in and sorts an ArrayList of Double using Selection Sort.
-  c. Create a method that takes in and sorts an ArrayList of Double using Insertion Sort.
+  a. Create a method that takes in and sorts an ArrayList of Double using bubble sort.
+  b. Create a method that takes in and sorts an ArrayList of Double using selection sort.
+  c. Create a method that takes in and sorts an ArrayList of Double using insertion sort.
   
 4. Create a method that uses selection sort to sort an array of int,
 except put the largest element at the end instead of putting the smallest element at the beginning.
@@ -19,7 +19,7 @@ Example: on the array {6, 9, 8, 4, 1}, after each pass of the selection sort the
 {1, 4, 6, 8, 9}
 
 5.
-  a. What are the approximate runtimes of Bubble Sort, Selection Sort, and Insertion Sort?
-  b. Can Bubble Sort or Selection Sort handle sorting arrays of length 5000000 within a reasonable amount of time?
-  c. Can Insertion Sort handle sorting nearly sorted arrays of length 5000000 within a reasonable amount of time?
-  d. On average, can Insertion Sort handle sorting randomized arrays of length 5000000 within a reasonable amound of time?
+  a. What are the approximate runtimes of bubble sort, selection sort, and insertion sort?
+  b. Can bubble sort or selection sort handle sorting arrays of length 5000000 within a reasonable amount of time?
+  c. Can insertion sort handle sorting nearly sorted arrays of length 5000000 within a reasonable amount of time?
+  d. On average, can insertion sort handle sorting randomized arrays of length 5000000 within a reasonable amound of time?
