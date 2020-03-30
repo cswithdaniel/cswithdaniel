@@ -1,0 +1,38 @@
+1. Determine the output:
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        HashMap<String, String> h = new HashMap<String, String>();
+        h.put("abc", "def");
+        h.put("a a", "qwe");
+        h.put("a a ", "okm");
+        h.put("a a", "zxc");
+        h.put("qwe", "123");
+        System.out.println(h.containsKey("a a"));
+        System.out.println(h.containsKey(" a a"));
+        System.out.println(h.containsValue("qwe"));
+        System.out.println(h.containsValue("123"));
+        System.out.println(h.get("qwe"));
+        System.out.println(h.size());
+    }
+}
+
+2. Create a method that takes a HashMap<Integer, Integer> and returns the sum of the keys of the HashMap.
+
+3. Create a method that takes a HashMap<Integer, Integer> and returns the sum of all keys and values of the HashMap.
+For example, if the input is [1=9, 3=6, 4=9, 6=8, 7=6] then the method should return 59.
+
+4. Create a method that takes a HashMap<String, Integer> and removes all mappings with value less than or equal to 0.
+For example, if the input is ["abc"=5, "qwe"=0, "asd"=7, "zxc"=9, "iop"=-2], then the resulting HashMap should be
+["abc"=5, "asd"=7, "zxc"=9].
+
+
+5. Create a generic class named MultiHashSet that acts like a HashSet that can contain multiple elements of the same value.
+You should have these methods:
+add(E element) - adds element to the set (E is the generic type)
+remove(E element) - removes an occurrence of element from the set
+contains(E value) - returns whether the set contains value
+size() - returns the number of elements in the set
+toString() - returns a string containing all the elements of the set
