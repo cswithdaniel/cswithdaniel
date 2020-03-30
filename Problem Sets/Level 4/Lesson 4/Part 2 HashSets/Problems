@@ -38,6 +38,8 @@ public class Main
   c. Create a toString() method.
   d. Create an equals() method.
   e. Create a hashCode() method.
+  f. Create a HashSet of RectangularPrism and insert a few elements including duplicates.
+  Verify that the HashSet removes all the duplicates.
 
 
 5. Consider the Pair class covered in class:
@@ -71,4 +73,5 @@ class Pair<A, B>
 a. Create a toString() method inside the Pair class.
 b. Create an equals() method inside the Pair class.
 c. Create a hashCode() method inside the Pair class.
-d. Create a HashSet of Pair<Integer, String>. Verify that the HashSet properly removes all duplicates.
+d. Create a HashSet of Pair<Integer, String> and insert a few elements including duplicates.
+Verify that the HashSet removes all the duplicates.
