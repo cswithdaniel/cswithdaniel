@@ -10,7 +10,8 @@
   b. Create a method that takes in and sorts an ArrayList of Double using Selection Sort.
   c. Create a method that takes in and sorts an ArrayList of Double using Insertion Sort.
   
-4. Create a method that uses selection sort to sort an array of int, except put the largest element at the end instead of putting the smallest element at the beginning.
+4. Create a method that uses selection sort to sort an array of int,
+except put the largest element at the end instead of putting the smallest element at the beginning.
 Example: on the array {6, 9, 8, 4, 1}, after each pass of the selection sort the array should be
 {6, 1, 8, 4, 9}
 {6, 1, 4, 8, 9}
