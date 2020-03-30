@@ -8,7 +8,9 @@
   a. Create a method that takes as input an array of int and performs merge sort on the array.
   b. Create a method that takes as input an ArrayList of Integer and performs merge sort on the array.
   
-5. What is the advantage of using merge sort instead of bubble, selection, and insertion sort?
+5.
+  a. What is the advantage of using merge sort instead of bubble, selection, and insertion sort?
+  b. Can merge sort handle sorting arrays of length 5000000 within a reasonable amount of time?
 
 
 Challenge Problem:
