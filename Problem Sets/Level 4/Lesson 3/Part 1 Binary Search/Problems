@@ -20,10 +20,10 @@
   a. determine whether a specific value is in a sorted double array.
   b. find the index of the first occurrence of a specific value in a sorted double array.
 
-6. Create a method that uses recursive binary search to
+5. Create a method that uses recursive binary search to
   a. determine whether a specific value is in a sorted double array.
   b. find the index of the first occurrence of a specific value in a sorted double array.
 
-8.
+6.
   a. What is the advantage of using binary search?
   b. When should you use sequential search instead of binary search?
