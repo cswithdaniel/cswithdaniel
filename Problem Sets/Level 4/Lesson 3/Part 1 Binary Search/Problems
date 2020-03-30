@@ -16,13 +16,13 @@
 
 3. Create a method that uses sequential search to find the index of the first occurrence of a specific value in an ArrayList of String.
 
-4. Create a method that uses iterative binary search to determine whether a specific value is in a sorted double array.
+4. Create a method that uses iterative binary search to
+  a. determine whether a specific value is in a sorted double array.
+  b. find the index of the first occurrence of a specific value in a sorted double array.
 
-5. Create a method that uses iterative binary search to find the index of the first occurrence of a specific value in a sorted double array.
-
-6. Create a method that uses recursive binary search to determine whether a specific value is in a sorted double array.
-
-7. Create a method that uses recursive binary search to find the index of the first occurrence of a specific value in a sorted double array.
+6. Create a method that uses recursive binary search to
+  a. determine whether a specific value is in a sorted double array.
+  b. find the index of the first occurrence of a specific value in a sorted double array.
 
 8.
   a. What is the advantage of using binary search?
