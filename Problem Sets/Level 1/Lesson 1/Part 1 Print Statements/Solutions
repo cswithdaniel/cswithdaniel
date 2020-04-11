@@ -1,0 +1,86 @@
+1.
+Original code:
+Public class 1Lesson
+{
+    system.out.print(asdf)
+}
+
+Fixed code:
+public class Lesson1
+{
+    public static void main(String[] args)
+    {
+        System.out.print("asdf");
+    }
+}
+
+Errors fixed:
+  Public should be lowercase
+  Class name cannot start with a number. 1Lesson is not valid.
+  A main method is needed.
+  The print statement needs a semicolon.
+  asdf needs quotes around it.
+  system should be System since Java is case sensitive.
+  
+
+2.
+  a. System.out.print("text"); will just print "text", while
+     System.out.println("text"); will print "text" and a new line afterward.
+     Anything printed immediately after a println() statement will be on a new line.
+
+  b. System.out.println("\"");
+     In general you need \" for a " to be printed.
+     
+  c. System.out.println("\\");
+     In general you need \\ for a \ to be printed.
+     
+  d. Printing "\n" prints a new line.
+     For example, System.out.println("abc\ndef"); will print abc on one line and def on the next.
+     
+  e. // comments out everything directly to the right of it.
+     Exception: if // is in quotes or a block comment then it isn't a comment.
+     For example,
+     System.out.println("//");
+     prints "//" while
+     //System.out.println("//");
+     doesn't do anything.
+
+
+3.
+System.out.print("qwerty");
+System.out.println("asdf");
+System.out.println("zxcv");
+System.out.println();
+//System.out.println();
+System.out.println("//");
+//System.out.println("//");
+
+Output:
+qwertyasdf
+zxcv
+
+//
+
+Notes:
+asdf is printed on the same line as qwerty since println prints a new line afterward, not before the text.
+//System.out.println();
+and
+//System.out.println("//");
+are comments, while 
+System.out.println("//");
+prints "//".
+
+
+4.
+public class Lesson1
+{
+    public static void main(String[] args)
+    {
+        System.out.println("JJJJJJJ    A     V       V    A    \\");
+        System.out.println("   J      A A     V     V    A A    \\");
+        System.out.println("   J     AAAAA     V   V    AAAAA    \\");
+        System.out.println("   J    A     A     V V    A     A    \\");
+        System.out.println("JJJJ   A       A     V    A       A    \\");
+    }
+}
+
