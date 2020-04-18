@@ -1,0 +1,95 @@
+1.
+  a. Initializing a variable also gives it a value, while declaring a variable doesn't.
+  b. Yes.
+  c. No.
+  d. No.
+  
+  
+2.
+  a. int, double, boolean, char, long, short, byte, float
+  b. byte, short, int, long
+  c. float, double
+     (double has more precision and takes up more space)
+  d. boolean stores true or false.
+     char stores a single character.
+ 
+ 
+3.
+Original code:
+int i;
+System.out.println(i);
+int i = 5;
+j = 7;
+System.out.println(k);
+
+Problems with code:
+i is initialized after it is printed (it should be initialized before it is printed).
+i is declared twice (int i; and int i = 5;). If you want to initialize it without declaring it then do i = 5;
+j is given a value before it is declared.
+k doesn't exist.
+
+Potential fix:
+int i = 5;
+System.out.println(i);
+int j = 7;
+System.out.println(j);
+
+
+4.
+int i = 5;
+boolean j = false;
+int k = 2;
+long l = 6;
+System.out.println("" + i + j + (k + l));
+
+
+5.
+int i = 1;
+int j = 2;
+int k = 3;
+System.out.println(i + "abc" + j + k);
+System.out.println(i + "abc" + (j + k));
+
+Output:
+1abc23
+1abc5
+
+
+6.
+int i = 9;
+int j = 2;
+i %= j;
+System.out.println("" + i + j);
+
+Output:
+12
+
+
+7.
+  a.
+  Output:
+  3
+  
+  b.
+  Output:
+  4
+  
+  
+8.
+Original code:
+double d1 = 5.7;
+double d2 = 9.5;
+d1 = d2;
+d2 = d1;
+System.out.println(d1 + " " + d2);
+
+Output:
+9.5 9.5
+
+Fixed code:
+double d1 = 5.7;
+double d2 = 9.5;
+double temp = d1;
+d1 = d2;
+d2 = temp;
+System.out.println(d1 + " " + d2);
