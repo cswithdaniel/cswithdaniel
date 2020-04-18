@@ -1,0 +1,180 @@
+1.
+  a. false. It can be in a for loop.
+  b. true.
+  c. false. break must be used in a loop (or switch, which you haven't learned about).
+  d. true.
+  e. false. The execution goes to the third statement inside the parentheses of the for loop.
+     For example, in the following code,
+     for (int i = 0; i < 5; i++)
+     {
+         //code here
+     }
+     once continue is used, the execution first goes to i++ then checking the condition afterwards.
+  f. true.
+  g. true.
+  h. true.
+  i. true.
+
+
+2.
+for (int i = 0; i < 17; i += 2)
+{
+    System.out.println(i);
+    if (i == 8) {continue;}
+    if (i == 12) {break;}
+    System.out.println(i);
+}
+
+Output:
+0
+0
+2
+2
+4
+4
+6
+6
+8
+10
+10
+12
+
+Notes:
+When i = 8, 8 is printed, then continue is executed, causing the program to go to the i += 2.
+When i = 12, 12 is printed, then break is executed, ending the loop.
+
+
+3.
+for (int i = 0; i < 5; i++)
+{
+    for (int j = 0; j < 6; j++)
+    {
+        System.out.print(i + j);
+    }
+    System.out.println();
+}
+
+Output:
+012345
+123456
+234567
+345678
+456789
+
+
+4.
+for (int i = 0; i < 5; i++)
+{
+    if (i == 2) {continue;}
+    if (i == 4) {break;}
+    for (int j = 0; j < 6; j++)
+    {
+        if (j == 2) {continue;}
+        if (j == 4) {break;}
+        System.out.print(i + j);
+    }
+    System.out.println();
+}
+
+Output:
+013
+124
+346
+
+
+5.
+for (int a = 0; a < 2; a++)
+{
+    for (int b = 0; b < 2; b++)
+    {
+        for (int c = 0; c < 2; c++)
+        {
+            for (int d = 0; d < 2; d++)
+            {
+                System.out.println("" + a + b + c + d);
+            }
+        }
+    }
+}
+
+Output:
+0000
+0001
+0010
+0011
+0100
+0101
+0110
+0111
+1000
+1001
+1010
+1011
+1100
+1101
+1110
+1111
+
+
+6.
+for (int i = 14; i <= 19; i++)
+{
+    for (int j = 14; j <= 19; j++)
+    {
+        System.out.println("(" + i + ", " + j + ")");
+    }
+}
+
+
+7.
+for (int i = -5; i <= 5; i += 2)
+{
+    for (int j = i + 2; j <= 5; j += 2)
+    {
+        System.out.println("(" + i + ", " + j + ")");
+    }
+}
+
+Notes:
+Note that i <= 5 is used instead of i < j since j is not defined.
+int j = i + 2 ensures that i < j and that j is odd (since i is odd).
+i += 2 and j += 2 ensures that i and j stay odd.
+
+
+8.
+for (int i = 0; i < 5; i++)
+{
+    for (int j = 0; j < 5; j++)
+    {
+        for (int k = 0; k < 5; k++)
+        {
+            System.out.print(".");
+        }
+        System.out.println();
+    }
+    System.out.println();
+}
+
+Note: you could also do
+for (int i = 0; i < 5; i++)
+{
+    for (int j = 0; j < 5; j++)
+    {
+        System.out.println(".....");
+    }
+    System.out.println();
+}
+
+
+9.
+for (int i = 0; i <= 10; i++)
+{
+    for (int j = i; j <= 2 * i; j++)
+    {
+        System.out.println("(" + i + ", " + j + ")");
+    }
+}
+
+
+
+Problems 10-12 will be covered in the next lesson part.
