@@ -1,0 +1,125 @@
+1.
+/*
+System.out.println("a");
+System.out.println("b");
+//*/
+///*
+System.out.println("//");
+//System.out.println("//");
+//*/
+
+Output:
+//
+
+Explanation:
+Lines 2-5 are commented out by a block comment.
+Lines 6 and 9 are not a block comment since both are commented out by // before the /* and */.
+Therefore, lines 7 and 8 are not in a block comment.
+Line 7 prints "//".
+Line 8 is commented out by // (a line comment).
+
+
+2.
+System.out.println(5 / 2);
+System.out.println(5 / 2.0);
+System.out.println(5.0 / 2);
+System.out.println(5.0 / 2.0);
+System.out.println(5 * 2);
+System.out.println(5 * 2.0);
+System.out.println(5.0 * 2);
+System.out.println(5.0 * 2.0);
+System.out.println(5 % 2);
+System.out.println(6 % 2);
+System.out.println(-9 % 2);
+System.out.println(5 % 1.4);
+System.out.println(5.6 % 1.9);
+
+Output:
+2
+2.5
+2.5
+2.5
+10
+10.0
+10.0
+10.0
+1
+0
+-1
+0.8
+1.8
+
+Notes:
+5 / 2 is integer division, while 5 / 2.0, 5.0 / 2, and 5.0 / 2.0 are not integer division.
+Similar reasoning for the multiplication.
+-9 % 2 is -1 since if the first operand of % is negative then the result is negative.
+Note that the last two have a little bit of imprecision, and that any non-integer computation can have imprecision.
+
+
+3.
+System.out.println("1 + 1 = " + 1 + 1);
+System.out.println("1 + 1 = " + (1 + 1));
+System.out.println(1 + 1);
+System.out.println("2 * 3 = " + 2 * 3);
+System.out.println("7 / 2 = " + 7 / 2);
+System.out.println(1 + 1 + " = 1 + 1 = " + 1 + 1);
+System.out.println(1 + 2 * 5 % 3 - 6);
+
+Output:
+1 + 1 = 11
+1 + 1 = 2
+2
+2 * 3 = 6
+7 / 2 = 3
+2 = 1 + 1 = 11
+-4
+
+Notes:
+On line 58 addition goes from left to right, so "1 + 1 = " + 1 + 1 is "1 + 1 = 1" + 1, which is "1 + 1 = 11"
+On line 59, the expression in parentheses is computed first.
+On lines 61 and 62, * and / come before + in the order of operations.
+Line 63 is computed the following way:
+1 + 1 + " = 1 + 1 = " + 1 + 1
+2 + " = 1 + 1 = " + 1 + 1
+"2 = 1 + 1 = " + 1 + 1
+"2 = 1 + 1 = 1" + 1
+"2 = 1 + 1 = 11"
+On line 64, * and % have the same priority (above + and -). Therefore,
+1 + 2 * 5 % 3 - 6 = 1 + 10 % 3 - 6 = 1 + 1 - 6 = 2 - 6 = -4.
+
+
+4.
+Original code:
+Public class 2FullOfErrors
+{
+  system.out.Println("qwerty");
+  public void main(String args)
+  {
+    System.println("asdfgh");
+}
+System.out.println(zxcvbn);
+System.out.println("1 + 1 = " (1 + 1));
+
+Fixed code:
+public class TooFullOfErrors
+{
+    public static void main(String[] args)
+    {
+        System.out.println("qwerty");
+        System.out.println("asdfgh");
+        System.out.println("zxcvbn");
+        System.out.println("1 + 1 = " + (1 + 1));
+    }
+}
+
+Errors fixed:
+public is lowercase.
+The class name cannot start with a number.
+All statements must be inside the main method.
+The main method needs a static and is missing [] after String.
+A } is missing.
+A + is missing between "1 + 1 = " and (1 + 1).
+System is uppercase.
+println is lowercase.
+An out is missing between one of the System and println.
+zxcvbn needs to be in quotes.
