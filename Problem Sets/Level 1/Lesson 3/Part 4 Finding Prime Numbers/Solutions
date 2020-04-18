@@ -1,0 +1,124 @@
+1.
+int n = 257; //change this for different parts of this problem
+boolean prime = true;
+for (int i = 2; i < n; i++)
+{
+    if (n % i == 0) {prime = false;}
+}
+System.out.println(prime);
+
+  a. 257 is prime.
+  b. 997 is prime.
+  c. 1001 is not prime.
+  d. 1003 is not prime.
+  e. 1573 is not prime.
+  f. 65537 is prime.
+  g. 99587 is not prime.
+  h. 14589127 is not prime.
+  i. 32426899 is not prime.
+  j. 99999997 is not prime.
+
+
+2.
+for (int i = 2; i <= 100; i++)
+{
+    boolean prime = true;
+    for (int j = 2; j < i; j++)
+    {
+        if (i % j == 0) {prime = false;}
+    }
+    if (prime) {System.out.println(i);}
+}
+
+
+3. (There are more correct solutions.)
+for (int p = 2; p <= 50; p++)
+{
+    boolean pPrime = true;
+    for (int d = 2; d < p; d++)
+    {
+        if (p % d == 0) {pPrime = false;}
+    }
+    if (pPrime)
+    {
+        for (int q = 2; q <= 50; q++)
+        {
+            boolean qPrime = true;
+            for (int d = 2; d < q; d++)
+            {
+                if (q % d == 0) {qPrime = false;}
+            }
+            if (qPrime) {System.out.println("(" + p + ", " + q + ")");}
+        }
+    }
+}
+
+
+4. (There are more correct solutions.)
+for (int p = 2; p <= 15; p++)
+{
+    boolean pPrime = true;
+    for (int d = 2; d < p; d++)
+    {
+        if (p % d == 0) {pPrime = false;}
+    }
+    if (pPrime)
+    {
+        for (int q = 2; q <= 15; q++)
+        {
+            boolean qPrime = true;
+            for (int d = 2; d < q; d++)
+            {
+                if (q % d == 0) {qPrime = false;}
+            }
+            if (qPrime)
+            {
+                for (int r = 2; r <= 15; r++)
+                {
+                    boolean rPrime = true;
+                    for (int d = 2; d < r; d++)
+                    {
+                        if (r % d == 0) {rPrime = false;}
+                    }
+                    if (rPrime) {System.out.println("(" + p + ", " + q + ", " + r + ")");}
+                }
+            }
+        }
+    }
+}
+
+
+5.
+int count = 0;
+for (int i = 2; count < 100; i++)
+{
+    boolean prime = true;
+    for (int j = 2; j < i; j++)
+    {
+        if (i % j == 0) {prime = false;}
+    }
+    if (prime) {count++; System.out.println(i);}
+}
+
+
+6.
+int count = 0;
+for (int i = 2; count < 100; i++)
+{
+    boolean prime = true;
+    for (int j = 2; j < i; j++)
+    {
+        if (i % j == 0) {prime = false;}
+    }
+    if (prime)
+    {
+        count++;
+        System.out.print("The " + count);
+        if (count % 100 == 11 || count % 100 == 12 || count % 100 == 13) {System.out.print("th");}
+        else if (count % 10 == 1) {System.out.print("st");}
+        else if (count % 10 == 2) {System.out.print("nd");}
+        else if (count % 10 == 3) {System.out.print("rd");}
+        else {System.out.print("th");}
+        System.out.println(" prime number is " + i + ".");
+    }
+}
