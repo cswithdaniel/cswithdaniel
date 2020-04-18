@@ -1,0 +1,93 @@
+1.
+System.out.println(6 < 7 && 8 > 6); //true && true, which is true
+System.out.println(6 < 7 || 8 > 6); //true || true, which is true
+System.out.println(6 < 7 ^ 8 > 6); //true ^ true, which is false
+System.out.println(6 % 2 == 0 && !(6 > 0)); //true && !true, which is true && false, which is false
+System.out.println(6 % 2 == 0 || !(6 > 0)); //true || !true, which is true || false, which is true
+System.out.println(6 % 2 == 0 ^ !(6 > 0)); //true ^ !true, which is true ^ false, which is true
+System.out.println(true || false && false); //true || (false && false), which is true || false, which is true
+System.out.println(6 % 2 == 0 || 6 > 0 && 6 < 5); //true || true && false, which is true || false, which is true
+System.out.println(6 % 2 == 0 && 6 > 0 || 6 < 5); //true && true || false, which is true || false, which is true
+System.out.println(6 % 2 == 0 ^ 6 > 0 || 6 < 5); //true ^ true || false, which is false || false, which is false
+System.out.println(6 % 2 == 0 || 6 > 0 ^ 6 < 5); //true || true ^ false, which is true || true, which is true
+
+Full Output:
+true
+true
+false
+false
+true
+true
+true
+true
+true
+false
+true
+
+
+2.
+  a. Yes.
+  b. No.
+  c. No.
+  d. The next statement is the only statement included in the if or else block.
+
+
+3. The two pieces of code look different, but since Java is not space sensitive, they are the same.
+
+
+4.
+if (6 < 7 && 8 > 6)
+{
+    if(6 < 7 || 8 > 6) System.out.println("a");
+    else System.out.println("b");
+    System.out.println("c");
+}
+else
+{
+    if(6 < 7 ^ 8 > 6) System.out.println("d");
+    else System.out.println("e");
+    System.out.println("f");
+}
+
+Output:
+a
+c
+
+Explanation:
+6 < 7 && 8 > 6 is true, so lines 41 through 43 are executed.
+6 < 7 || 8 > 6 is true, so a is printed.
+Then the else on line 42 is skipped.
+Then c is printed (line 43 is not part of the else).
+Then lines 45 through 50 are skipped since the corresponding if was already executed.
+
+
+5.
+int i = 6;
+if (i % 2 == 0) {i /= 2;}
+if (i % 2 != 0) {i = 3 * i + 1;}
+else
+{
+    i /= 2;
+}
+if (i % 2 == 0) {i /= 2;}
+else
+{
+    i = 3 * i + 1;
+}
+if (i == 1) {System.out.println(i);}
+else {System.out.print("not done");}
+System.out.println("qwerty");
+
+Output:
+not doneqwerty
+
+Explanation:
+i is 6 on line 65.
+6 % 2 == 0 is true (line 66), so i becomes 6 / 2, which is 3.
+6 % 2 != 0 is false (line 67), so line 67 is skipped and line 70 is executed.
+Then i becomes 3 / 2, which is 1.
+i % 2 == 0 is false (line 72), so line 72 is skipped and line 75 is executed.
+Then i becomes 3 * 1 + 1, which is 4.
+i == 1 is false, so line 77 is skipped and line 78 is executed.
+Then "not done" is printed (without a new line at the end).
+Then "qwerty" is printed (in the same line as "not done").
