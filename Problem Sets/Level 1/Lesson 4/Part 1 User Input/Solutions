@@ -1,0 +1,122 @@
+1.
+Original code:
+public class Main
+{
+  public static void main(String args)
+  {
+    System.out.print("Enter an integer: ");
+    int i = input.nextInt();
+    System.out.println("You entered " i);
+  }
+}
+
+Fixed code:
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter an integer: ");
+        int i = input.nextInt();
+        System.out.println("You entered " + i);
+    }
+}
+
+Errors fixed:
+Scanner needs to be imported, and a Scanner must be created.
++ needs to be added between "You entered " and i.
+The main method needs [] after String.
+
+
+2.
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter two integers: ");
+        int i = input.nextInt();
+        int j = input.nextInt();
+        System.out.println(i + " + " + j + " = " + (i + j));
+    }
+}
+
+
+3.
+Code:
+Scanner input = new Scanner(System.in);
+int a = input.nextInt();
+int b = input.nextInt();
+System.out.println(a + b + input.nextInt());
+String s = input.next() + input.next();
+System.out.println(s + input.nextInt() + input.next());
+System.out.println(input.next());
+
+User input:
+4 5 7
+1 qwe 3
+abc def 56
+
+Output:
+16
+1qwe3abc
+def
+
+
+4.
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter three words: ");
+        String a = input.next();
+        String b = input.next();
+        String c = input.next();
+        System.out.println(c + " " + b + " " + a);
+    }
+}
+
+
+5.
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter an integer: ");
+        int n = input.nextInt();
+        System.out.print("Enter " + n + " integers: ");
+        int sum = 0;
+        for (int i = 0; i < n; i++)
+        {
+            sum += input.nextInt();
+        }
+        System.out.println("The sum of the " + n + " integers is " + sum + ".");
+    }
+}
+
+
+6.
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        while (true)
+        {
+            System.out.print("Enter an integer: ");
+            int g = input.nextInt();
+            if (g < 0) {break;}
+            if (g >= 90) {System.out.println("A");}
+            else if (g >= 80) {System.out.println("B");}
+            else if (g >= 70) {System.out.println("C");}
+            else {System.out.println("F");}
+        }
+    }
+}
