@@ -14,7 +14,7 @@ System.out.println(6 % 2 == 0 || 6 > 0 ^ 6 < 5);
 2.
   a. Can an if block exist without an else block?
   b. Can an else block exist without an if statement?
-  c. Can an if block be followed by more than one else block?
+  c. Can an if block be directly followed by more than one else block?
   d. What happens when an if block or else block has no brackets?
   
 3. Find all differences between the following blocks of code:
