@@ -1,0 +1,58 @@
+1. Determine the output:
+int u = 7;
+switch (u)
+{
+    case 1: System.out.println("a");
+    case 7: System.out.println("b");
+    case 9: System.out.println("c"); break;
+    default: System.out.println("d");
+}
+
+2. Determine the output:
+int u = 7;
+switch (u + 3)
+{
+    case 1: System.out.println("a");
+    case 7: System.out.println("b");
+    case 9: System.out.println("c"); break;
+    default: System.out.println("d");
+}
+
+3. Determine the output:
+for (int u = 0; u < 10; u++)
+{
+    switch (u)
+    {
+        case 1: System.out.println("a");
+        case 7: System.out.println("b");
+        case 9: System.out.println("c"); break;
+        default: System.out.println("d");
+    }
+}
+
+4. Determine the output:
+for (int i = 0; i < 5; i++)
+{
+    switch (3 * i)
+    {
+        case -3: i = 1; break;
+        case 0: i = -1;
+        case 2: i = -2;
+        case 3: System.out.println(i); break;
+        case 6: System.out.println(3 + i);
+        default: System.out.println(i * i);
+    }
+}
+
+5. What is wrong with the following code? Explain in detail what would happen when this code is executed.
+for (int i = 0; i < 5; i++)
+{
+    switch (3 * i)
+    {
+        case 0: i = -1;
+        case 2: i = -2;
+        case 3: System.out.println(i); break;
+        case 6: System.out.println(3 + i);
+        default: System.out.println(i * i);
+    }
+}
