@@ -1,0 +1,76 @@
+1. Fix all errors.
+
+int[] arr1 = new int {4, 7, 8, 6};
+Int[] arr2 = {4, 7, 8, 6};
+int[] arr3 = {4, 7.8, 6};
+arr3 = {2, 3, 4, 6};
+int[] arr4 = {4, 7.8, 6};
+arr4[0] = 2;
+arr4[1] = 3;
+arr4[2] = 4;
+arr4[3] = 6;
+int[] arr5 = new int[];
+arr5 = {4, 7, 8, 6}
+int[] arr6 = new int[];
+arr6[0] = 2;
+arr6[1] = 3;
+arr6[2] = 4;
+arr6[3] = 6;
+int[] arr0 = new int[4];
+for (i = 0; i < arr0.length, i++)
+{
+    arr0[i] = i
+}
+
+2. Determine the output:
+int[] arr1 = new int[] {4, 2, 3, 6};
+int[] arr2 = new int[] {3, 6, 9, 2, 4, 6, 8, 11};
+for (int i = 0; i < arr1.length; i++)
+{
+    System.out.println(arr1[i] + arr2[i]);
+}
+
+3. Determine the output:
+int[] arr1 = new int[] {4, 2, 3, 6};
+int[] arr2 = new int[] {3, 6, 9, 2, 4, 6, 8, 11};
+for (int i : arr1)
+{
+    System.out.print(arr2[i]);
+}
+System.out.println();
+
+4. Determine the output:
+int[] arr = new int[5];
+System.out.println(arr.length);
+for (int i = 0; i < 4; i++)
+{
+    arr[i] = 2 * i;
+}
+for (int i : arr)
+{
+    System.out.println(i);
+}
+
+5.
+  a. Create an array with values 5.7, 6.8, 9.2, 7.9, 5.7, and 3.4 (in that order).
+  b. Print the elements of the array using a loop.
+  c. Print the product of the elements of the array using a loop.
+  
+6.
+  a. Create an array that contains the square numbers from 0 to 10000 inclusive.
+  b. Print the sum of the elements of the array using a loop.
+
+7.
+  a. Prompt the user for an integer n. Then prompt the user for n integers and save them into an array.
+  b. Then repeat the following:
+         Prompt the user for an index.
+         If the index is out of bounds, stop.
+         Otherwise, print the element at the index the user enters.
+
+8. The 0th fibonacci number is 0.
+The 1st fibonacci number is 1.
+Every fibonacci number is the sum of the previous two fibonacci numbers.
+Prompt the user for an integer n.
+Then create an array that contains the 0th fibonacci number through the nth fibonacci number.
+Then print the array.
+For example, if the user enters 6, then {0, 1, 1, 2, 3, 5, 8} (or something similar) should be printed.
