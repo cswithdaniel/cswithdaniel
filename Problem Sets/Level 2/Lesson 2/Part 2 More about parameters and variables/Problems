@@ -1,0 +1,91 @@
+1. Determine the output:
+public class Main
+{
+    public static double fun(int a, int b)
+    {
+        return a * b;
+    }
+    public static double fun(double a, int b)
+    {
+        return a + b;
+    }
+    public static double fun(int a, double b)
+    {
+        return a - b;
+    }
+    public static double fun(double a, double b)
+    {
+        return a / b;
+    }
+    public static void main(String[] args)
+    {
+        System.out.println(fun(4, 5));
+        System.out.println(fun(4.0, 6));
+        System.out.println(fun(6, 7.0));
+        System.out.println(fun(6.1, 6.7));
+    }
+}
+
+
+2. Fix all errors then determine the output:
+public class Main
+{
+    public static int fun(double a, int b)
+    {
+        return a + b;
+    }
+    public static int fun(int a, double b)
+    {
+        return a - b;
+    }
+    public static void main(String[] args)
+    {
+        System.out.println(fun(4.0, 6));
+        System.out.println(fun(6, 7.0));
+    }
+}
+
+
+3. True or false:
+  a. Local variables (defined in a given method) can be accessed from other methods.
+  b. Variables in a loop can be accessed outside the loop.
+  c. Variables defined immediately before a block can be accessed from the block.
+  d. Static methods can be accessed from any method in the same class.
+  e. The order of methods within a class matters.
+  f. The order of static variables matters in some cases.
+  g. Variables defined inside an else block disappear when the block ends.
+  h. All local variables must be initialized.
+  i. All local variables must be initialized in order to be printed.
+  j. All static variables must be initialized in order to be printed.
+
+
+4. Create a method that takes in as input 2 integers a, b and a char c.
+If c is ‘+’, return a + b
+If c is ‘-’, return a – b
+If c is ‘*’ return a * b
+If c is ‘/’ return a / b
+If c is ‘%’ return a % b
+Otherwise return 0
+
+
+5. Create a method that takes in as input an array of Strings and
+returns a String equivalent to the concatenation of all the Strings in the array.
+
+
+6. Identify all errors:
+public class Main
+{
+    public static int fun(double a, int b)
+    {
+    }
+    public static int fun(int a, double b)
+    {
+    }
+    public static void main(String[] args)
+    {
+        fun(4.0, 6);
+        fun(6, 7.0);
+        fun(4, 6);
+        fun(4.0, 7.8);
+    }
+}
