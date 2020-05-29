@@ -48,9 +48,9 @@ public class Main
 
 3. True or false:
   a. Local variables (defined in a given method) can be accessed from other methods.
-  b. Variables in a loop can be accessed outside the loop.
+  b. Variables defined in a loop can be accessed outside the loop.
   c. Variables defined immediately before a block can be accessed from the block.
-  d. Static methods can be accessed from any method in the same class.
+  d. Static variables can be accessed from any method in the same class.
   e. The order of methods within a class matters.
   f. The order of static variables matters in some cases.
   g. Variables defined inside an else block disappear when the block ends.
