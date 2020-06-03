@@ -12,7 +12,27 @@
   k. Instance methods can be accessed without an object.
   l. A variable of type String and a variable of type int can be defined in the same statement.
   
-2. Count the number of instance variables and instance methods:
+2. Count the number of instance variables and instance methods. Then create 3 instances of each example.
+Then demonstrate the usage of every method by calling each one in the main method.
+a.
+class Circle
+{
+    double radius;
+    public Circle(double r)
+    {
+        radius = r;
+    }
+    public double area()
+    {
+        return Math.PI * radius * radius;
+    }
+    public double circumference()
+    {
+        return 2 * Math.PI * radius;
+    }
+}
+
+b.
 class ClassName
 {
     int a, b;
@@ -26,14 +46,18 @@ class ClassName
   b. Create a constructor that properly sets those variables using parameters.
   c. Create a method named volume that takes no parameters and returns the volume (length * width * height).
   d. Create 3 RectangularPrism objects in the main method and print the volume of each RectangularPrism.
-
+  
 4.
   a. Create a class named Person that contains instance variables name, email, phoneNumber, and age.
      The name, email, and phoneNumber variables have type String, but the age variable has type int.
   b. Create a constructor that sets the instance variables using parameters.
   c. Create a method named display that takes no parameters and prints all the information of the Person.
   d. Create a method named isAdult that takes no parameters and returns a boolean indicating whether the age is at least 18.
-  e. Create a class named Group that contains a Person array as an instance variable.
-  f. Create a constructor that sets the instance variable using a parameter (the parameter should also be a Person array).
-  g. Create a method named display that takes no parameters and prints all the information of every Person in the array.
-  h. Create a method named numberOfAdults that takes no parameters and returns the number of adults in the group.
+  e. Create 3 instances of Person and display the information of each of them.
+  f. Create a class named Group that contains a Person array as an instance variable.
+  g. Create a constructor that sets the instance variable using a parameter (the parameter should also be a Person array).
+  h. Create a method named display that takes no parameters and prints all the information of every Person in the array.
+  i. Create a method named numberOfAdults that takes no parameters and returns the number of adults in the group.
+  j. Create a Person array that contains the 3 instances of Person created in part e.
+  k. Create a Group, passing the array into the constructor.
+  l. Test the display and numberOfAdults methods to make sure they work.
