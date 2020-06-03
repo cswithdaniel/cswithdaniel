@@ -1,0 +1,39 @@
+1. Determine whether the following statements are true or false:
+  a. Instance variables can be accessed in the main method.
+  b. Constructors can return things.
+  c. Constructors must have void in their header since they don't return anything.
+  d. Constructors must have the same name as the class they are in.
+  e. Instance methods must have parameters.
+  f. Static methods must have parameters.
+  g. All methods must have a pair of parentheses when called or defined.
+  h. Parameters of a method cannot be accessed outside the method.
+  i. Instance methods cannot return anything.
+  j. Instance variables can be accessed without an object.
+  k. Instance methods can be accessed without an object.
+  l. A variable of type String and a variable of type int can be defined in the same statement.
+  
+2. Count the number of instance variables and instance methods:
+class ClassName
+{
+    int a, b;
+    public ClassName(int x, int y, int z) {}
+    public void x() {}
+    public int y(int u) {return u;}
+}
+
+3.
+  a. Create a class named RectangularPrism that has instance variables length, width, and height (of type double).
+  b. Create a constructor that properly sets those variables using parameters.
+  c. Create a method named volume that takes no parameters and returns the volume (length * width * height).
+  d. Create 3 RectangularPrism objects in the main method and print the volume of each RectangularPrism.
+
+4.
+  a. Create a class named Person that contains instance variables name, email, phoneNumber, and age.
+     The name, email, and phoneNumber variables have type String, but the age variable has type int.
+  b. Create a constructor that sets the instance variables using parameters.
+  c. Create a method named display that takes no parameters and prints all the information of the Person.
+  d. Create a method named isAdult that takes no parameters and returns a boolean indicating whether the age is at least 18.
+  e. Create a class named Group that contains a Person array as an instance variable.
+  f. Create a constructor that sets the instance variable using a parameter (the parameter should also be a Person array).
+  g. Create a method named display that takes no parameters and prints all the information of every Person in the array.
+  h. Create a method named numberOfAdults that takes no parameters and returns the number of adults in the group.
