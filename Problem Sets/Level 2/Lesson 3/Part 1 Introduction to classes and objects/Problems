@@ -46,7 +46,8 @@ class ClassName
   b. Create a constructor that properly sets those variables using parameters.
   c. Create a method named volume that takes no parameters and returns the volume (length * width * height).
   d. Create 3 RectangularPrism objects in the main method and print the volume of each RectangularPrism.
-  
+
+Challenge Problem:
 4.
   a. Create a class named Person that contains instance variables name, email, phoneNumber, and age.
      The name, email, and phoneNumber variables have type String, but the age variable has type int.
