@@ -1,0 +1,56 @@
+1. Determine the output:
+public class Problem1
+{
+    public static void main(String[] args)
+    {
+        new Something(5, 7);
+        new Something(2, 3, "abc");
+        new Something(5, 7).display();
+        new Something(2, 3, "abc").display();
+    }
+}
+class Something
+{
+    int a, b;
+    String c;
+    public Something(int a, int b)
+    {
+        this.a = a;
+        b = this.b;
+        c = "" + a + b;
+    }
+    public Something(int a, int b, String s)
+    {
+        this(a, b);
+        c = s;
+    }
+    public void display()
+    {
+        System.out.println(a + " " + b + " " + c);
+    }
+}
+
+
+2.
+  a. Create a class named BankAccount that contains an instance variable balance.
+  b. Create a constructor that takes in an int and properly sets the balance variable.
+  c. Create another constructor that has no parameters and sets the balance variable to 0.
+  d. Create an instance method deposit that takes in an int and adds that int to the balance if it is positive.
+  e. Create an instance method withdraw that takes in an int and subtracts that int from the balance.
+     If the parameter is greater than the balance or less than 0 then do nothing.
+  f. Create an instance method getBalance that takes no parameters and returns the balance.
+
+
+3.
+  a. Create a class named City that has instance variables name and population (name is a String, population is an int).
+  b. Create a constructor that sets the instance variables using parameters.
+  c. Create a method named display that displays all the instance variables.
+  d. Create 5 instances of City with any name and population (in the main method of your program).
+  e. Call the display method for each of the 5 instances of City.
+  f. Create an array of Cities (City[]) of length 5. Fill the array of cities with the 5 cities you created.
+  g. Create a class named Country that has instance variables name and continent (both of type String).
+  h. Create an instance variable in Country named cities of type City[].
+  i. Create a constructor in Country that takes two Strings and a City[] and sets the variables using the parameters.
+  j. Create a method named totalPopulation that returns the sum of the populations of each city.
+  k. Create a method named display that displays the country name, continent, and the information of all the cities.
+  l. Create an instance of Country using the array you created in part f. Call the display and totalPopulation methods.
