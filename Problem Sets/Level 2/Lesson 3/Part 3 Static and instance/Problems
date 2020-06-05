@@ -1,0 +1,44 @@
+1. Determine whether the following should be an instance variable, instance method, static variable, or static method.
+  a. In a BankAccount class
+      i. password
+     ii. balance
+    iii. getBalance
+     iv. numberOfAccountsCreated
+      v. deposit
+     vi. withdraw
+    vii. totalBalance (of all accounts created)
+   viii. averageBalance (of all accounts created)
+
+  b. In a Bird class
+      i. age
+     ii. population
+    iii. weight
+     iv. country
+      v. color
+     vi. fly
+    vii. maxSpeed
+    
+  c. In a Car class
+      i. color
+     ii. maxSpeed
+    iii. weight
+     iv. numberOfCarsManufactured
+      v. accelerate
+     vi. brake
+    vii. turnLeft
+   viii. turnRight
+     ix. setSpeedLimit (of a road that is passed in as an argument)
+
+
+
+2.
+  a. Create a BankAccount class with all variables and methods listed in problem 1a.
+     You cannot deposit or withdraw a negative amount. Also, you cannot withdraw more than the balance.
+  
+  b. Create a Bird class with all variables and methods listed in problem 1b.
+     For fly you can just print "Flying".
+  
+  c. Create a Car class with all variables and methods listed in problem 1c except setSpeedLimit.
+     For turnLeft and turnRight, you can just print "Turning left" and "Turning right" respectively.
+     For accelerate, increase the speed by 1 unless the speed is already maximum.
+     For brake, decrease the speed by 1 unless the speed is already 0.
