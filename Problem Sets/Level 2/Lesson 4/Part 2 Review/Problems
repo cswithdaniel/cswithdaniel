@@ -1,0 +1,87 @@
+1. Determine the output of the following:
+int[] arr = new int[10];
+for (int i = 0; i < 9; i++)
+{
+    arr[i] = i;
+}
+int sum = 0;
+for (int i = 0; i < arr.length; i++)
+{
+    sum += i;
+}
+System.out.println(sum);
+
+
+2. Determine the output of the following:
+PrintWriter writer = new PrintWriter(new File("a.txt"));
+for (int i = 0; i < 10; i++)
+{
+   writer.println(i);
+}
+writer.close();
+Scanner reader = new Scanner(new File("a.txt"));
+for (int i = 0; i < 10; i++)
+{
+   int j = reader.nextInt();
+   if (i % 2 == 0) {System.out.println(j);}
+}
+
+
+3. Determine the output of the following:
+int[] arr1 = {3, 5, 7};
+int[] arr2 = arr1;
+arr2[1] = 4;
+System.out.println(arr1[0] + arr1[1] + arr1[2]);
+
+
+4. Determine the output of the following:
+public class MyClass
+{
+    public static void main(String[] args)
+    {
+        int[] arr = {3, 7, 5, 6, 1};
+        int sum = 0;
+        for (int i : arr)
+        {
+            sum += i;
+            if (i == 5) {continue;}
+            System.out.print(i);
+        }
+        System.out.println("\n" + sum);
+        int[] arr2 = new int[1000];
+        for (int i = 0; i * i * i < 100; i++)
+        {
+            arr2[i * i * i] = 1;
+        }
+        for (int i = 0; i < 100; i++)
+        {
+            if (arr2[i] == 1) {System.out.println(i);}
+        }
+    }
+}
+
+
+5.
+  a. Print the odd integers from 1 to 100 inclusive to a file named odd.txt
+  b. Prompt the user for an integer n, then print the integers from 1 to n inclusive to a file named n.txt
+  c. Read from odd.txt and print the sum of the numbers in odd.txt to a file named oddsum.txt
+  d. Read from n.txt and print the sum of the numbers in n.txt to a file named nsum.txt
+  e. Read from odd.txt and n.txt and print the sum of the two numbers in a file named sum.txt
+
+
+6. Assume that ints.txt has a bunch of integers and nothing else.
+It is guaranteed that all computations will not exceed the limits of an int.
+  a. Print the maximum number of ints.txt.
+  b. Print the minimum number of ints.txt.
+  c. Print the sum of the numbers in ints.txt.
+  d. Print the number of numbers in ints.txt.
+  e. Do tasks a to d again except this time print the result to a file named ints.out.
+
+
+7.
+  a. Create a class named Rectangle that instance variables length and width of type double.
+  b. Create a constructor that sets the variables using parameters.
+  c. Create an instance method named area that returns the area.
+  d. Create a Rectangle with length 7 and width 9 (in the main method) and display its area.
+  e. Create a static int variable in Rectangle named numRectanglesCreated that increases by 1 each time a Rectangle is created.
+  f. Create an instance method named display that displays the length, width, and area of the Rectangle.
