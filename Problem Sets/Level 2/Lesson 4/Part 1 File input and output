@@ -1,0 +1,19 @@
+1. Prompt the user for an integer n.
+Then print the first n odd integers to a file named odd.txt
+
+
+2. Prompt the user for an integer n.
+Then prompt the user for n integers and write them to a file.
+Finally, read from the file and print the sum of the n integers.
+
+
+3. Prompt the user for a file name.
+Then prompt the user for 5 words and print them to a file with the file name.
+
+
+4. Prompt the user for an integer n.
+Then prompt the user for n file names, and for each file name prompt the user for 5 integers
+and print them in reverse order to the files.
+
+
+5. Assume words.txt has a bunch of words/tokens. Print all of them to System.out.
