@@ -1,0 +1,115 @@
+1. Determine the output:
+class Circle
+{
+    public double radius;
+    public Circle(double r)
+    {
+        radius = r;
+    }
+    public double area()
+    {
+        return Math.PI * radius * radius;
+    }
+}
+public class Problem1
+{
+    public static void main(String[] args)
+    {
+        Circle c = new Circle(5.7);
+        System.out.println(c.radius);        
+        Circle c2 = new Circle(7.5);
+        System.out.println(c.radius);  
+        System.out.println(c2.radius);  
+        c2.radius = 6.8;
+        System.out.println(c.radius);  
+        System.out.println(c2.radius);  
+        c2 = c;
+        c2.radius = 6.8;
+        System.out.println(c.radius);  
+        System.out.println(c2.radius);  
+    }
+}
+
+2. Determine the output:
+class Circle
+{
+    public double radius;
+    public Circle(double r)
+    {
+        radius = r;
+    }
+    public double area()
+    {
+        return Math.PI * radius * radius;
+    }
+}
+public class Lesson4part4
+{
+    public static void main(String[] args)
+    {   
+        Circle c = new Circle(5.7);
+        Circle c2 = new Circle(7.5);
+        Circle[] cArr = new Circle[] {c, c2};
+        Circle[] cArr1 = cArr;
+        System.out.println(cArr[0].radius);  
+        System.out.println(cArr1[0].radius);  
+        cArr1 = new Circle[] {c2, c};
+        cArr1[0] = new Circle(6.8);
+        System.out.println(cArr[0].radius);  
+        System.out.println(cArr[0].radius);  
+        cArr1 = cArr;
+        cArr1[0] = new Circle(6.8);
+        System.out.println(cArr[0].radius);  
+        System.out.println(cArr1[0].radius);  
+        cArr1 = cArr;
+        cArr1[0].radius = 6.8;
+        System.out.println(cArr[0].radius);  
+        System.out.println(cArr1[0].radius);
+    }
+}
+
+3. Detemine the output:
+public class Main
+{
+    public static void main(String[] args)
+    {
+        A x = new A(5);
+        A y = new A(5);
+        A z = x;
+        A w = x;
+        w = new A(3);
+        z.a = 4;
+        System.out.println(x.a + " " + y.a + " " + z.a + " " + w.a);
+
+        int a = 5;
+        int b = 5;
+        int c = a;
+        int d = a;
+        d = 3;
+        c = 4;
+        System.out.println(a + " " + b + " " + c + " " + d);
+    }
+}
+class A
+{
+    int a;
+    public A(int aa)
+    {
+        a = aa;
+    }
+}
+
+4.
+  a. Create class named City that contains instance variables name and country of type String.
+  b. Create a constructor that sets those variables using parameters.
+  d. Create 5 cities.
+  c. Create a City array of length 5. Fill the array of cities with the 5 cities you created.
+  e. Create a class named Country that has instance variables name and continent of type String.
+  f. Create an instance variable in Country named cities of type City[].
+  g. Create a static variable in Country named numberOfCountriesCreated that is initially set to 0.
+  h. Create a constructor in Country that takes two Strings and a City[] and sets the variables.
+  i. Make the constructor in Country increase the numberOfCountriesCreated variable by 1.
+  j. Make the constructor in Country set the country variable in every city passed in to be the name of the country.
+     For example, if City A has Country A, but is passed into Country B's constructor, then the country for City A
+     should be replaced with Country B.
+  k. Create a Country by passing in the City array as an argument.
