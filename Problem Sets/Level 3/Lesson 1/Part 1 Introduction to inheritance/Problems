@@ -1,0 +1,42 @@
+1. Determine whether the following statements are true or false:
+  a. A subclass inherits all variables and methods from its superclass.
+  b. A subclass inherits all constructors from its superclass.
+  c. The super() call to the superclass constructor may be omitted if the superclass has only one constructor.
+  d. There can be two super() calls in a constructor.
+  e. Creating a method with the same name and parameter types as a superclass method is allowed.
+  f. Creating a method with the same name and parameter types as a superclass but with different return types is allowed.
+  g. A subclass can directly call methods of its superclass.
+  h. A relation where X extends Y, Y extends Z, and Z extends X is allowed.
+  i. Country extends City is a valid inheritance relation.
+  j. City extends Country is a valid inheritance relation.
+  k. Apple extends Fruit is a valid inheritance relation.
+  l. Grass extends Green is a valid inheritance relation.
+
+
+2.
+  a. Create a class named Oval that has instance variables radius1 and radius2.
+  b. Create a constructor in Oval that sets the variables using parameters.
+  c. Create a method in Oval named area that returns the area of the Oval (which is Math.PI * radius1 * radius2).
+  d. Create a class named Circle that extends Oval. Make the constructor force radius1 and radius2 to be the same.
+  e. Create a method in Circle named circumference that returns the circumference (which is Math.PI * 2 * radius).
+  f. Verify that the Circle class works by creating an instance of Circle in the main method.
+     Both the area and circumference methods should work properly.
+
+
+Challenge Problem:
+3.
+  a. Create a class named Point has instance variables x and y (of type double) and a constructor that sets those values.
+  b. Create a class named Polygon that contains an array of points and a constructor that sets the array.
+     As a bonus, make the Polygon class immutable, meaning that if you modify the array passed through the constructor,
+     the array in the object will not change.
+  c. Create an instance method in Polygon that takes in an index, an x, and a y,
+     and sets the point at the index of the array to a point with the specified coordinates.
+  d. Create an instance method in Polygon that takes in an index and returns the point at that index of the array.
+  e. Create an instance method that displays the points in Polygon.
+  f. Create a class named Rectangle that extends Polygon.
+     The constructor should take in a location for the lower left point, a length, and a width.
+     Then it should call the constructor of Polygon using an array of points.
+  g. Create a constructor in Rectangle that just takes in a length and a width,
+     and calls the other constructor in Rectangle, with the coordinates of the lower point as (0, 0)
+  h. Create a rectangle with length 5 and width 7 (no specified coordinates should be passed to the constructor).
+  i. Display the points of the rectangle using the display method in Polygon.
