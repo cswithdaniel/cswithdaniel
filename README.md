@@ -37,7 +37,7 @@ Free video lessons on https://www.youtube.com/channel/UCSL-Yqh3riycNomgQNCjQlw (
 ##### For self-studying students
 * Students are encouraged to do the problem sets of a lesson part before moving on to the next lesson part.
 
-##### For high school students planning to use my curriculum to teach Java
+##### For anyone planning to use my curriculum to teach Java
 * There are two teaching schedules I have used:
   * 12 lessons for each level, 1 lesson each week, each lesson is 60-75 minutes long (including going over practice problems) and covers the equivalent of a lesson part in the videos
   * 4 lessons for each level, 1 lesson per day, each lesson is 3 hours long and covers the equivalent of a lesson in the videos
