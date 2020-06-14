@@ -1,0 +1,94 @@
+1. Determine whether the following statements are true or false:
+  a. A variable with type Superclass can be set to an object with type Subclass.
+  b. A variable with type Subclass can be set to an object with type Superclass.
+  c. Variable types don't matter for compilation.
+  d. Casting can help resolve compilation errors.
+  e. Variable types don't matter during runtime.
+  f. A runtime error prevents a program from being executed.
+  g. A compilation error prevents a program from being executed.
+  h. The instanceof operator checks variable types.
+
+
+2. Determine the output:
+public class MyClass
+{
+    public static void main(String[] args)
+    {
+        System.out.println(new A() instanceof A);
+        System.out.println(new A() instanceof B);
+        System.out.println(new A() instanceof C);
+        System.out.println(new B() instanceof A);
+        System.out.println(new B() instanceof B);
+        System.out.println(new B() instanceof C);
+        System.out.println(new C() instanceof A);
+        System.out.println(new C() instanceof B);
+        System.out.println(new C() instanceof C);
+    }
+}
+class A {}
+class B extends A {}
+class C extends B {}
+
+
+3. Determine tht output:
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Superclass s1 = new Subclass(5);
+        s1.display();
+        Superclass s2 = new Superclass(5);
+        s2.display();
+        Subclass s3 = null, s4 = null;
+        if (s1 instanceof Subclass)
+        {
+            s3 = (Subclass) s1;
+        }
+        if (s2 instanceof Subclass)
+        {
+            s4 = (Subclass) s2;
+        }
+        if (s3 != null) {s3.display();}
+        else {System.out.println(s3);}
+        if (s4 != null) {s4.display();}
+        else {System.out.println(s4);}
+    }
+}
+class Superclass
+{
+    int variable;
+    public Superclass(int v)
+    {
+        variable = v;
+    }
+    public void display()
+    {
+        System.out.println(variable);
+    }
+}
+class Subclass extends Superclass
+{
+    int u;
+    public Subclass(int v)
+    {
+        super(v);
+        u = v % 2;
+    }
+    public void display()
+    {
+        super.display();
+        System.out.println(u);
+    }
+}
+
+
+4.
+  a. Create a class named City that has instance variables name (String) and population (int).
+  b. Create a constructor in City that sets the variables using parameters.
+  c. Create a method in City named display that prints the name and population of the City.
+  d. Create a class named Capital that extends City (and otherwise acts the same as City).
+  e. Create a class named Country that has instance variables name (String) and cities (City[]).
+  f. Create a constructor in Country that takes a String and a City[] and sets the variables using parameters.
+  g. Create a method in Country named display that prints the name and displays all the information of every City.
+  h. Create a method in Country named getCapital that returns the first instance of Capital in the City array.
+     If there is no capital, return the first City in the array (element at index 0).
