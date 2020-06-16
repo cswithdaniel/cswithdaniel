@@ -1,0 +1,125 @@
+1. Determine whether the following statements are true or false:
+  a. Every object is an instance of Object.
+  b. The equals() method needs to be overriden to compare the values of objects.
+  c. String overrides the equals method.
+  d. The == operator is the same thing as the equals method.
+  e. If the toString method is overriden in a class, then every instance of that class can be printed directly.
+  f. You can access variables and methods of null objects without compilation errors.
+  g. You can access variables and methods of null objects without runtime errors.
+  h. Objects that are null cannot be printed.
+
+
+2. Determine the output:
+public class Main
+{
+    public static void main(String[] args)
+    {
+        A a1 = new A(5);
+        a1.xyz();
+        A a2 = new B(7);
+        a2.xyz();
+        A a3 = new A(5);
+        a3.i = 7;
+        a1.xyz();
+        a3.xyz();
+        A a4 = a1;
+        a4 = new A(8);
+        a1.xyz();
+        a4.xyz();
+        A a5 = a1;
+        a5.i = 4;
+        a1.xyz();
+        a1 = new A(1);
+        a5.i = 9;
+        a1.xyz();
+        a1 = new B(-5);
+        A a6 = a1;
+        System.out.println(a6 == a1);
+        A a7 = new B(-5);
+        System.out.println(a7 == a1);
+        a1.xyz();
+    }
+}
+class A
+{
+    int i;
+    public A(int i)
+    {
+        this.i = i;
+    }
+    public void xyz()
+    {
+        System.out.println(i);
+    }
+}
+class B extends A
+{
+    public B(int j)
+    {
+        super(j);
+    }
+    public void xyz()
+    {
+        System.out.println(i * i);
+    }
+}
+
+
+3. Determine the ouptut:
+public class Main
+{
+    public static void main(String[] args)
+    {
+        A a1 = new A(5);
+        A a2 = new A(7);
+        B b1 = new B(5);
+        B b2 = new B(5);
+        C c1 = new C(5);
+        System.out.println(a1);
+        System.out.println(a2);
+        System.out.println(c1);
+        System.out.println(a1.equals(a2));
+        System.out.println(a1.equals(b2));
+        System.out.println(a1.equals(c1));
+        System.out.println(b1.equals(b2));
+    }
+}
+class A
+{
+    int a;
+    public A(int a)
+    {
+        this.a = a;
+    }
+    public boolean equals(Object o)
+    {
+        if (!(o instanceof A)) {return false;}
+        return a == ((A) o).a;
+    }
+    public String toString()
+    {
+        return "" + a;
+    }
+}
+class B
+{
+    int b;
+    public B(int b)
+    {
+        this.b = b;
+    }
+}
+class C extends A
+{
+    public C(int c) {super(c);}
+}
+
+
+4.
+  a. Create a class named City that contains instance variables name (String) and population (int).
+  b. Create a constructor in City that sets the variables using parameters.
+  c. Create a toString method in City that returns a String containing both the name and the population of the City.
+  d. Create an equals method in City that compares both the name and population variables.
+  e. Create a class named Country that contains instance variables name (String) and cities (City[]).
+  f. Create a toString method in Country that returns a String containing both the name of the country and all the information
+     of the cities.
