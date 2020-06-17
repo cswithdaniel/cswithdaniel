@@ -1,0 +1,27 @@
+1. For each of the following, put either public, protected, default, or private.
+  a. Accessible to classes in the same package only.
+  b. Accessible to classes in the same package and subclasses.
+  c. Accessible everywhere.
+  d. Accessible in the same class only.
+  
+2.
+  a. Create a class named RectangularPrism that has private double instance variables length, width, and height.
+  b. Create a constructor that sets the variables using parameters.
+     If a parameter is negative, then set the corresponding variable to the absolute value of the parameter.
+  c. Make a get method for each instance variable.
+  d. Make a set method for each instance variable.
+     If the parameter is negative, then set the corresponding variable to the absolute value of the parameter.
+  e. Create a method named volume that returns the product of the length, width, and height.
+  f. Create a method named surfaceArea that returns the surface area 2 * (length * width + length * height + width * height).
+  g. Create a class named Cube that extends RectangularPrism.
+     Make the constructor of the Cube so that the length, width, and height are equal.
+     
+3.
+  a. Create a class named DoubleArrayInfo that has a private double array as an instance variable.
+  b. Create a constructor that sets the array using parameters.
+  c. Create a method named get that takes an index and returns the element at the index.
+  d. Create a method named set that takes an index and value and sets the element at the index to the value.
+  e. Create a toString method that returns a String that contains every element of the array.
+  f. Create an equals method that returns true if and only if all elements are equal and in the same order.
+  g. Create a method named sum that returns the sum of the elements in the array.
+  h. Create a method named mean that returns the mean (average) of the elements in the array.
