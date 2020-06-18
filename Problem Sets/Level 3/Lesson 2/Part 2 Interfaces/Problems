@@ -1,0 +1,35 @@
+1. Determine whether the following statements are true or false:
+  a. If A is an interface, then new A() is allowed.
+  b. Interfaces cannot have instance variables.
+  c. Interfaces can extend classes.
+  d. Interfaces can extend interfaces.
+  e. All methods in interfaces are public and abstract.
+  f. Abstract methods in an interface must be overriden in classes that implement the interface.
+  g. A class can extend multiple classes.
+  h. A class can implement multiple interfaces.
+  
+  
+2.
+  a. Create an abstract class called Person that has instance variables
+     firstName (String), lastName (String), and yearOfBirth (int).
+     Create a constructor in Person that sets the instance variables.
+     Create an abstract method named display in Person.
+
+   b. Create an interface named Contactable that has a method getContactInfo that takes no parameters and returns a String.
+
+   c. Create a class named Student that extends Person and implements Contactable.
+      The Student class should have additional instance variables
+      gpa (double), grade (int), email (String), and phoneNumber (String).
+      Override the display method to display all the information of the Student.
+      Override the getContactInfo method to return a String containing the email and phoneNumber of the Student.
+
+   d. Create a class named Employee that extends Person and implements Contactable.
+      The Employee class should have additional instance variables
+      occupation (String), salary (double), email (String), and phoneNumber (String).
+      Override the display method to display all the information of the Employee.
+      Override the getContactInfo method to return a String containing the email and phoneNumber of the Employee.
+
+   e. In the main class, create a method named displayAllContactInfo that
+      takes an array of Contactable and prints the contact info of every element of the array.
+      Create a method named displayAllInfo that
+      takes an array of Person and prints the info of every element of the array (call the display method).
