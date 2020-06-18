@@ -1,0 +1,71 @@
+1. Determine whether the following statements are true or false:
+  a. If A is an abstract class, then new A() is allowed.
+  b. Abstract classes cannot have instance variables since you cannot create instances of them.
+  c. Abstract classes can extend non-abstract classes.
+  d. All methods in an abstract class must be abstract.
+  e. Abstract methods can be private.
+  f. Abstract methods must be overriden in non-abstract subclasses.
+  g. Abstract classes must have abstract methods.
+  
+  
+2. 
+  a. Create an abstract class named Course that contains instance variables
+     name (String), subject (String), and numberOfCredits (double).
+  b. Create abstract method in Course named getExamDate() (that returns a String).
+  c. Create a class named Java3 that extends Course. 
+     In the constructor, set the name to "Java Level III", the subject to "Computer Science", and the number of credits to 1.
+  d. Override the getExamDate() method to return "10/27/20".
+
+
+3. Fix all errors:
+public class Main
+{
+    public static void main(String[] args)
+    {
+        A a = new A(7, 9);
+        a.display();
+    }
+}
+class A implements X
+{
+    double x, y;
+    public abstract double xy()
+    public A(double x, double y)
+    {
+        this.x = x;
+        this.y = y;
+    }
+}
+interface X
+{
+    void display();
+}
+class B extends A
+{
+    public int xy()
+    {
+        return x * y;
+    }
+}
+
+
+4.
+  a. Create an abstract class called Person that has instance variables 
+     firstName (String), lastName (String), and yearOfBirth (int).
+     Create a constructor in Person that sets the instance variables using parameters.
+     Create an abstract method named display in Person.
+  
+  b. Create a class named Student that extends Person. The Student class should have additional instance variables
+     gpa (double), grade (int), email (String), and phoneNumber (String).
+     Override the display method to display all the information of the Student.
+     
+  c. Create a class named Employee that extends Person. The Employee class should have additional instance variables
+     occupation (String), salary (double), email (String), and phoneNumber (String).
+     Override the display method to display all the information of the Employee.
+
+  d. In the main class, create a method named displayInfo that takes an object of type Person
+     and prints all its information (calls its display() method).
+     Pass an object of type Student and Employee to both methods.
+
+
+
