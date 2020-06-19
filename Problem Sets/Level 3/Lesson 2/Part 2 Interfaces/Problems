@@ -3,7 +3,7 @@
   b. Interfaces cannot have instance variables.
   c. Interfaces can extend classes.
   d. Interfaces can extend interfaces.
-  e. All methods in interfaces are public and abstract.
+  e. All abstract methods in interfaces are public.
   f. Abstract methods in an interface must be overriden in classes that implement the interface.
   g. A class can extend multiple classes.
   h. A class can implement multiple interfaces.
