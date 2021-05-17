@@ -1,9 +1,9 @@
 # cswithdaniel
-Four levels of Java classes are designed and offered by High School Student Daniel Li (USA Computing Olympiad finalist 2018-2019 season) to cover all of the material needed to take the AP Computer Science A exam.
+Four levels of Java classes are designed and offered by High School Student Daniel Li (USA Computing Olympiad finalist 2018-2019 season) to cover all of the material needed to take the AP Computer Science A exam. The only materials needed to finish the four levels are the video lessons on cswithdaniel, the problem sets, and a computer. No textbooks or other materials are necessary.
 
 Since 9th grade, Daniel Li has taught around 20 courses of Java at the Horizons for Youth Program in Northampton Community College (each course covers a level) with over 500 teaching hours and over 100 students in middle and high school.
 
-Free video lessons on https://www.youtube.com/channel/UCSL-Yqh3riycNomgQNCjQlw (new videos weekly).
+Free video lessons on https://www.youtube.com/channel/UCSL-Yqh3riycNomgQNCjQlw.
 
 ## Who should learn from cswithdaniel?
 * Students are strongly recommended to have learned at least **Algebra 1**. A basic mathematical foundation will significantly help with programming.
