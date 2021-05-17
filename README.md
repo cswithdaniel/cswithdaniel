@@ -30,7 +30,7 @@ Free video lessons on https://www.youtube.com/channel/UCSL-Yqh3riycNomgQNCjQlw (
 * There are 4 levels in total.
 * Each level has 4 lessons, total of 16 lessons.
 * Each lesson has around 3 lesson parts; each level contains around 12 lesson parts, total of 48 lesson parts in 4 levels.
-* Each lesson part has 10-20 minutes in video lessons.
+* Each lesson part in Level 1 has 10-20 minutes in video lessons. Each lesson part in Levels 2-4 has 15-30 minutes in video lessons.
 * Each lesson part has a problem set to go along with it, and each problem set takes around 45-90 minutes for students with no prior programming experience.
 * This curriculum is designed to help students self-study and help high school students teach Java.
 
