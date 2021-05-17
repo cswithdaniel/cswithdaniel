@@ -20,17 +20,17 @@ Free video lessons on https://www.youtube.com/channel/UCSL-Yqh3riycNomgQNCjQlw (
   * Python is also often too slow for many programming competitions.
 * It is significantly easier to learn a second programming language than it is to learn the first. After learning Java, learning C++, Python, and other languages will be significantly easier.
 
-## Why cswithdaniel?
-* Taught by a high school student, making programming seem accessible to middle and high school students.
-* Contains problem sets for each video.
-* Contains curriculum that is organized. Curriculum can be used to self-study or teach.
-* It is free.
-
 ## Who should learn from cswithdaniel?
 * Students are strongly recommended to have learned at least **Algebra 1**. A basic mathematical foundation will significantly help with programming.
 * Students should be able to watch the videos, do the problem sets, and compare with the available solutions of the problem sets.
 * Students should fully attempt the problem sets before viewing the solutions. After viewing solutions, students are strongly encouraged to understand and correct any mistakes.
 * Students are encouraged to do the problem sets of a lesson part before moving on to the next video.
+
+## Why cswithdaniel?
+* Taught by a high school student, making programming seem accessible to middle and high school students.
+* Contains problem sets for each video.
+* Contains curriculum that is organized. Curriculum can be used to self-study or teach.
+* It is free.
 
 ## Amount of time needed
 * There are 4 levels in total.
