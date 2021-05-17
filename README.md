@@ -30,7 +30,7 @@ Free video lessons on https://www.youtube.com/channel/UCSL-Yqh3riycNomgQNCjQlw (
 * Students are strongly recommended to have learned at least Algebra 1. A basic mathematical foundation will significantly help with programming.
 * Students should be able to watch the videos, do the problem sets, and compare with the available solutions of the problem sets.
 * Students should fully attempt the problem sets before viewing the solutions. After viewing solutions, students are strongly encouraged to understand and correct any mistakes.
-* Students are encouraged to do the problem sets of a lesson part before moving on to the next lesson part.
+* Students are encouraged to do the problem sets of a lesson part before moving on to the next video.
 
 ## Amount of time needed
 * There are 4 levels in total.
