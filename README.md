@@ -52,4 +52,4 @@ Free video lessons on https://www.youtube.com/channel/UCSL-Yqh3riycNomgQNCjQlw.
   * Additional lessons can be dedicated to review material or test students.
   * Lesson summaries, problem sets, and exams are posted here and can be freely used in teaching.
 * Teachers are encouraged to assign homework after each lesson.
-* Teachers are free to use the curriculum or videos here.
+* Teachers are free to use the curriculum or videos here if credit for the videos and the problem sets is given to cswithdaniel.
