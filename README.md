@@ -28,7 +28,7 @@ Free video lessons on https://www.youtube.com/channel/UCSL-Yqh3riycNomgQNCjQlw.
 
 ## Why cswithdaniel?
 * Taught by a high school student, making programming seem accessible to middle and high school students.
-* Contains problem sets for each video.
+* Contains problem sets and solutions for each video.
 * Contains curriculum that is organized. Curriculum can be used to self-study or teach.
 * It is free.
 
