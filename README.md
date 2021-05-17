@@ -42,7 +42,7 @@ Free video lessons on https://www.youtube.com/channel/UCSL-Yqh3riycNomgQNCjQlw.
 
 ## What to expect from cswithdaniel
 * After finishing all 4 levels, students will have learned all the material needed to take the AP Computer Science A Exam.
-* The 4 levels will cover some additional material not covered by the AP Computer Science A Exam.
+* The 4 levels will cover some additional material not covered by the AP Computer Science A Exam that may be useful for competitions and college courses.
 * The 4 levels are not entirely designed for the AP Computer Science A Exam. Instead, they are designed to give students a solid programming foundation for the future.
 
 ## For anyone planning to use my curriculum to teach Java
