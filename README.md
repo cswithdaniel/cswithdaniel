@@ -22,7 +22,7 @@ Free video lessons on https://www.youtube.com/channel/UCSL-Yqh3riycNomgQNCjQlw.
 
 ##### Compared to other popular programming languages
 * Although some languages such as C++ are faster, they are much harder to learn and debug.
-* Although Python is easy to learn, it is much slower than Java, and it is harder to debug in Python than in Java.
+* Although Python is easy to learn, it is much slower than Java, and it is sometimes harder to debug in Python than in Java.
   * Python is also often too slow for many programming competitions.
 * It is significantly easier to learn a second programming language than it is to learn the first. After learning Java, learning C++, Python, and other languages will be significantly easier.
 
