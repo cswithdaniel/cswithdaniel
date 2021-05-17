@@ -18,6 +18,7 @@ Free video lessons on https://www.youtube.com/channel/UCSL-Yqh3riycNomgQNCjQlw (
 * Although some languages such as C++ are faster, they are much harder to learn and debug.
 * Although Python is easy to learn, it is much slower than Java, and it is harder to debug in Python than in Java.
   * Python is also often too slow for many programming competitions.
+* It is significantly easier to learn a second programming language than it is to learn the first. After learning Java, learning C++, Python, and other languages will be significantly easier.
 
 ## Why cswithdaniel?
 * Taught by a high school student, making programming seem accessible to middle and high school students.
@@ -25,8 +26,12 @@ Free video lessons on https://www.youtube.com/channel/UCSL-Yqh3riycNomgQNCjQlw (
 * Contains curriculum that is organized. Curriculum can be used to self-study or teach.
 * It is free.
 
-## Amount of time needed
+## Who should learn from cswithdaniel?
+* Students are strongly recommended to have learned at least Algebra 1. A basic mathematical foundation will significantly help with programming.
+* Students should be able to watch the videos, do the problem sets, and compare with the available solutions of the problem sets.
+* Students are encouraged to do the problem sets of a lesson part before moving on to the next lesson part.
 
+## Amount of time needed
 * There are 4 levels in total.
 * Each level has 4 lessons, total of 16 lessons.
 * Each lesson has around 3 lesson parts; each level contains around 12 lesson parts, total of 48 lesson parts in 4 levels.
@@ -34,10 +39,12 @@ Free video lessons on https://www.youtube.com/channel/UCSL-Yqh3riycNomgQNCjQlw (
 * Each lesson part has a problem set to go along with it, and each problem set takes around 45-90 minutes for students with no prior programming experience.
 * This curriculum is designed to help students self-study and help high school students teach Java.
 
-##### For self-studying students
-* Students are encouraged to do the problem sets of a lesson part before moving on to the next lesson part.
+## What to expect from cswithdaniel
+* After finishing all 4 levels, students will have learned all the material needed to take the AP Computer Science A Exam.
+* The 4 levels will cover some additional material not covered by the AP Computer Science A Exam.
+* The 4 levels are not specifically designed for the AP Computer Science A Exam. Instead, they are designed to give students a solid programming foundation for the future.
 
-##### For anyone planning to use my curriculum to teach Java
+## For anyone planning to use my curriculum to teach Java
 * There are two teaching schedules I have used:
   * 12 lessons for each level, 1 lesson each week, each lesson is 60-75 minutes long (including going over practice problems) and covers the equivalent of a lesson part in the videos
   * 4 lessons for each level, 1 lesson per day, each lesson is 3 hours long and covers the equivalent of a lesson in the videos
