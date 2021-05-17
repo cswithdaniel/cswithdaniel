@@ -5,6 +5,12 @@ Since 9th grade, Daniel Li has taught around 20 courses of Java at the Horizons 
 
 Free video lessons on https://www.youtube.com/channel/UCSL-Yqh3riycNomgQNCjQlw (new videos weekly).
 
+## Who should learn from cswithdaniel?
+* Students are strongly recommended to have learned at least **Algebra 1**. A basic mathematical foundation will significantly help with programming.
+* Students should be able to watch the videos, do the problem sets, and compare with the available solutions of the problem sets.
+* Students should fully attempt the problem sets before viewing the solutions. After viewing solutions, students are strongly encouraged to understand and correct any mistakes.
+* Students are encouraged to do the problem sets of a lesson part before moving on to the next video.
+
 ## Why Java?
 * Java is the most popular programming language.
   * Java can run on nearly any system.
@@ -19,12 +25,6 @@ Free video lessons on https://www.youtube.com/channel/UCSL-Yqh3riycNomgQNCjQlw (
 * Although Python is easy to learn, it is much slower than Java, and it is harder to debug in Python than in Java.
   * Python is also often too slow for many programming competitions.
 * It is significantly easier to learn a second programming language than it is to learn the first. After learning Java, learning C++, Python, and other languages will be significantly easier.
-
-## Who should learn from cswithdaniel?
-* Students are strongly recommended to have learned at least **Algebra 1**. A basic mathematical foundation will significantly help with programming.
-* Students should be able to watch the videos, do the problem sets, and compare with the available solutions of the problem sets.
-* Students should fully attempt the problem sets before viewing the solutions. After viewing solutions, students are strongly encouraged to understand and correct any mistakes.
-* Students are encouraged to do the problem sets of a lesson part before moving on to the next video.
 
 ## Why cswithdaniel?
 * Taught by a high school student, making programming seem accessible to middle and high school students.
