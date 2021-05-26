@@ -143,7 +143,7 @@ int i1 = 6;
 int i2 = 7;
 int i3 = i2 - i1;
 int[] arr2 = {i1, i2, i3};
-int[][] arr3 = {arr1, arr2};
+int[][] arr2D = {arr1, arr2};
 for (int[] i : arr2D)
 {
     for (int j : i)
