@@ -1,0 +1,251 @@
+Credit: Ryan Wu
+
+1.
+int[][] arr2D2 = new int[3][2];
+for (int i = 0; i < arr2D2.length; i++)
+{
+    for (int j = 0; j < arr2D2[i].length; j++)
+    {
+        arr2D2[i][j] = 2;
+    }   
+}
+for (int[] i : arr2D2)
+{
+    for (int j : i)
+    {
+        System.out.print(j + " ");
+    }   
+    System.out.println();
+}
+
+Output:
+2 2
+2 2
+2 2
+
+
+2.
+int[][] array = new int[4][3];
+for (int i = 0; i < array.length; i++)
+{
+    for (int j = 0; j < array[i].length; j++)
+    {
+        array[i][j] = 10 * i + j + 11;
+    }
+}
+for (int[] i : array)
+{
+    for (int j : i)
+    {
+        System.out.print(j + " ");
+    }
+    System.out.println();
+}
+
+Output:
+11 12 13 
+21 22 23 
+31 32 33 
+41 42 43 
+
+
+3.
+int[][] arr2D =
+{
+    {3, 5, 8},
+    {7},
+    {},
+    {9, 4, 6, 0}
+};
+
+arr2D[0][0] is 3
+arr2D[4][2] does not exist
+arr2D[3][3] is 0
+arr2D[2][0] does not exist
+arr2D[-1][1] does not exist
+arr2D[0][2] is 8
+arr2D[1][1] does not exist
+arr2D[1][0] is 7
+
+
+4.
+Scanner input = new Scanner(System.in);
+System.out.print("Enter an integer: ");
+int row = input.nextInt();
+System.out.print("Enter another integer: ");
+int col = input.nextInt();
+
+int[][] arr2D = new int[row][col];
+
+for (int i = 0; i < row; i++)
+{
+  for (int j = 0; j < col; j++)
+  {
+     System.out.print("Enter arr2D[" + i + "][" + j + "]: ");
+     arr2D[i][j] = input.nextInt();
+  }
+}
+
+System.out.println("The contents of the array are: ");
+for (int[] i : arr2D)
+{
+  for (int j : i)
+  {
+     System.out.print(j + " ");
+  }
+  System.out.println();
+}
+
+
+5.
+for(int[] i : arr)
+{
+  for(int j : i)
+  {
+     System.out.print(j + " ");
+  }
+  System.out.println();
+}
+
+int sum = 0;
+for(int i = 0; i < arr.length; i++)
+{
+  for(int j = 0; j < arr[i].length; j++)
+  {
+     sum += arr[i][j];
+  }
+}
+System.out.println(sum);
+
+for (int i = 0; i < arr.length; i++)
+{
+  int total = 0;
+  for (int j = 0; j < arr[i].length; j++)
+  {
+     total += arr[i][j];
+  }
+  System.out.println("The sum of all the elements in row " + i + " is " + total);
+}
+
+
+6.
+int[][] arr2D = new int[3][2];
+for (int[] i : arr2D)
+{
+    for (int j : i)
+    {
+        j = 2;
+    }
+}     
+for (int[] i : arr2D)
+{
+    for (int j : i)
+    {
+        System.out.print(j + " " );
+    }   
+    System.out.println();
+}
+
+Output:
+0 0 
+0 0 
+0 0 
+
+
+7.
+int[][] arr2D = new int[3][2];
+for (int[] i : arr2D)
+{
+    for (int j = 0; j < i.length; j++)
+    {
+        i[j] = 2;
+    }
+}     
+for (int[] i : arr2D)
+{
+    for (int j : i)
+    {
+        System.out.print(j + " " );
+    }   
+    System.out.println();
+}
+
+Output:
+2 2 
+2 2 
+2 2 
+
+
+8.
+int[][] arr2D = new int[3][2];
+for (int i = 0; i < arr2D.length; i++)
+{
+    for (int j : arr2D[i])
+    {
+        j = 2;
+    }
+}     
+for (int[] i : arr2D)
+{
+    for (int j : i)
+    {
+        System.out.print(j + " " );
+    }   
+    System.out.println();
+}
+
+Output:
+0 0 
+0 0 
+0 0 
+
+
+9.
+int[] arr1 = {4, 5, 7, 6};
+int i1 = 6;
+int i2 = 7;
+int i3 = i2 - i1;
+int[] arr2 = {i1, i2, i3};
+int[][] arr2D = {arr1, arr2};
+for (int[] i : arr2D)
+{
+    for (int j : i)
+    {
+        System.out.print(j + " " );
+    }   
+    System.out.println();
+}
+
+Output:
+4 5 7 6 
+6 7 1 
+
+
+10.
+int[] arr1 = {4, 5, 6};
+int[][] arr2 = {arr1, arr1, arr1};
+for (int[] i : arr2)
+{
+    for (int j : i)
+    {
+        System.out.print(j + " " );
+    }   
+    System.out.println();
+}
+arr1[1] = 9;
+for (int[] i : arr2)
+{
+    for (int j : i)
+    {
+        System.out.print(j + " " );
+    }   
+    System.out.println();
+}
+
+Output:
+4 5 6 
+4 5 6 
+4 5 6 
+4 9 6 
+4 9 6 
+4 9 6 
