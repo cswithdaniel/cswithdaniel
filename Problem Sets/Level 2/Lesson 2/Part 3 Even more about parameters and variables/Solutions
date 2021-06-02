@@ -1,0 +1,163 @@
+Credit: Ryan Wu
+
+1.
+public class HelloWorld
+{
+    public static void main(String[] args)
+    { 
+        int i = 3;
+        int j = 6;
+        method1(5)
+        System.out.println(i);
+        System.out.println(a);
+        System.out.println(j);
+    }
+    public staitic void method1(int a)
+    {
+        i = a;
+        int j = 7;
+    }
+}
+
+Errors:
+method1(5) needs a semicolon
+Variable a does not exist
+Variable i in method1 is not defined
+static is misspelled
+
+
+2.
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int i = 5;
+        int j = 7;
+        swap(i, j);
+        printArray(new int[] {i, j});
+        int[] arr1 = {5, 6, 7};
+        int[] arr2 = {8, 7, 5};
+        swap(arr1, arr2);
+        printArray(arr1);
+        printArray(arr2);
+        swap2(arr1, arr2);
+        printArray(arr1);
+        printArray(arr2);
+        swap3(arr1, arr2);
+        printArray(arr1);
+        printArray(arr2);
+    }
+    public static void increment(int i)
+    {
+        i++;
+    }
+    public static void swap(int i, int j)
+    {
+        int temp = i;
+        i = j;
+        j = temp;
+    }
+    public static void swap(int[] i, int[] j)
+    {
+        if (i.length == j.length)
+        {
+            for (int idx = 0; idx < i.length; idx++)
+            {
+                int temp = i[idx];
+                i[idx] = j[idx];
+                j[idx] = temp;
+            }
+        }
+    }
+    public static void swap2(int[] i, int[] j)
+    {
+        int[] temp = i;
+        i = j;
+        j = temp;
+    }
+    public static void swap3(int[] i, int[] j)
+    {
+        if (i.length == j.length)
+        {
+            for (int idx = 0; idx < i.length; idx++)
+            {
+                swap(i[idx], j[idx]);
+            }
+        }
+    }
+    public static void printArray(int[] arr)
+    {
+        System.out.print("{");
+        for (int i = 0; i < arr.length; i++)
+        {
+            System.out.print(arr[i]);
+            if (i < arr.length - 1) {System.out.print(", ");}
+        }
+        System.out.println("}");
+    }
+}
+
+Output:
+{5, 7}
+{8, 7, 5}
+{5, 6, 7}
+{8, 7, 5}
+{5, 6, 7}
+{8, 7, 5}
+{5, 6, 7}
+
+
+3.
+public static int g1 = 5;
+public static int g2 = 7;
+
+public static void swapStaticVars()
+{
+  int temp = g1;
+  g1 = g2;
+  g2 = temp;
+}
+
+
+4.
+public static void increaseByOne(int[] arr)
+{
+  for (int i = 0; i < arr.length; i++)
+  {
+     arr[i]++;
+  }
+}
+
+
+5.
+public static void swapRows(int[][] arr2D, int r1, int r2)
+{
+  for (int col = 0; col < arr2D[r1].length; col++)
+  {
+     int temp = arr2D[r1][col];
+     arr2D[r1][col] = arr2D[r2][col];
+     arr2D[r2][col] = temp;
+  }
+}
+
+Alternate solution:
+public static void swapRows(int[][] arr2D, int r1, int r2)
+{
+  int[] temp = arr2D[r1];
+  arr2D[r1] = arr2D[r2];
+  arr2D[r2] = temp;
+}
+
+
+6.
+public static void swapCol(int[][] arr2D, int c1, int c2)
+{
+  for(int row = 0; row < arr2D.length; row++)
+  {
+     int temp = arr2D[row][c1];
+     arr2D[row][c1] = arr2D[row][c2];
+     arr2D[row][c2] = temp;
+  }
+}
+
+Note: the alternate solution for problem 5 does not work for this problem since there is no direct way to get a column of a 2D array
