@@ -1,4 +1,4 @@
-1. Determine the output:
+1. Determine the output (you may round results to 3 significant figures if needed):
 public class Main
 {
     public static double fun(int a, int b)
