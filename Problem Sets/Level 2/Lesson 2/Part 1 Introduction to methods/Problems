@@ -33,7 +33,7 @@ public class P3
     }
 }
 
-X
+4.
   a. Write a method named max which takes three ints and returns the max.
   b. Call the max method with three int values and print the result.
   
