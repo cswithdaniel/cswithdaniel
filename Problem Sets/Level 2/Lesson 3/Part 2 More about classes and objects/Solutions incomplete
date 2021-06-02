@@ -1,0 +1,35 @@
+1.
+public class Problem1
+{
+    public static void main(String[] args)
+    {
+        new Something(5, 7);
+        new Something(2, 3, "abc");
+        new Something(5, 7).display();
+        new Something(2, 3, "abc").display();
+    }
+}
+class Something
+{
+    int a, b;
+    String c;
+    public Something(int a, int b)
+    {
+        this.a = a;
+        b = this.b;
+        c = "" + a + b;
+    }
+    public Something(int a, int b, String s)
+    {
+        this(a, b);
+        c = s;
+    }
+    public void display()
+    {
+        System.out.println(a + " " + b + " " + c);
+    }
+}
+
+Output:
+5 0 50
+2 0 abc
