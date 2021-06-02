@@ -1,0 +1,162 @@
+Credit: Ryan Wu
+
+1. Which of the following are allowed to be in the same class?
+Two methods with the same name and the same parameter types in the same order
+    No, because java will not know which method to execute
+Two methods with the same name and different parameter types
+    Yes, because Java can distinguish using what you enter as the parameters
+Two methods with different names and the same parameter types in the same order
+    Yes
+Two methods with different names and different parameter types
+    Yes
+    
+
+2. Determine whether the following are true or false.
+a. Calling a method in another method is allowed.
+    true, because there are other functions in other methods that you can use
+    while inside of a method
+b. All methods must have parameters.
+    false
+c. All methods must return something.
+    false, you can use void
+d. You can directly nest a method inside another method.
+    false
+e. Methods must be inside a class.
+    true
+f. You can always call a method inside of the parentheses of System.out.println();
+    false, because if the method doesn't return anything, you cannot print the result
+g. The main method must be the first method of a class.
+    false
+
+
+3.
+public class P3
+{
+    public static void main(String[] args)
+    {
+        method1(5, 7);
+        method2(5, 7);
+    }
+    public static int method1(int a, int b)
+    {
+        return a - b;
+    }
+    public static void method2(int a, int b)
+    {
+        System.out.println(a + b);
+    }
+}
+
+Output:
+12
+
+
+4.
+public static int max(int a, int b, int c)
+{
+  int max = a;
+  if (b > max) {max = b;}
+  if (c > max) {max = c;}
+  return max;
+}
+
+Calling method:
+System.out.println(max(3, 5, 8));
+
+
+5.
+public class P5
+{
+    public static void main(String[] args)
+    {
+        System.out.println(method1(5, 7));
+    } 
+    public static int method1(int a, int b)
+    {
+        System.out.println(a * b);
+        return a * b;
+    }
+}
+
+Output:
+35
+35
+
+
+6.
+public class AAA
+{
+    public static void main(String[] args)
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            System.out.println(suspiciousFactorialSquared(i));
+        }
+    }
+    public static long suspiciousFactorialSquared(int n)
+    {
+        return suspiciousFactorial(n) * suspiciousFactorial(n);
+    }
+    public static long suspiciousFactorial(int n)
+    {
+        long x = 1;
+        for (int i = 1; i < n; i++)
+        {
+            x *= i;
+        }
+        return x;
+    } 
+}
+
+Output:
+1
+1
+1
+4
+36
+
+
+7.
+public class P7
+{
+    public static void main(String[] args)
+    {
+        x();
+        System.out.println(x(7));
+        x("abc");
+    }
+    public static void x()
+    {
+        System.out.println(5);
+    }
+    public static int x(int n)
+    {
+        System.out.println(n);
+        return n;
+    }
+    public static void x(String s)
+    {
+        System.out.println(s);
+    }
+}
+
+Output:
+5
+7
+7
+abc
+
+
+8.
+public static int max(int[] arr)
+{
+  int max = arr[0];
+  for (int i = 1; i < arr.length; i++)
+  {
+     if (arr[i] > max)
+     {
+        max = arr[i];
+     }
+  }
+  return max;
+}
