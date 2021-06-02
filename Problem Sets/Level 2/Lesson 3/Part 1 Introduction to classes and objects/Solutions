@@ -1,0 +1,165 @@
+Credit: Ryan Wu
+
+1.
+  a. Instance variables can be accessed in the main method.
+      False (except through the creation of an object)
+  b. Constructors can return things.
+      False
+  c. Constructors must have void in their header since they don't return anything.
+      False
+  d. Constructors must have the same name as the class they are in
+      True
+  e. Instance methods must have parameters.
+      False
+  g. All methods must have a pair of parentheses when called or defined.
+      True
+  h. Parameters of a method cannot be accessed outside the method.
+      True
+  i. Instance methods cannot return anything.
+      False
+  j. Instance variables can be accessed without an object.
+      False
+  k. Instance methods can be accessed without an object.
+      False
+  l. A variable of type String and a variable of type int can be defined in the same statement.
+      False
+      
+
+2.
+a.
+//Instance Variable Count: 1
+//Instance Methods Count: 2
+class Circle
+{
+    double radius;
+    public Circle(double r)
+    {
+        radius = r;
+    }
+    public double area()
+    {
+        return Math.PI * radius * radius;
+    }
+    public double circumference()
+    {
+        return 2 * Math.PI * radius;
+    }
+}
+
+Testing:
+Circle c1 = new Circle(5);
+Circle c2 = new Circle(10);
+Circle c3 = new Circle(12);
+System.out.println(c1.area());
+System.out.println(c2.circumference());
+
+b.
+//Instance Variable Count: 2
+//Instance Methods Count: 2
+class ClassName
+{
+    int a, b;
+    public ClassName(int x, int y, int z) {}
+    public void x() {}
+    public int y(int u) {return u;}
+}
+
+Testing:
+ClassName cn1 = new ClassName(1, 2, 3);
+ClassName cn2 = new ClassName(2, 3, 4);
+ClassName cn3 = new ClassName(3, 4, 5);
+cn1.x();
+System.out.println(cn2.y(5));
+
+
+3.
+class RectangularPrism
+{
+   public double length, width, height;
+   public RectangularPrism(double l, double w, double h)
+   {
+      length = l;
+      width = w;
+      height = h;
+   }
+   public double getVolume()
+   {
+      return length * width * height;
+   }
+}
+
+Inside main method:
+RectangularPrism rp1 = new RectangularPrism(2, 6, 4);
+System.out.println(rp1.getVolume());
+RectangularPrism rp2 = new RectangularPrism(3.5, 6.9, 12.2);
+System.out.println(rp2.getVolume());
+RectangularPrism rp3 = new RectangularPrism(11.5, 23.8, 32.1);
+System.out.println(rp3.getVolume());
+
+
+4.
+class Group
+{
+   public Person[] pArr;
+   public Group(Person[] p)
+   {
+      pArr = p;
+   }
+   public void display()
+   {
+      for(int i = 0; i < pArr.length; i++)
+      {
+         System.out.println("Person " + (i + 1) + ": ");
+         pArr[i].display();
+      }
+   }
+   public int numberOfAdults()
+   {
+      int count = 0;
+      for(Person e: pArr)
+      {
+         if(e.isAdult())
+         {
+            count++;
+         }
+      }
+      return count;
+   }
+}
+class Person
+{
+   public String name, email, phoneNumber;
+   public int age;
+   public Person(String n, String e, String pn, int a)
+   {
+      name = n;
+      email = e;
+      phoneNumber = pn;
+      age = a;
+   }
+   public boolean isAdult()
+   {
+      if(age >= 18) {return true;}
+      return false;
+   }
+   public void display()
+   {
+      System.out.println("Information of " + name + ":");
+      System.out.println("Age: " + age);
+      System.out.println("Email Address: " + email);
+      System.out.println("Phone Number: " + phoneNumber);
+      System.out.println("Is " + name + " an adult? " + isAdult());
+   }
+}
+
+Testing:
+Person p1 = new Person("Bob", "bobTheBuilder@gmail.com", "777-777-7777", 20);
+p1.display();
+Person p2 = new Person("Voldemort", "iHateHarryPotter@gmail.com", "101-101-1010", 30);
+p2.display();
+Person p3 = new Person("Harry Potter", "iLoveQuidditch@gmail.com", "777-777-7771", 15);
+p3.display();
+Person[] pArr1 = {p1, p2, p3};
+Group g1 = new Group(pArr1);
+g1.display();
+System.out.println(g1.numberOfAdults());
