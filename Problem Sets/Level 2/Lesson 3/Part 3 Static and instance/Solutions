@@ -1,0 +1,142 @@
+Credit: Ryan Wu
+
+1. Determine whether the following should be an instance variable, instance method, static variable, or static method.
+  a. In a BankAccount class
+      i. password - instance variable
+     ii. balance - instance variable
+    iii. getBalance - instance method
+     iv. numberOfAccountsCreated - static variable
+      v. deposit - instance method
+     vi. withdraw - instance method
+    vii. totalBalance (of all accounts created) - static variable
+   viii. averageBalance (of all accounts created) - static method
+
+  b. In a Bird class
+      i. age - instance variable
+     ii. population - static variable
+    iii. weight - instance variable
+     iv. country - instance variable
+      v. color - instance variable
+     vi. fly - instance method
+    vii. maxSpeed - instance variable
+   
+  c. In a Car class
+      i. color - instance variable
+     ii. maxSpeed - instance variable
+    iii. weight - instance variable
+     iv. numberOfCarsManufactured - static variable
+      v. accelerate - instance method
+     vi. brake - instance method
+    vii. turnLeft - instance method
+   viii. turnRight - instance method
+     ix. setSpeedLimit (of a road that is passed in as an argument) - static method
+      x. speed - instance variable
+      
+     
+2.
+class BankAccount
+{
+  String password;
+  int balance;
+  static int numberOfAccountsCreated = 0;
+  static int totalBalance = 0;
+  public BankAccount(String p, int b)
+  {
+     password = p;
+     balance = b;
+     numberOfAccountsCreated++;
+     totalBalance += b;
+  }
+  public int getBalance()
+  {
+     return balance;
+  }
+  public void deposit(int depositAmount)
+  {
+     balance += depositAmount;
+     totalBalance += depositAmount;
+  }
+  public void withdraw(int withdrawAmount)
+  {
+     balance -= withdrawAmount;
+     totalBalance -= withdrawAmount;
+  }
+  public static double averageBalance()
+  {
+     return (double) totalBalance / numberOfAccountsCreated;
+  }
+}
+
+
+3.
+class Bird
+{
+   int age;
+   int weight;
+   String country;
+   String color;
+   int maxSpeed;
+   static int population = 0;
+  
+   public Bird(int a, int w, String cou, String col, int ms)
+   {
+      age = a;
+      weight = w;
+      country = cou;
+      color = col;
+      maxSpeed = ms;
+      population++;
+   }
+  
+   public void fly()
+   {
+      System.out.println("Flying");
+   }
+}
+
+
+4.
+class Car
+{
+   String color;
+   int maxSpeed;
+   int weight;
+   int speed;
+   static int numberOfCarsManufactured = 0;
+   public Car(String c, int ms, int w, int s)
+   {
+      maxSpeed = ms;
+      color = c;
+      weight = w;
+      speed = s;
+      numberOfCarsManufactured++;
+   }
+  
+   public void accelerate()
+   {
+      if(speed < maxSpeed)
+      {
+         speed++;
+      }
+   } 
+   public void brake()
+   {
+      if(speed > 0)
+      {
+         speed--;
+      }
+   }
+   public void turnLeft()
+   {
+      System.out.println("Turning left");
+   }
+   public void turnRight()
+   {
+      System.out.println("Turning Right");
+   }
+  
+   public static void setSpeedLimit(int speedLimit, String road)
+   {
+      System.out.println(road + " has a speed limit of " + speedLimit);
+   }
+}
