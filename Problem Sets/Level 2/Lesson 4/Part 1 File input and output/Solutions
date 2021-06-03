@@ -1,0 +1,134 @@
+Credit: Ryan Wu
+
+1.
+import java.util.*;
+import java.io.*;
+public class Main
+{
+    public static void main(String[] args) throws FileNotFoundException
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter an integer: ");
+        int n = input.nextInt();
+        
+        File f1 = new File("odd.txt");
+        PrintWriter pw1 = new PrintWriter(f1);
+        
+        for(int i = 1; i <= n; i++)
+        {
+           pw1.println(i * 2 - 1);
+        }
+        
+        pw1.close();
+    }
+}
+
+
+2.
+import java.util.*;
+import java.io.*;
+public class Main
+{
+    public static void main(String[] args) throws FileNotFoundException
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter an integer: ");
+        int n = input.nextInt();
+         
+        File f2 = new File("nInts.txt");
+        PrintWriter pw2 = new PrintWriter(f2);
+         
+        System.out.println("Enter " + n + " integers: ");
+        for(int i = 0; i < n; i++)
+        {
+            pw2.print(input.nextInt() + " ");
+        }
+        pw2.close();
+        Scanner sc = new Scanner(f2);
+         
+        int sum = 0;
+        while(sc.hasNext())
+        {
+            sum += sc.nextInt();
+        }
+        System.out.println(sum);
+    }
+}
+
+
+3.
+import java.util.*;
+import java.io.*;
+public class Main
+{
+    public static void main(String[] args) throws FileNotFoundException
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a file name: ");
+        String s = input.next();
+        PrintWriter pw3 = new PrintWriter(new File(s));
+        
+        Scanner sc = new Scanner(s);
+         
+        System.out.println("Enter 5 words to add to the file: ");
+        for(int i = 0; i < 5; i++)
+        {
+            pw3.println(input.next());
+        }
+        pw3.close();
+
+    }
+}
+
+
+4.
+import java.util.*;
+import java.io.*;
+public class Main
+{
+    public static void main(String[] args) throws FileNotFoundException
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter an integer: ");
+        int n = input.nextInt();
+         
+        String[] fileNames = new String[n];
+        System.out.println("Enter " + n + " file names: ");
+        for (int i = 0; i < n; i++)
+        {
+            fileNames[i] = input.next();
+        }
+         
+        for (String e : fileNames)
+        {
+            PrintWriter pw = new PrintWriter(new File(e));
+            int[] arr = new int[5];
+            System.out.println("Enter 5 values: ");
+            for (int i = 0; i < 5; i++)
+            {
+                arr[i] = input.nextInt();
+            }
+            for (int i = arr.length - 1; i >= 0; i--)
+            {
+                pw.print(arr[i] + " ");
+            }
+            pw.close();
+        }
+    }
+}
+
+
+5.
+import java.util.*;
+import java.io.*;
+public class Main
+{
+    public static void main(String[] args) throws FileNotFoundException
+    {
+        Scanner sc = new Scanner(new File("words.txt"));
+        while(sc.hasNext())
+        {
+           System.out.println(sc.next());
+        }
+    }
+}
