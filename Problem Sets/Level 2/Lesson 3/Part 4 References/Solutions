@@ -1,0 +1,166 @@
+1.
+class Circle
+{
+    public double radius;
+    public Circle(double r)
+    {
+        radius = r;
+    }
+    public double area()
+    {
+        return Math.PI * radius * radius;
+    }
+}
+public class Problem1
+{
+    public static void main(String[] args)
+    {
+        Circle c = new Circle(5.7);
+        System.out.println(c.radius);        
+        Circle c2 = new Circle(7.5);
+        System.out.println(c.radius);  
+        System.out.println(c2.radius);  
+        c2.radius = 6.8;
+        System.out.println(c.radius);  
+        System.out.println(c2.radius);  
+        c2 = c;
+        c2.radius = 6.8;
+        System.out.println(c.radius);  
+        System.out.println(c2.radius);  
+    }
+}
+
+Output:
+5.7
+5.7
+7.5
+5.7
+6.8
+6.8
+6.8
+
+
+2.
+class Circle
+{
+    public double radius;
+    public Circle(double r)
+    {
+        radius = r;
+    }
+    public double area()
+    {
+        return Math.PI * radius * radius;
+    }
+}
+public class Lesson4part4
+{
+    public static void main(String[] args)
+    {   
+        Circle c = new Circle(5.7);
+        Circle c2 = new Circle(7.5);
+        Circle[] cArr = new Circle[] {c, c2};
+        Circle[] cArr1 = cArr;
+        System.out.println(cArr[0].radius);  
+        System.out.println(cArr1[0].radius);  
+        cArr1 = new Circle[] {c2, c};
+        cArr1[0] = new Circle(6.8);
+        System.out.println(cArr[0].radius);  
+        System.out.println(cArr[0].radius);  
+        cArr1 = cArr;
+        cArr1[0] = new Circle(6.8);
+        System.out.println(cArr[0].radius);  
+        System.out.println(cArr1[0].radius);  
+        cArr1 = cArr;
+        cArr1[0].radius = 6.8;
+        System.out.println(cArr[0].radius);  
+        System.out.println(cArr1[0].radius);
+    }
+}
+
+Output:
+5.7
+5.7
+5.7
+5.7
+6.8
+6.8
+6.8
+6.8
+
+
+3.
+public class Main
+{
+    public static void main(String[] args)
+    {
+        A x = new A(5);
+        A y = new A(5);
+        A z = x;
+        A w = x;
+        w = new A(3);
+        z.a = 4;
+        System.out.println(x.a + " " + y.a + " " + z.a + " " + w.a);
+
+        int a = 5;
+        int b = 5;
+        int c = a;
+        int d = a;
+        d = 3;
+        c = 4;
+        System.out.println(a + " " + b + " " + c + " " + d);
+    }
+}
+class A
+{
+    int a;
+    public A(int aa)
+    {
+        a = aa;
+    }
+}
+
+Output:
+4 5 4 3
+5 5 4 3
+
+
+4.
+class Country
+{
+  String name, continent;
+  City[] cities;
+  static int numberOfCountriesCreated = 0;
+  public Country(String n, String c, City[] cArr)
+  {
+     name = n;
+     continent = c;
+     cities = cArr;
+     numberOfCountriesCreated++;
+     for(int i = 0; i < cities.length; i++)
+     {
+        cities[i].country = name;
+     }
+  }
+}
+class City
+{
+  String name, country;
+  public City(String n, String c)
+  {
+     name = n;
+     country = c;
+  }
+}
+ 
+Testing:
+City c1 = new City("Allentown", "United States");
+City c2 = new City("Philadelphia", "USA");
+City c3 = new City("Chicago", "USA");
+City c4 = new City("Memphis", "United States of America");
+City c5 = new City("New York City", "United States");
+
+City[] cArr = {c1, c2, c3, c4, c5};
+Country cc1 = new Country("United States of America", "North America", cArr);
+System.out.println(c3.country);
+System.out.println(Country.numberOfCountriesCreated);
