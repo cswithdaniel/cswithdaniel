@@ -1,0 +1,212 @@
+1.
+int[] arr = new int[10];
+for (int i = 0; i < 9; i++)
+{
+    arr[i] = i;
+}
+int sum = 0;
+for (int i = 0; i < arr.length; i++)
+{
+    sum += i;
+}
+System.out.println(sum);
+
+Output:
+45
+
+
+2.
+PrintWriter writer = new PrintWriter(new File("a.txt"));
+for (int i = 0; i < 10; i++)
+{
+   writer.println(i);
+}
+writer.close();
+Scanner reader = new Scanner(new File("a.txt"));
+for (int i = 0; i < 10; i++)
+{
+   int j = reader.nextInt();
+   if (i % 2 == 0) {System.out.println(j);}
+}
+
+Output:
+0
+2
+4
+6
+8
+
+
+3.
+int[] arr1 = {3, 5, 7};
+int[] arr2 = arr1;
+arr2[1] = 4;
+System.out.println(arr1[0] + arr1[1] + arr1[2]);
+
+Output:
+14
+
+
+4.
+public class MyClass
+{
+    public static void main(String[] args)
+    {
+        int[] arr = {3, 7, 5, 6, 1};
+        int sum = 0;
+        for (int i : arr)
+        {
+            sum += i;
+            if (i == 5) {continue;}
+            System.out.print(i);
+        }
+        System.out.println("\n" + sum);
+        int[] arr2 = new int[1000];
+        for (int i = 0; i * i * i < 100; i++)
+        {
+            arr2[i * i * i] = 1;
+        }
+        for (int i = 0; i < 100; i++)
+        {
+            if (arr2[i] == 1) {System.out.println(i);}
+        }
+    }
+}
+
+Output:
+3761
+22
+0
+1
+8
+27
+64
+
+
+5.
+import java.util.*;
+import java.io.*;
+public class Main
+{
+    public static void main(String[] args) throws IOException
+    {
+        Scanner input = new Scanner(System.in);
+        PrintWriter writer = new PrintWriter(new File("odd.txt"));
+        for(int i = 1; i <= 100; i += 2)
+        {
+           writer.println(i);
+        }
+        writer.close();
+        
+        System.out.println("Enter an integer: ");
+        int n = input.nextInt();
+        
+        PrintWriter writer2 = new PrintWriter(new File("n.txt"));
+        
+        for(int i = 1; i <= n; i++)
+        {
+           writer2.println(i);
+        }
+        writer2.close();
+        
+        Scanner reader = new Scanner(new File("odd.txt"));
+        int oddsum = 0;
+        while(reader.hasNext())
+        {
+           oddsum += reader.nextInt();
+        }  
+        PrintWriter writer3 = new PrintWriter(new File("oddsum.txt"));
+        writer3.println(oddsum);
+        writer3.close();
+        
+        Scanner reader2 = new Scanner(new File("n.txt"));
+        int nsum = 0;
+        while(reader2.hasNext())
+        {
+           nsum += reader2.nextInt();
+        }
+        
+        PrintWriter writer4 = new PrintWriter(new File("nsum.txt"));
+        writer4.println(nsum);
+        writer4.close();
+        
+        Scanner reader3 = new Scanner(new File("oddsum.txt"));
+        Scanner reader4 = new Scanner(new File("nsum.txt"));
+        
+        PrintWriter writer5 = new PrintWriter(new File("sum.txt"));
+        writer5.println(reader3.nextInt() + reader4.nextInt());
+        writer5.close();  
+
+    }
+}
+
+
+6.
+import java.util.*;
+import java.io.*;
+public class Main
+{
+    public static void main(String[] args) throws IOException
+    {
+        Scanner input = new Scanner(System.in);
+        
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
+        int sum = 0;
+        int count = 0;
+        Scanner reader = new Scanner(new File("ints.txt"));
+        while(reader.hasNext())
+        {
+           int value = reader.nextInt();
+           if(value > max) {max = value;}
+           if(value < min) {min = value;}
+           sum += value;
+           count++;
+        }
+        System.out.println(max);
+        System.out.println(min);
+        System.out.println(sum);
+        System.out.println(count);
+        
+        PrintWriter writer = new PrintWriter(new File("ints.out"));
+        writer.println(max);
+        writer.println(min);
+        writer.println(sum);
+        writer.println(count);
+        writer.close();
+
+    }
+}
+
+
+7.
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Rectangle r1 = new Rectangle(7, 9);
+        r1.area();
+        r1.display();
+    }
+}
+
+class Rectangle
+{
+    double length, width;
+    static int numRectanglesCreated = 0;
+    public Rectangle(double l, double w)
+    {
+        length = l;
+        width = w;
+        numRectanglesCreated++;
+    }
+    public double area()
+    {
+        return length * width;
+    }
+    public void display()
+    {
+        System.out.println(length + "x" + width + " Rectangle");
+        System.out.println("Area: " + area());
+    }
+}
