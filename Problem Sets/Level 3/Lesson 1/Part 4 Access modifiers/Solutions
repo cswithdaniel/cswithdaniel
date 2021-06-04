@@ -1,0 +1,124 @@
+Credit: Ryan Wu
+
+1. For each of the following, put either public, protected, default, or private.
+  a. Accessible to classes in the same package only.
+     default
+  b. Accessible to classes in the same package and subclasses.
+     protected
+  c. Accessible everywhere.
+     public
+  d. Accessible in the same class only.
+     private
+     
+     
+2.
+class RectangularPrism
+{
+   private double length, width, height;
+   public RectangularPrism(double l, double w, double h)
+   {
+      length = l;
+      width = w;
+      height = h;
+     
+      if (length < 0) {length = -1 * length;}
+      if (width < 0) {width = -1 * width;}
+      if (height < 0) {height = -1 * height;}
+   }
+   public double getLength()
+   {
+      return length;
+   }
+   public void setLength(double r)
+   {
+      if (r < 0) {length = -1 * r;}
+      else {length = r;}
+   }
+   public double getWidth()
+   {
+      return width;
+   }
+   public void setWidth(double r)
+   {
+      if (r < 0) {width = -1 * r;}
+      else {width = r;}
+   }
+   public double getHeight()
+   {
+      return length;
+   }
+   public void setHeight(double r)
+   {
+      if (r < 0) {length = -1 * r;}
+      else {height = r;}
+   }
+   public double volume()
+   {
+      return length * width * height;
+   }
+   public double surfaceArea()
+   {
+      return 2 * (length * width + length * height + width * height);
+   }
+}
+class Cube extends RectangularPrism
+{
+   public Cube(double s)
+   {
+      super(s, s, s);
+   }
+}
+
+
+3.
+class DoubleArrayInfo
+{
+   private double[] arr;
+   public DoubleArrayInfo(double[] a)
+   {
+      arr = a;
+   }
+   public double get(int idx)
+   {
+      return arr[idx];
+   }
+   public void set(int idx, double r)
+   {
+      arr[idx] = r;
+   }
+   public String toString()
+   {
+      String result = "";
+      for (double d : arr)
+      {
+         result += d + " ";
+      }
+      return result;
+   }
+   public boolean equals(Object o)
+   {
+      if (o == null) {return false;}
+      if (!(o instanceof DoubleArrayInfo)) {return false;}
+      for (int i = 0; i < arr.length; i++)
+      {
+         if (arr[i] != ((DoubleArrayInfo) o).get(i))
+         {
+            return false;
+         }
+      }
+      return true;
+   }
+   public double sum()
+   {
+      double sum = 0;
+      for (double d : arr)
+      {
+         sum += d;
+      }
+      return sum;
+   }
+   public double mean()
+   {
+      return this.sum() / arr.length;
+   }
+}
