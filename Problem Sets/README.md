@@ -1,1 +1,1 @@
-Note: Solutions to the problems from levels 3 through 4 will be posted by June 2, 2021.
+Note: Solutions to the problems from the second half of level 4 will be posted by June 4, 2021.
