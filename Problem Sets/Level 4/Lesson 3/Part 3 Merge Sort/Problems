@@ -17,5 +17,5 @@ Challenge Problem:
 
 6. An inversion in an array is a pair of elements such that the element to the left is greater than the element to the right.
 For example, {1, 3, 2, 5, 4} has 2 inversions (2, 3) and (4, 5), while {5, 4, 3, 2, 1} has 10 inversions (every pair of elements).
-Create a method that takes as input an array of int and returns the number of inversions in the array.
+Create a method that takes as input an array of int and returns the number of inversions in the array in O(n * log n) time.
 Hint: Use merge sort.
