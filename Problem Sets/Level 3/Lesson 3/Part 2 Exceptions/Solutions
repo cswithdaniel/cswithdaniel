@@ -1,0 +1,90 @@
+Credit: Ryan Wu
+
+1. Determine whether the following are true or false:
+  a. Unchecked exceptions cannot be caught by a catch block 
+    False
+  b. All try blocks must have a catch block
+    False (try blocks must have either a catch block or a finally block)
+  c. All try blocks must have a finally block
+    False
+  d. All catch blocks must have a try block
+    True
+  e. Try blocks can only have one catch block
+    False
+    
+    
+2.
+import java.io.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        try
+        {
+            PrintWriter wr = new PrintWriter(new File("a.txt"));
+            System.out.println(new double[]{3.0, 5.5, 8.4}[5]);
+            System.out.println(5 / 0);
+        }
+        catch (IOException e) {System.out.println("Access Denied");}
+        catch (ArrayIndexOutOfBoundsException e) {System.out.println("Array index too large");}
+        catch (Exception e) {System.out.println("An unknown error occured");}
+        finally
+        {
+            System.out.println("This statement is always executed.");
+        }
+
+    }
+}
+
+Output:
+Array index too large
+This statement is always executed.
+
+
+3.
+Scanner input = new Scanner(System.in);
+System.out.print("Enter an integer: ");
+int n = input.nextInt();
+int[] arr = new int[n];
+for(int i = 0; i < n; i++)
+{
+   System.out.print("Enter an integer for index " + i + ": ");
+   arr[i] = input.nextInt();
+}
+System.out.println("Array Completed");
+try
+{
+  while (true)
+  {
+    System.out.print("Enter an integer: ");
+    int i = input.nextInt();
+    System.out.println("The element at index " + i + " is " + arr[i]);
+  }
+}
+catch (ArrayIndexOutOfBoundsException e)
+{
+  System.out.println("The index you entered is nonexistent.");
+}
+catch (InputMismatchException e)
+{
+  System.out.println("Your input did not match the format.");
+}
+
+
+4.
+Scanner input = new Scanner(System.in);
+System.out.print("Enter two integers separated by a space: ");
+try
+{
+  int a = input.nextInt();
+  int b = input.nextInt();
+  System.out.println(a + "/" + b + " = " + a / b);
+}
+catch (ArithmeticException e)
+{
+  System.out.println("The denominator must be nonzero.");
+}
+catch (InputMismatchException e)
+{
+  System.out.println("Your input did not match the format.");
+}
