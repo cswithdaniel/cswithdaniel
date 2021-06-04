@@ -1,0 +1,36 @@
+1. Identify all statements below that produce errors. Determine the output when those statements are removed.
+
+System.out.println("abcdefg".length());
+System.out.println("abcdabcd".indexOf("bcd"));
+System.out.println("abcdabcd".indexOf("cde"));
+System.out.println("abcdefg".charAt(3));
+"abcdefg".charAt(7);
+"abcdefg".charAt(-1);
+System.out.println("abcdefg".substring(3));
+System.out.println("abcdefg".substring(7));
+"abcdefg".substring(8);
+"abcdefg".substring(-1);
+System.out.println("abcdefg".substring(4, 6));
+System.out.println("abcdefg".substring(3, 7));
+System.out.println("abcdefg".substring(2, 2));
+"abcdefg".substring(4, 8);
+"abcdefg".substring(5, 4);
+
+
+2. Evaluate the following using methods from the Java Math class (mathematically, ^ means exponent):
+(sqrt(10) - 3)(4 + 7) / 4^2
+e^(-(5.5 - 3.2)^2)
+|2 - 5| / pi
+
+
+3.
+  a. Print a random integer from 0 to 5 excluding 5.
+  b. Print a random integer from 3 to 7 excluding 7.
+  c. Print a random odd integer from 7 to 17 inclusive.
+  
+  
+4. You have a circular board game that has 10 squares on it.
+You are going to roll a fair die and move your playing piece that many squares forward on the board.
+You will keep rolling the die and moving your piece until you stop on every square.
+Write a Java program which simulates the game.
+(Hint: Create an array of size 10 to record the if the die stops at a square)
