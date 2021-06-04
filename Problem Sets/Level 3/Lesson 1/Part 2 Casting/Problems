@@ -30,7 +30,7 @@ class B extends A {}
 class C extends B {}
 
 
-3. Determine tht output:
+3. Determine the output:
 public class Main
 {
     public static void main(String[] args)
