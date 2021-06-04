@@ -1,0 +1,154 @@
+1. What are the advantages of using generic classes?
+  Generic classes allow the use of different types for variables.
+  Different instances of a generic class can have different generic types.
+  
+  
+2.
+class Triple<A, B, C>
+{
+   private A first;
+   private B second;
+   private C third;
+   public Triple(A a, B b, C c)
+   {
+      first = a;
+      second = b;
+      third = c;
+   }
+   public A getFirst()
+   {
+      return first;
+   }
+   public void setFirst(A value)
+   {
+      first = value;
+   }
+   public B getSecond()
+   {
+      return second;
+   }
+   public void setSecond(B value)
+   {
+      second = value;
+   }
+   public C getThird()
+   {
+      return third;
+   }
+   public void setThird(C value)
+   {
+      third = value;
+   }
+}
+
+
+3 through 7.
+class MyArray<E>
+{
+   private E[] arr;
+   private int size;
+   public MyArray()
+   {
+      arr = (E[]) (new Object[0]);
+      size = 0;
+   }
+   public void add(E value)
+   {
+      E[] temp = (E[]) (new Object[arr.length + 1]);
+      for (int i = 0; i < arr.length; i++)
+      {
+         temp[i] = arr[i];
+      }
+      temp[arr.length] = value;
+      arr = temp;
+      size++;
+   }
+   public void add(int idx, E value)
+   {
+      E[] temp = (E[]) (new Object[arr.length + 1]);
+      for(int i = 0; i < idx; i++)
+      {
+         temp[i] = arr[i];
+      }
+      temp[idx] = value;
+      for(int i = idx; i < arr.length; i++)
+      {
+         temp[i + 1] = arr[i];
+      }
+      arr = temp;
+      size++;
+   }
+   public void remove(int idx)
+   {
+      E[] temp = (E[]) (new Object[arr.length - 1]);
+      for (int i = 0; i < idx; i++)
+      {
+         temp[i]  = arr[i];
+      }
+      for (int i = idx + 1; i < arr.length; i++)
+      {
+         temp[i - 1] = arr[i];
+      }
+      arr = temp;
+      size--;
+   }
+   public boolean contains(E value)
+   {
+      for (int i = 0; i < arr.length; i++)
+      {
+         if (value.equals(arr[i])) {return true;}
+      }
+      return false;
+   }
+   public void remove(E value)
+   {
+      int idx = -1;
+      for (int i = 0; i < arr.length; i++)
+      {
+         if (value.equals(arr[i])) {idx = i; break;}
+      }
+      if (idx != -1)
+      {
+         this.remove(idx);
+      }
+   }
+   public int size()
+   {
+      return size;
+   }
+   public E get(int idx)
+   {
+       return arr[idx];
+   }
+}
+
+
+8.
+class Pair<A, B>
+{
+    A first;
+    B second;
+    public Pair(A a, B b)
+    {
+        first = a;
+        second = b;
+    }
+    public void set(A a, B b)
+    {
+        first = a;
+        second = b;
+    }
+    public A getFirst()
+    {
+        return first;
+    }
+    public B getSecond()
+    {
+        return second;
+    }
+}
+
+
+9.
+  a. Rectangle should not be generic because there are no variables or aspects of Rectangle that would benefit from having generic types.
+  b. No. In fact, the Rectangle class itself won't compile since length and width have generic types and therefore cannot be multiplied.
