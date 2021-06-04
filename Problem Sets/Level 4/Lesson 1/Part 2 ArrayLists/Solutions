@@ -1,0 +1,222 @@
+1.
+  a.
+  import java.util.ArrayList;
+  import java.util.*;
+  
+  b.
+  ArrayList<String> a1 = new ArrayList<String>();
+  
+  
+2.
+Original code:
+public class Main
+{
+    public static void main(String[] args)
+    {
+        ArrayList<double> list;
+        list.add(2.7);
+        list.add(4);
+        list.add(5.3);
+        System.out.println(list);
+    }
+}
+
+Fixed code:
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        ArrayList<Double> list = new ArrayList<Double>();
+        list.add(2.7);
+        list.add(4.0);
+        list.add(5.3);
+        System.out.println(list);
+    }
+}
+
+
+3.
+ArrayList<String> listOfStrings = new ArrayList<String>();
+listOfStrings.add("Asdfghjkl");
+listOfStrings.add("qwerty");
+listOfStrings.add(1, "abcdefg");
+listOfStrings.add("okm");
+listOfStrings.add(1, "okm");
+listOfStrings.remove("okm");
+listOfStrings.set(1, "qwerty");
+listOfStrings.remove("qwerty");
+listOfStrings.remove(0);
+System.out.println(listOfStrings);
+for (String s : listOfStrings)
+{
+    System.out.println(s);
+}
+
+Output:
+[qwerty, okm]
+qwerty
+okm
+
+
+4.
+ArrayList<Integer> list = new ArrayList<Integer>();
+list.add(5);
+list.add(2);
+list.add(3);
+list.add(7);
+list.add(9);
+list.remove(2);
+System.out.println(list);
+
+Output:
+[5, 2, 7, 9]
+
+
+5.
+ArrayList<Integer> list = new ArrayList<Integer>();
+list.add(3);
+list.add(5);
+list.add(7);
+list.add(9);
+list.remove(3);
+list.size();
+System.out.println(list);
+System.out.println(list.contains(3));
+System.out.println(list.size());
+System.out.println(list.get(2));
+list.set(1, 8);
+list.add(2, 4);
+list.add(1, 6);
+System.out.println(list);
+Integer i = list.get(2);
+Integer j = 4;
+list.remove(j);
+System.out.println(list);
+list.remove(i);
+System.out.println(list);
+
+Output:
+[3, 5, 7]
+true
+3
+7
+[3, 6, 8, 4, 7]
+[3, 6, 8, 7]
+[3, 6, 7]
+
+
+6.
+//Two solutions:
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        list.add(7);
+        list.add(0);
+        list.add(9);
+        list.add(0);
+        list.add(0);
+        list.add(11);
+        System.out.println(list);
+        removeZeros(list);
+        System.out.println(list);
+        list.add(1, 0);
+        list.add(3, 0);
+        list.add(4, 0);
+        System.out.println(list);
+        removeZeros2(list);
+        System.out.println(list);
+    }
+    public static void removeZeros(ArrayList<Integer> l)
+    {
+        while (l.contains(0))
+        {
+            l.remove(new Integer(0));
+        }
+    }
+    public static void removeZeros2(ArrayList<Integer> l)
+    {
+        for (int i = 0; i < l.size(); i++)
+        {
+            if (l.get(i).equals(0))
+            {
+                l.remove(i);
+                i--; //removing an element offsets the indices
+                //i-- will ensure an element is not skipped
+            }
+        }
+    }
+}
+
+
+7.
+ArrayList<Integer> list1 = new ArrayList<Integer>();
+for (int i = 1; i <= 100; i++)
+{
+    list1.add(i);
+}
+for (int i = 0; i < list1.size(); i++)
+{
+    if (list1.get(i) % 3 == 0) {list1.set(i, 0);}
+}
+for (int i = 1; i * i <= 100; i++)
+{
+    list1.remove(new Integer(i * i));
+}
+while (list1.contains(0))
+{
+    list1.remove(new Integer(0));
+}
+
+
+8.
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println(primes(10));
+    }
+    public static ArrayList<Integer> primes(int n)
+    {
+        ArrayList<Integer> primes = new ArrayList<Integer>();
+        for (int i = 2; primes.size() < n; i++)
+        {
+            boolean prime = true;
+            for (int j : primes)
+            {
+                if (i % j == 0) {prime = false;}
+            }
+            if (prime) {primes.add(i);}
+        }
+        return primes;
+    }
+}
+
+
+9.
+Original code:
+int[] arr = {2, 5, 7, 2, 8, 3, 4, 0, 9, 6};
+ArrayList<Integer> list = new ArrayList<Integer>();
+for (int i : arr) {list.add(i);}
+for (int i = 0; i < list.size(); i++)
+{
+    if (list.get(i) % 2 == 0) {list.remove(i);}
+}
+System.out.println(list);
+
+Original output:
+[5, 7, 8, 3, 0, 9]
+
+Fixed code:
+int[] arr = {2, 5, 7, 2, 8, 3, 4, 0, 9, 6};
+ArrayList<Integer> list = new ArrayList<Integer>();
+for (int i : arr) {list.add(i);}
+for (int i = 0; i < list.size(); i++)
+{
+    if (list.get(i) % 2 == 0) {list.remove(i); i--;}
+}
+System.out.println(list);
