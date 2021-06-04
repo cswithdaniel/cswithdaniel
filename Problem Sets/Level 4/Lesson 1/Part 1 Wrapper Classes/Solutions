@@ -1,0 +1,178 @@
+Credit: Ryan Wu
+
+1. Determine whether the following are true or false:
+  a. Wrapper classes are primitive data types.
+    False
+  b. Instances of wrapper classes have properties of objects.
+    True
+  c. String is a primitive data type.
+    False
+  d. When the == operator compares two wrapper class objects, it compares the references (not the values) of the objects.
+    True
+  e. If i1 and i2 are two Integer objects with different values, then i1 == i2 is always false.
+    True
+  f. If i1 and i2 are two Integer objects with the same values, then i1 == i2 is always true.
+    False
+  g. If i1 and i2 are two Double objects, then i1 == i2 is always the same as i1 >= i2 && i1 <= i2.
+    False
+  h. When one of the <, >, <=, and >= operators compares two Integer objects, it compares the values of the objects.
+    True
+  i. If i1 has type int and i2 has type Integer, then i1 == i2 checks whether i1 and i2 have the same value.
+    True
+  j. Casting between Integer and int is allowed both ways.
+    True
+  k. Integer i = 5; is allowed.
+    True
+  l. Double d = 5; is allowed.
+    False
+    
+
+2.
+Integer i1 = 2;
+Integer i2 = 2;
+Integer i3 = new Integer(2);
+Integer i4 = i3;
+Integer i5 = i2;
+int i6 = i3;
+int i7 = 7;
+Integer i8 = new Integer(2);
+System.out.println(i1 == i2);
+System.out.println(i1 == i3);
+System.out.println(i3 == i4);
+System.out.println(i3 == i5);
+System.out.println(i1 == i5);
+System.out.println(i1 == i6);
+System.out.println(i3 == i7);
+System.out.println(i4 == i5);
+System.out.println(i5 == i6);
+System.out.println(i3 == i8);
+
+Output:
+true
+false
+true
+false
+true
+true
+false
+false
+true
+false
+
+
+3.
+Integer i1 = 2;
+Integer i2 = 2;
+Integer i3 = new Integer(2);
+Integer i4 = i3;
+Integer i5 = i2;
+int i6 = i3;
+int i7 = 7;
+Integer i8 = new Integer(2);
+
+  a. i1.equals(i2) - true
+  b. i1.equals(i3) - true
+  c. i3.equals(i4) - true
+  d. i3.equals(i5) - true
+  e. i1.equals(i5) - true
+  f. i1.equals(i6) - true
+  g. i3.equals(i7) - false
+  h. i4.equals(i5) - true
+  i. i5.equals(i6) - true
+  j. i3.equals(i8) - true
+  k. i3.equals(i6) - true
+  l. i6.equals(i3) - not allowed
+  m. i1.compareTo(i2) - 0
+  n. i1.compareTo(i3) - 0
+  o. i3.compareTo(i6) - 0
+  p. i6.compareTo(i3) - not allowed
+  q. i1.compareTo(i7) - -1
+  r. i7.compareTo(i1) - 1
+  s. new Integer(i7).compareTo(i6) - 0
+  t. new Integer(i6).compareTo(i7) - 0
+  u. i1.toString() - 2
+  v. i3.toString() - 2
+  w. i4.toString() - 2
+  x. i5.toString() - 2
+  y. i6.toString() - not allowed
+  z. i7.toString() - 7
+  
+  
+4.
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Integer i1 = 2;
+        int i2 = 2;
+        Double d1 = 2.0;
+        double d2 = 2;
+        x(i1);
+        x(i2);
+        x(d1);
+        x(d2);
+    }
+    public static void x(int i1)
+    {
+        System.out.println("int");
+    }
+    public static void x(Integer i1)
+    {
+        System.out.println("Integer");
+    }
+    public static void x(double i1)
+    {
+        System.out.println("double");
+    }
+    public static void x(Double i1)
+    {
+        System.out.println("Double");
+    }
+}
+
+Output:
+Integer
+int
+Double
+double
+
+
+5.
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int i2 = 2;
+        x(i2);
+    }
+    public static void x(Integer i1)
+    {
+        System.out.println("Integer");
+    }
+    public static void x(double i1)
+    {
+        System.out.println("double");
+    }
+}
+
+Output:
+double
+
+
+6.
+  a. System.out.println(Integer.parseInt("5"));
+    5
+  b. System.out.println(Integer.parseInt("5.0"));
+    error
+  c. System.out.println(Double.parseDouble("5"));
+    5.0
+  d. System.out.println(Double.parseDouble("5.0"));
+    5.0
+  e. System.out.println(Integer.parseInt("1234567890987654321"));
+    error
+  f. System.out.println(Long.parseLong("1234567890987654321"));
+    1234567890987654321
+  g. System.out.println(Integer.parseInt("1234L"));
+    error
+  h. System.out.println(Long.parseLong("1234L"));
+    1234
