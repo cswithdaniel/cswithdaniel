@@ -1,0 +1,116 @@
+1. Determine whether the following statements are true or false:
+  a. If A is an interface, then new A() is allowed.
+     False
+  b. Interfaces cannot have instance variables.
+     True
+  c. Interfaces can extend classes.
+     False
+  d. Interfaces can extend interfaces.
+     True
+  e. All abstract methods in interfaces are public.
+     True
+  f. Abstract methods in an interface must be overriden in all classes that implement the interface.
+     True
+  g. A class can extend multiple classes.
+     False
+  h. A class can implement multiple interfaces.
+     True
+     
+     
+2.
+abstract class Person
+{
+   String firstName, lastName;
+   int yearOfBirth;
+   public Person(String f, String l, int y)
+   {
+      firstName = f;
+      lastName = l;
+      yearOfBirth = y;
+   }
+  
+   public abstract void display();
+}
+
+interface Contactable
+{
+   String getContactInfo();
+}
+
+class Student extends Person implements Contactable
+{
+   double gpa;
+   int grade;
+   String email, phoneNumber;
+   public Student(String f, String l, int y, double g, int gr, String e, String p)
+   {
+      super(f, l, y);
+      gpa = g;
+      grade = gr;
+      email = e;
+      phoneNumber = p;
+   }
+   public void display()
+   {
+      System.out.println("Name: " + firstName + " " + lastName);
+      System.out.println("Year of birth: " + yearOfBirth);
+      System.out.println("Grade: " + grade);
+      System.out.println("GPA: " + gpa);
+      System.out.println("Email: " + email);
+      System.out.println("Phone Number: " + phoneNumber);
+   }
+  
+   public String getContactInfo()
+   {
+      return "Email: " + email + "\nPhoneNumber: " + phoneNumber;
+   }
+}
+
+class Employee extends Person implements Contactable
+{
+   String occupation, email, phoneNumber;
+   double salary;
+   public Employee(String f, String l, int y, String o, String e, String p, double s)
+   {
+      super(f, l, y);
+      yearOfBirth = y;
+      occupation = o;
+      email = e;
+      phoneNumber = p;
+      salary = s;
+   }
+   public void display()
+   {
+      System.out.println("Name: " + firstName + " " + lastName);
+      System.out.println("Year of birth: " + yearOfBirth);
+      System.out.println("Occupation: " + occupation);
+      System.out.println("Salary: " + salary);
+      System.out.println("Email: " + email);
+      System.out.println("Phone Number: " + phoneNumber);
+   }
+  
+   public String getContactInfo()
+   {
+      return "Email: " + email + "\nPhoneNumber: " + phoneNumber;
+   }
+}
+public class Main
+{
+   public static void main(String[] args)
+   {
+   }
+   public static void displayAllContactInfo(Contactable[] c)
+   {
+      for (int i = 0; i < c.length; i++)
+      {
+         System.out.println(c[i].getContactInfo());
+      }
+   }
+   public static void displayAllInfo(Person[] p)
+   {
+      for (int i = 0; i < p.length; i++)
+      {
+         p[i].display();
+      }
+   }
+}
