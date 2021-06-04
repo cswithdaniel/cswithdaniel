@@ -129,3 +129,8 @@ public static void mergeSortList(ArrayList<Integer> list, int low, int high)
     Merge sort is significantly faster than bubble, selection, and insertion sort.
   b. Can merge sort handle sorting arrays of length 5000000 within a reasonable amount of time?
     Yes
+
+
+6. Search up how to find the number of inversions in an array in O(n * log n) time.
+Links:
+https://www.geeksforgeeks.org/counting-inversions/
