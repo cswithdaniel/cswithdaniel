@@ -1,0 +1,41 @@
+1. Determine whether the following are true or false:
+  a. Unchecked exceptions cannot be caught by a catch block 
+  b. All try blocks must have a catch block
+  c. All try blocks must have a finally block
+  d. All catch blocks must have a try block
+  e. Try blocks can only have one catch block
+  
+  
+2. Determine the output:
+import java.io.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        try
+        {
+            PrintWriter wr = new PrintWriter(new File("a.txt"));
+            System.out.println(new double[]{3.0, 5.5, 8.4}[5]);
+            System.out.println(5 / 0);
+        }
+        catch (IOException e) {System.out.println("Access Denied");}
+        catch (ArrayIndexOutOfBoundsException e) {System.out.println("Array index too large");}
+        catch (Exception e) {System.out.println("An unknown error occured");}
+        finally
+        {
+            System.out.println("This statement is always executed.");
+        }
+
+    }
+}
+
+
+3. Prompt the user for an integer n.
+Then prompt the user for n integers and store them in an array.
+Then repeat the following:
+  Prompt the user for an integer i.
+  Print the element at index i.
+  If the user enters an invalid index, catch the exception appropriately.
+
+
+4. Prompt the user for two integers a and b and print a / b. Catch the exception if necessary.
