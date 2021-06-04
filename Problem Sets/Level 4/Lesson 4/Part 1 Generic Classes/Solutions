@@ -1,3 +1,5 @@
+Credit: Ryan Wu
+
 1. What are the advantages of using generic classes?
   Generic classes allow the use of different types for variables.
   Different instances of a generic class can have different generic types.
