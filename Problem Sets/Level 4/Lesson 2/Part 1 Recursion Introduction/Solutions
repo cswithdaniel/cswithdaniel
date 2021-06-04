@@ -1,0 +1,79 @@
+1.
+  a. What does a method have to do for it to be considered recursive?
+    A method has to call itself (directly or indirectly) to be considered recursive.
+  b. What is a base case, and why should every recursive method have one?
+    A base case is a case when there is no recursion left. Every recursive method should have a base case to not have infinite recursion.
+  c. Can every recursive method be written iteratively (without recursion)?
+    Yes (although it can be complicated)
+  d. What are the benefits of writing iterative code compared to recursive code?
+    It takes less time to run the code
+  e. What are the benefits of writing recursive code compared to iterative code?
+    The code can be significantly simpler
+    
+    
+2.
+public static int sumIntegers(int n)
+{
+  if (n == 0) {return 0;}
+  return n + sumIntegers(n - 1);
+}
+
+sumIntegers(7) = 7 + sumIntegers(6) = 7 + 6 + sumIntegers(5) = ... = 7 + 6 + 5 + 4 + 3 + 2 + 1 = 28
+sumIntegers(-1) = -1 + sumIntegers(-2) = -1 + -2 + sumIntegers(-3) = -1 + -2 + -3 + ... = error (too much recursion for Java)
+Note that sumIntegers can be fixed to return 0 when a negative value is passed in:
+public static int sumIntegers(int n)
+{
+  if (n <= 0) {return 0;}
+  return n + sumIntegers(n - 1);
+}
+
+
+3.
+public class Main
+{
+    public static void main(String[] args)
+    {
+        p3(5);
+    }
+    public static void p3(int n)
+    {
+        if (n <= 0) {System.out.println(0);}
+        else
+        {
+            System.out.println(n);
+            p3(n - 1);
+        }
+    }
+}
+
+Output:
+5
+4
+3
+2
+1
+0
+
+
+4.
+public class Main
+{
+    public static void main(String[] args)
+    {
+        p3(5);
+    }
+    public static void p3(int n)
+    {
+        if (n <= 0) {System.out.println(0);}
+        else
+        {
+            p3(n - 1);
+            System.out.println(n);
+            p3(n);
+        }
+    }
+}
+
+The code causes an error because there is infinite recursion.
+Although there is a base case, not all calls get closer to the base case.
+In particular, the p3(n); call causes the problem.
