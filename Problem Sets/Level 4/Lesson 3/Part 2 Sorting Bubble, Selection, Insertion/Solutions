@@ -1,0 +1,118 @@
+Credit: Ryan Wu
+
+1.
+  a. Explain how bubble sort works in general.
+     Bubble sort compares adjacent elements on each iteration and swaps them if needed. The largest element is sorted each iteration.
+  b. Explain how selection sort works in general.
+     Selection sort puts the smallest remaining element at the beginning each iteration.
+  c. Explain how insertion sort works in general.
+     In iteration x, the first x elements are sorted.
+     Each iteration, keep moving the next element backwards until it is in the right spot.
+
+
+2.
+Bubble Sort:
+{6, 9, 8, 4, 1}
+{6, 8, 9, 4, 1}
+{6, 8, 4, 9, 1}
+{6, 8, 4, 1, 9}
+{6, 8, 4, 1, 9}
+{6, 4, 8, 1, 9}
+{6, 4, 1, 8, 9}
+{4, 6, 1, 8, 9}
+{4, 1, 6, 8, 9}
+{1, 4, 6, 8, 9}
+
+Insertion Sort:
+{6, 9, 8, 4, 1}
+{6, 8, 9, 4, 1}
+{4, 6, 8, 9, 1}
+{1, 4, 6, 8, 9}
+
+Selection Sort:
+{6, 9, 8, 4, 1}
+{1, 9, 8, 4, 6}
+{1, 4, 8, 9, 6}
+{1, 4, 6, 9, 8}
+{1, 4, 6, 8, 9}
+
+
+3.
+public static void bubbleSort(ArrayList<Double> list)
+{
+  for (int i = 0; i < list.size() - 1; i++)
+  {
+     for (int j = 0; j < list.size() - 1 - i; j++)
+     {
+        if (list.get(j) > list.get(j + 1))
+        {
+           double temp = list.get(j);
+           list.set(j, list.get(j + 1));
+           list.set(j + 1, temp);
+        }
+     }
+  }
+}
+
+public static void insertionSort(ArrayList<Double> list)
+{
+  for (int i = 0; i < list.size(); i++)
+  {
+     for (int j = i - 1; j >= 0; j--)
+     {
+        if (list.get(j) > list.get(j + 1))
+        {
+           double temp = list.get(j);
+           list.set(j, list.get(j + 1));
+           list.set(j + 1, temp);
+        }
+     }
+  }
+}
+
+public static void selectionSort(ArrayList<Double> list)
+{
+  for (int i = 0; i < list.size() - 1; i++)
+  {
+     Double smallest = Double.POSITIVE_INFINITY;
+     int idx = -1;
+     for (int j = i; j < list.size(); j++)
+     {
+        if(list.get(j) < smallest) {smallest = list.get(j); idx = j;}
+     }
+
+     double temp = list.get(i);
+     list.set(i, list.get(idx));
+     list.set(idx, temp);
+  }
+}
+
+
+4.
+public static void backwardSelectionSort(int[] arr)
+{
+  for(int i = arr.length - 1; i > 0; i--)
+  {
+     int largest = Integer.MIN_VALUE;
+     int idx = -1;
+     for (int j = i; j >= 0; j--)
+     {
+        if (arr[j] > largest) {largest = arr[j]; idx = j;}
+     }
+
+     int temp = arr[i];
+     arr[i] = arr[idx];
+     arr[idx] = temp;
+  }
+}
+
+
+5.
+  a. What are the approximate runtimes of bubble sort, selection sort, and insertion sort?
+     O(n^2)
+  b. Can bubble sort or selection sort handle sorting arrays of length 5000000 within a reasonable amount of time?
+     No
+  c. Can insertion sort handle sorting nearly sorted arrays of length 5000000 within a reasonable amount of time?
+     Yes
+  d. On average, can insertion sort handle sorting randomized arrays of length 5000000 within a reasonable amound of time?
+     No
