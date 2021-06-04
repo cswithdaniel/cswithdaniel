@@ -1,0 +1,156 @@
+Credit: Ryan Wu
+
+1.
+public static ArrayList<String> deleteDuplicates(ArrayList<String> list)
+{
+  ArrayList<String> result = new ArrayList<String>();
+  HashSet<String> seen = new HashSet<String>();
+  for (String s : list)
+  {
+     if (!(seen.contains(s))) {result.add(s);}
+     seen.add(s);
+  }
+
+  return result;
+}
+
+
+2. (Call the method in the main method for a complete program)
+public static void printNoDuplicates()
+{
+  Scanner input = new Scanner(System.in);
+  HashSet<String> result = new HashSet<String>();
+  System.out.print("Enter an integer: ");
+  int n = input.nextInt();
+  for (int i = 0; i < n; i++)
+  {
+     System.out.print("Enter a word: ");
+     result.add(input.next());
+  }
+  for (String s : result)
+  {
+     System.out.println(s);
+  }
+}
+
+
+3.
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        HashSet<Integer> h = new HashSet<Integer>();
+        h.add(5);
+        h.add(7);
+        h.add(5);
+        h.add(8);
+        h.add(-1);
+        h.add(8);
+        h.remove(5);
+        int sum = 0;
+        for (int i : h)
+        {
+            sum += i;
+        }
+        System.out.println(sum);
+    }
+}
+
+Output:
+14
+
+
+4.
+class RectangularPrism
+{
+   public int length, width, height;
+   public RectangularPrism(int l, int w, int h)
+   {
+      length = l;
+      width = w;
+      height = h;
+   }
+   public String toString()
+   {
+      return length + "x" + width + "x" + height;
+   }
+   public boolean equals(Object o)
+   {
+      if (o == null) {return false;}
+      if (!(o instanceof RectangularPrism)) {return false;}
+      RectangularPrism r = (RectangularPrism) o;
+      return length == r.length && width == r.width && height == r.height;
+   }
+   public int hashCode()
+   {
+      return 10000007 * ((new Double(length)).hashCode()) + (new Double(width)).hashCode() + (new Double(height)).hashCode();
+   }
+}
+
+Testing:
+HashSet<RectangularPrism> rectSet = new HashSet<RectangularPrism>();
+rectSet.add(new RectangularPrism(5, 6, 7));
+rectSet.add(new RectangularPrism(1, 2, 3));
+rectSet.add(new RectangularPrism(5, 6, 7));
+rectSet.add(new RectangularPrism(1, 2, 3));
+rectSet.add(new RectangularPrism(5, 6, 7));
+rectSet.add(new RectangularPrism(1, 2, 3));
+System.out.println(rectSet);
+
+
+5.
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        HashSet<Pair<String, Integer>> h = new HashSet<Pair<String, Integer>>();
+        h.add(new Pair<String, Integer>("abc", 5));
+        h.add(new Pair<String, Integer>("def", 5));
+        h.add(new Pair<String, Integer>("abc", 5));
+        h.add(new Pair<String, Integer>("abc", 7));
+        System.out.println(h);
+    }
+}
+class Pair<A, B>
+{
+    public A first;
+    public B second;
+    public Pair(A a, B b)
+    {
+        first = a;
+        second = b;
+    }
+    public void setFirst(A a)
+    {
+        first = a;
+    }
+    public A getFirst()
+    {
+        return first;
+    }
+    public void setSecond(B b)
+    {
+        second = b;
+    }
+    public B getSecond()
+    {
+        return second;
+    }
+    public String toString()
+    {
+        return "(" + first.toString() + ", " + second.toString() + ")";
+    }
+    public boolean equals(Object o)
+    {
+      if (o == null) {return false;}
+      if (!(o instanceof Pair)) {return false;}
+      Pair pair = (Pair) o;
+      return pair.first.equals(first) && pair.second.equals(second);
+    }
+    public int hashCode()
+    {
+        return 10000007 * first.hashCode() + second.hashCode();
+    }
+}
