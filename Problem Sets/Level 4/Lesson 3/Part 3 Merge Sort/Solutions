@@ -1,0 +1,131 @@
+Credit: Ryan Wu
+
+1. Explain how merge sort works in general.
+  Split the array in half, recursively perform Merge Sort on each half, and merge the two sorted halves together.
+  
+ 
+2.
+{3, 4, 7, 9, 5, 7, 8, 11}
+{3, 4, 7, 9} {5, 7, 8, 11}
+{3, 4} {7, 9}
+{3} {4}
+{3, 4} {7} {9}
+{3, 4} {7, 9}
+{3, 4, 7, 9} {5, 7} {8, 11}
+{3, 4, 7, 9} {5} {7}
+{3, 4, 7, 9} {5, 7} {8} {11}
+{3, 4, 7, 9} {5, 7} {8, 11}
+{3, 4, 7, 9} {5, 7, 8, 11}
+{3, 4, 5, 7, 7, 8, 9, 11}
+ 
+ 
+3.
+{7, 3, 9, 4, 8, 7, 5, 11}
+{7, 3, 9, 4}
+{7, 3}
+{7} {3}
+{3, 7}
+{9, 4}
+{9} {4}
+{4, 9}
+{3, 4, 7, 9}
+{8, 7, 5, 11}
+{8, 7}
+{8} {7}
+{7, 8}
+{5} {11}
+{5, 11}
+{5, 7, 8, 11}
+{3, 4, 5, 7, 7, 8, 9, 11}
+
+
+4.
+public static void mergeSortArray(int[] arr, int low, int high)
+{
+   if(low == high) {return;}
+   int mid = (low + high) / 2;
+   mergeSortArray(arr, low, mid);
+   mergeSortArray(arr, mid + 1, high);
+   int lidx = low;
+   int ridx = mid + 1;
+   int[] temp = new int[high - low + 1];
+   int idx = 0;
+
+   while (idx < temp.length)
+   {
+      if(lidx > mid)
+      {
+         temp[idx] = arr[ridx];
+         ridx++;
+      }
+      else if(ridx > high)
+      {
+         temp[idx] = arr[lidx];
+         lidx++;
+      }
+      else if(arr[lidx] < arr[ridx])
+      {
+         temp[idx] = arr[lidx];
+         lidx++;
+      }
+      else
+      {
+         temp[idx] = arr[ridx];
+         ridx++;
+      }
+      idx++;
+   }
+
+   for(int i = low; i <= high; i++)
+   {
+      arr[i] = temp[i - low];
+   }
+}
+
+public static void mergeSortList(ArrayList<Integer> list, int low, int high)
+{
+   if(low == high) {return;}
+   int mid = (low + high) / 2;
+   mergeSortList(list, low, mid);
+   mergeSortList(list, mid + 1, high);
+   int lidx = low;
+   int ridx = mid + 1;
+   ArrayList<Integer> temp = new ArrayList<Integer>();
+   int idx = 0;
+
+   while(idx < high - low + 1)
+   {
+      if(lidx > mid)
+      {
+         temp.set(idx, list.get(ridx));
+         ridx++;
+      }
+      else if(ridx > high)
+      {
+         temp.set(idx, list.get(lidx));
+         lidx++;
+      }
+      else if(list.get(lidx) < list.get(ridx))
+      {
+         temp.set(idx, list.get(lidx));
+         lidx++;
+      }
+      else
+      {
+         temp.set(idx, list.get(ridx));
+         ridx++;
+      }
+      idx++;
+   }
+
+   for(int i = low; i <= high; i++)
+   {
+      list.set(i, temp.get(i - low));
+   }
+}
+
+5.
+  a. What is the advantage of using merge sort instead of bubble, selection, and insertion sort?
+    Merge sort is significantly faster than bubble, selection, and insertion sort.
+  b. Can merge sort handle sorting arrays of length 5000000 within a reasonable amount of time?
+    Yes
