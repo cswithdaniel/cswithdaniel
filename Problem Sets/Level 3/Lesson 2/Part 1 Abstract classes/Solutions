@@ -1,0 +1,187 @@
+1. Determine whether the following statements are true or false:
+  a. If A is an abstract class, then new A() is allowed.
+     False
+  b. Abstract classes cannot have instance variables since you cannot create instances of them.
+     False
+  c. Abstract classes can extend non-abstract classes.
+     True
+  d. All methods in an abstract class must be abstract.
+     False
+  e. Abstract methods can be private.
+     False
+  f. Abstract methods must be overriden in non-abstract subclasses.
+     True
+  g. Abstract classes must have abstract methods.
+     False
+     
+     
+2.
+abstract class Course
+{
+   String name, subject;
+   double numberOfCredits;
+   public abstract String getExamDate();
+}
+class Java3 extends Course
+{
+   public Java3()
+   {
+      name = "Java Level III";
+      subject = "Computer Science";
+      numberOfCredits = 1;
+   }
+   public String getExamDate()
+   {
+      return "10/27/20";
+   }
+}
+
+
+3.
+Original Code:
+public class Main
+{
+    public static void main(String[] args)
+    {
+        A a = new A(7, 9);
+        a.display();
+    }
+}
+class A implements X
+{
+    double x, y;
+    public abstract double xy()
+    public A(double x, double y)
+    {
+        this.x = x;
+        this.y = y;
+    }
+}
+interface X
+{
+    void display();
+}
+class B extends A
+{
+    public int xy()
+    {
+        return x * y;
+    }
+}
+
+Fixed Code:
+public class Main
+{
+    public static void main(String[] args)
+    {
+        A a = new B(7, 9);
+        a.display();
+    }
+}
+abstract class A implements X
+{
+    double x, y;
+    public abstract double xy();
+    public A(double x, double y)
+    {
+        this.x = x;
+        this.y = y;
+    }
+}
+interface X
+{
+    void display();
+}
+class B extends A
+{
+    public B(double x, double y)
+    {
+        super(x, y);
+    }
+    public double xy()
+    {
+        return x * y;
+    }
+    public void display()
+    {
+        System.out.println(x + " " + y);
+    }
+}
+
+
+4.
+abstract class Person
+{
+   String firstName, lastName;
+   int yearOfBirth;
+   public Person(String f, String l, int y)
+   {
+      firstName = f;
+      lastName = l;
+      yearOfBirth = y;
+   }
+   public abstract void display();
+}
+
+class Student extends Person
+{
+   double gpa;
+   int grade;
+   String email, phoneNumber;
+   public Student(String f, String l, int y, double g, int gr, String e, String p)
+   {
+      super(f, l, y);
+      gpa = g;
+      grade = gr;
+      email = e;
+      phoneNumber = p;
+   }
+   public void display()
+   {
+      System.out.println("First Name: " + firstName);
+      System.out.println("Last Name: " + lastName);
+      System.out.println("Year of Birth: " + yearOfBirth);
+      System.out.println("GPA: " + gpa);
+      System.out.println("Grade: " + grade);
+      System.out.println("Phone Number: " + phoneNumber);
+      System.out.println("Email: " + email);
+   }
+}
+
+class Employee extends Person
+{
+   String occupation, email, phoneNumber;
+   double salary;
+   public Employee(String f, String l, int y, String o, String e, String p, double s)
+   {
+      super(f, l, y);
+      occupation = o;
+      email = e;
+      phoneNumber = p;
+      salary = s;
+   }
+   public void display()
+   {
+      System.out.println("First Name: " + firstName);
+      System.out.println("Last Name: " + lastName);
+      System.out.println("Year of Birth: " + yearOfBirth);
+      System.out.println("Occupation: " + occupation);
+      System.out.println("Email: " + email);
+      System.out.println("Phone Number: " + phoneNumber);
+      System.out.println("Salary: " + salary);
+   }
+}
+public class Main
+{
+   public static void main(String[] args)
+   {
+      Student s1 = new Student("Ryan", "Wu", 2006, 0, 8, "ryan@gmail.com", "000-000-0000");
+      Employee e1 = new Employee("Random", "Person", 1985, "Professional Eater", "eatmorefood@gmail.com", "123-234-3456", 1000000);
+      displayInfo(s1);
+      displayInfo(e1);
+   }
+   public static void displayInfo(Person p)
+   {
+      p.display();
+   }
+}
