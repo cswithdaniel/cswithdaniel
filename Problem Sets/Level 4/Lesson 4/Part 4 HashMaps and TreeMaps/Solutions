@@ -1,0 +1,166 @@
+Credit: Ryan Wu, Daniel Li
+
+1.
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        HashMap<String, String> h = new HashMap<String, String>();
+        h.put("abc", "def");
+        h.put("a a", "qwe");
+        h.put("a a ", "okm");
+        h.put("a a", "zxc");
+        h.put("qwe", "123");
+        System.out.println(h.containsKey("a a"));
+        System.out.println(h.containsKey(" a a"));
+        System.out.println(h.containsValue("qwe"));
+        System.out.println(h.containsValue("123"));
+        System.out.println(h.get("qwe"));
+        System.out.println(h.size());
+    }
+}
+
+Output:
+true
+false
+false
+true
+123
+4
+
+
+2.
+public static int sumKeys(HashMap<Integer, Integer> map)
+{
+  Set<Integer> keys = map.keySet();
+  int sum = 0;
+  for (Integer i : keys)
+  {
+     sum += i;
+  }
+  return sum;
+}
+
+
+3.
+public static int sumKeysAndValues(HashMap<Integer, Integer> map)
+{
+  Set<Integer> keys = map.keySet();
+  int sum = 0;
+  for (Integer i : keys)
+  {
+     sum += i;
+  }
+  Collection<Integer> values = map.values();
+  for (Integer i : values)
+  {
+     sum += i;
+  }
+  return sum;
+}
+
+
+4.
+public static void removeNonpositive(HashMap<String, Integer> h)
+{
+  ArrayList<String> toRemove = new ArrayList<String>();
+  Set<Map.Entry<String, Integer>> s = h.entrySet();
+  for (Map.Entry<String, Integer> e : s)
+  {
+    if (e.getValue() <= 0)
+    {
+      toRemove.add(e.getKey());
+    }
+  }
+  for (String s1 : toRemove)
+  {
+    h.remove(s1);
+  }
+}
+
+Alternate solution:
+public static void removeNonpositive(HashMap<String, Integer> map)
+{
+  Set<Map.Entry<String, Integer>> entries = map.entrySet();
+  boolean removed = true;
+  while (removed)
+  {
+    removed = false;
+    for (Map.Entry<String, Integer> e : entries)
+    {
+      if (e.getValue() <= 0) {map.remove(e.getKey()); removed = true; break;}
+    }
+  }
+}
+
+Note: The following code will NOT work:
+public static void removeNonpositive(HashMap<String, Integer> map)
+{
+  Set<Map.Entry<String, Integer>> entries = map.entrySet();
+  for (Map.Entry<String, Integer> e : entries)
+  {
+    if (e.getValue() <= 0) {map.remove(e.getKey());}
+  }
+}
+
+Removing from a collection or map while looping through it can cause an error (with a for-each loop) or incorrect results (with a normal for loop).
+In this case, calling removeNegatives can cause a ConcurrentModificationException.
+
+
+5.
+class MultiHashSet<E>
+{
+  private HashMap<E, Integer> occurrences = new HashMap<E, Integer>();
+  public MultiHashSet() {}
+  public void add(E element)
+  {
+    if (occurrences.containsKey(element))
+    {
+      occurrences.put(element, occurrences.get(element) + 1);
+    }
+    else
+    {
+      occurrences.put(element, 1);
+    }
+  }
+  public void remove(E element)
+  {
+    if (!occurrences.containsKey(element)) {return;}
+    occurrences.put(element, occurrences.get(element) - 1);
+    if (occurrences.get(element) == 0)
+    {
+      occurrences.remove(element);
+    }
+  }
+  public boolean contains(E element)
+  {
+    return occurrences.containsKey(element);
+  }
+  public int size()
+  {
+    int sum = 0;
+    for (int i : occurrences.values())
+    {
+      sum += i;
+    }
+    return sum;
+  }
+  public String toString()
+  {
+    String result = "[";
+    boolean first = true;
+    for (Map.Entry<E, Integer> entry : occurrences.entrySet())
+    {
+      int val = entry.getValue();
+      for (int i = 0; i < val; i++)
+      {
+        if (!first) {result += ", ";}
+        else {first = false;}
+        result += entry.getKey().toString();
+      }
+    }
+    result += "]";
+    return result;
+  }
+}
