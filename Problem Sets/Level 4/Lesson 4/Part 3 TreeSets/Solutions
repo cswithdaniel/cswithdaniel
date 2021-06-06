@@ -1,0 +1,155 @@
+Credit: Ryan Wu
+
+1.
+public static ArrayList<Integer> noDuplicates(ArrayList<Integer> list)
+{
+  ArrayList<Integer> result = new ArrayList<Integer>();
+  TreeSet<Integer> filter = new TreeSet<Integer>();
+
+  for (int i = 0; i < list.size(); i++)
+  {
+     filter.add(list.get(i));
+  }
+
+  for (Integer i : filter)
+  {
+     result.add(i);
+  }
+  return result;
+}
+
+
+2.
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        TreeSet<Integer> t = new TreeSet<Integer>();
+        t.add(5);
+        t.add(7);
+        t.add(5);
+        t.add(8);
+        t.add(-1);
+        t.add(8);
+        t.remove(5);
+        int sum = 0;
+        for (int i : t)
+        {
+            sum += i;
+        }
+        System.out.println(sum);
+        System.out.println(t);
+    }
+}
+
+Output:
+14
+[-1, 7, 8]
+
+
+3.
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        TreeSet<Point3D> pointSet = new TreeSet<Point3D>();
+        pointSet.add(new Point3D(3.5, 6.4, 5.2));
+        pointSet.add(new Point3D(3.4, 5.8, 1.7));
+        pointSet.add(new Point3D(3.5, 6.4, 4.7));
+        pointSet.add(new Point3D(3.5, 2.2, 5.2));
+        pointSet.add(new Point3D(3.5, 6.4, 5.2));
+        pointSet.add(new Point3D(3.4, 5.8, 1.7));
+        System.out.println(pointSet);
+    }
+}
+class Point3D implements Comparable<Point3D>
+{
+    private double x, y, z;
+    public Point3D(double xx, double yy, double zz)
+    {
+        x = xx;
+        y = yy;
+        z = zz;
+    }
+    public int compareTo(Point3D other)
+    {
+        if (this.x > other.getX()) {return 1;}
+        if (this.x < other.getX()) {return -1;}
+        if (this.y > other.getY()) {return 1;}
+        if (this.y < other.getY()) {return -1;}
+        if (this.z > other.getZ()) {return 1;}
+        if (this.z < other.getZ()) {return -1;}
+        return 0;
+    }
+    public double getX()
+    {
+        return this.x;
+    }
+    public void setX(double value)
+    {
+        this.x = value;
+    }
+    public double getY()
+    {
+        return this.y;
+    }
+    public void setY(double value)
+    {
+        this.y = value;
+    }
+    public double getZ()
+    {
+        return this.z;
+    }
+    public void setZ(double value)
+    {
+        this.z = value;
+    }
+    public String toString()
+    {
+        return "(" + x + ", " + y + ", " + z + ")";
+    }
+}
+
+
+4.
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        TreeSet<Integer> t1 = new TreeSet<Integer>();
+        t1.add(5);
+        t1.add(7);
+        t1.add(9);
+        t1.add(6);
+        t1.add(0);
+        for (int i : t1) {System.out.print(i);}
+        System.out.println();
+        
+        TreeSet<Integer> t2 = new TreeSet<Integer>(
+            new Comparator<Integer>()
+            {
+                public int compare(Integer a, Integer b)
+                {
+                    if (a % 2 == 0 && b % 2 != 0) {return 1;}
+                    if (a % 2 != 0 && b % 2 == 0) {return -1;}
+                    return new Integer(a).compareTo(b);
+                }
+            }
+            );
+        t2.add(5);
+        t2.add(7);
+        t2.add(9);
+        t2.add(6);
+        t2.add(0);
+        for (int i : t2) {System.out.print(i);}
+        System.out.println();
+    }
+}
+
+Output:
+05679
+57906
