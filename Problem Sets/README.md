@@ -1,1 +1,1 @@
-All solutions have been posted
+All problems and solutions have been posted
